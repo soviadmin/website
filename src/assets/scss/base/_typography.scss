@@ -1,0 +1,33 @@
+///
+/// Forty by HTML5 UP
+
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Type */
+	a {
+		border-bottom: dotted 1px;
+		text-decoration: none;
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+	p {
+		margin: 0 0 _size(element-margin) 0;
+	}
+
+	// h1, h2, h3, h4, h5, h6 {
+
+	// }
+	.align-left {
+		text-align: left;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	.align-right {
+		text-align: right;
+	}
