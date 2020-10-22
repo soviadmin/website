@@ -2,7 +2,8 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+*/
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -31,7 +32,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site. #663399
+        icon: 'src/assets/images/web-icon.png', // This path is relative to the root of the site. #663399
       },
     },
     `gatsby-plugin-offline`,
