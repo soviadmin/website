@@ -1,0 +1,13 @@
+.feature-eq {
+    text-align: center;
+    padding: 4rem 0;
+    h3 {
+        margin-bottom: 3rem;
+    }
+    &.choose-us {
+        background: _palette(bg-secondary);
+        h3 {
+            text-transform: none;
+        }
+    }
+}

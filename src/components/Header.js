@@ -5,14 +5,32 @@ import { Link } from 'gatsby'
 
 const Header = (props) => (
     <header>
-        {/* <Link to="/" className="logo"><img src = {logo}/></Link> */}
-        {/* <nav id="header-nav">
-            <PrimaryMenu/>
-            <div id="tobehide">
-                <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;"><p id="menu-name">Menu</p></a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand ml-lg-5 ml-sm-0" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Equipment</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request a Quote</button>
             </div>
-        </nav> */}
-        <p>Nav bar</p>
+        </nav>
     </header>
 )
 

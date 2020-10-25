@@ -1,0 +1,13 @@
+.about-us {
+    background-color: _palette(bg-secondary);
+    padding: 4rem 0;
+    &.choose-us {
+        text-align: center;
+    }
+    
+}
+@include breakpoint(medium) {
+    .about-us {
+        text-align: center;
+    }
+}

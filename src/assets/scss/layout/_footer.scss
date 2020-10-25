@@ -1,0 +1,28 @@
+footer {
+    &.page-footer {
+        background-color: _palette(bg-footer);
+        color: white;
+        h6 {
+            font-weight: 900 !important;
+            color:white;
+        }
+    }
+    hr {
+        background: lightblue;
+        height: .1rem;
+        &.footer-hr {
+            background: rgba(143, 130, 160, 0.658);
+            height: .3px;
+            width: 60%;
+        }
+    }
+    .footer-copyright {
+        p {
+            color: rgba(243, 233, 255, 0.658);
+        }
+    }
+    a {
+        color: white;
+    }
+    
+}

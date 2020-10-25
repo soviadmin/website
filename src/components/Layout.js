@@ -11,34 +11,33 @@ class Layout extends React.Component {
             isMenuVisible: false,
             loading: 'is-loading'
         }
-        this.handleToggleMenu = this.handleToggleMenu.bind(this)
+        // this.handleToggleMenu = this.handleToggleMenu.bind(this)
     }
 
-    componentDidMount () {
-        this.timeoutId = setTimeout(() => {
-            this.setState({loading: ''});
-        }, 100);
-    }
+    // componentDidMount () {
+    //     this.timeoutId = setTimeout(() => {
+    //         this.setState({loading: ''});
+    //     }, 100);
+    // }
 
-    componentWillUnmount () {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
-    }
+    // componentWillUnmount () {
+    //     if (this.timeoutId) {
+    //         clearTimeout(this.timeoutId);
+    //     }
+    // }
 
-    handleToggleMenu() {
-        this.setState({
-            isMenuVisible: !this.state.isMenuVisible
-        })
-    }
+    // handleToggleMenu() {
+    //     this.setState({
+    //         isMenuVisible: !this.state.isMenuVisible
+    //     })
+    // }
 
     render() {
         const { children } = this.props
-
         return (
-            <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
+            <div>
                 {/* <div id="wrapper"> */}
-                    <Header onToggleMenu={this.handleToggleMenu} />
+                    <Header />
                     {children}
                     <Footer />
                 {/* </div> */}

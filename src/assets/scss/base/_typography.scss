@@ -7,7 +7,7 @@
 
 /* Type */
 	a {
-		border-bottom: dotted 1px;
+		// border-bottom: dotted 1px;
 		text-decoration: none;
 		&:hover {
 			border-bottom-color: transparent;
@@ -15,11 +15,19 @@
 	}
 	p {
 		margin: 0 0 _size(element-margin) 0;
+		
 	}
 
-	// h1, h2, h3, h4, h5, h6 {
-
-	// }
+	h1, h2, h3, h4, h5, h6 {
+		color: #4a4b65;
+		font-weight: bold;
+		letter-spacing: .2px;
+		text-transform: capitalize;
+		line-height: 1.25;
+	}
+	h6 {
+		font-weight: bolder !important;
+	}
 	.align-left {
 		text-align: left;
 	}

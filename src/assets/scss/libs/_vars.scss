@@ -14,7 +14,7 @@ $duration: (
 $size: (
     border-radius:		4px,
     element-height:		2.75em,
-    element-margin:		2em,
+    element-margin:		1rem,
     inner:				65em
 );
 // Font.
@@ -30,6 +30,11 @@ $font: (
 // Palette.
 $palette: (
     white: #fff,
+    bg-footer: rgb(52, 49, 65),
+    bg-secondary: #f7f7fc,
+    bg-dark: rgb(79, 74, 104),
+    font-light: #737491,
+
 );
 
 
