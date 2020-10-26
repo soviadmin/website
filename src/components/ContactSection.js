@@ -1,7 +1,7 @@
 import React from 'react';
 import { useImage } from "../hooks/useImage";
 
-export default function GetQuote(props) {
+export default function ContactSection(props) {
     // const imgContainer = useImage();
     return (
         <div className="get-quote">

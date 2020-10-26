@@ -2,7 +2,7 @@ import React from 'react';
 import { useImage } from "../hooks/useImage";
 import about from '../assets/images/h3_sq.jpg'
 
-export default function AboutUs(props) {
+export default function AboutSection(props) {
     // const imgContainer = useImage();
     return (
         <div className="about-us">

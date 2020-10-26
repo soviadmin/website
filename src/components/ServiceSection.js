@@ -5,9 +5,8 @@ import p1 from "../assets/images/truck.svg";
 import p3 from "../assets/images/trolley.svg";
 
 
-export default function OurServices(props) {
+export default function ServiceSection(props) {
     // const imgContainer = useImage();
-
     return (
         <div className="our-services">
             <h3>Our Services</h3>

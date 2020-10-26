@@ -4,7 +4,7 @@ import { useImage } from "../hooks/useImage";
 import h1 from '../assets/images/h3.jpg';
 import Carousel from "react-bootstrap/Carousel";
 
-export default function BakingCarousel(props) {
+export default function Banner(props) {
     // const imgContainer = useImage();
     return (
         <div className="baking-carousel-container" id="baking-part-1">

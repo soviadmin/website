@@ -4,8 +4,15 @@
     &.choose-us {
         text-align: center;
     }
-    
+
+    h3 {
+        font-family: _font(emphasis);
+        text-transform: uppercase;
+    }
 }
+
+
+
 @include breakpoint(medium) {
     .about-us {
         text-align: center;

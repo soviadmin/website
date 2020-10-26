@@ -13,19 +13,19 @@ const Header = (props) => (
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Home</a>
+                        <Link class="nav-link" to="/">Home</Link>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">About</a>
+                        <Link class="nav-link" to="/about">About</Link>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Services</a>
+                        <Link class="nav-link" to="/service">Service</Link>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Equipment</a>
+                        <Link class="nav-link" to="/equipment">Equipment</Link>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Contact</a>
+                        <Link class="nav-link" to="/contact">Contact</Link>
                     </li>
                 </ul>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request a Quote</button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useImage } from "../hooks/useImage";
 
-export default function FeaturedEquipment(props) {
+export default function EquipmentSection(props) {
     // const imgContainer = useImage();
     return (
         <div className="feature-eq">
