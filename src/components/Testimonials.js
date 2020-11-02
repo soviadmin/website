@@ -1,8 +1,7 @@
 import React from 'react';
-import { useImage } from "../hooks/useImage";
 
 
-export default function Testimonials(props) {
+export default function Testimonials() {
     // const imgContainer = useImage();
     return (
         <div>

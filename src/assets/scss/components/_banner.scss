@@ -1,0 +1,14 @@
+
+/* Banner SCSS */
+
+#banner {
+
+    .banner-image {
+        filter: grayscale(20%);
+    }
+
+    .carousel-caption {
+        color: _palette(white);
+        top: 0;
+    }
+}

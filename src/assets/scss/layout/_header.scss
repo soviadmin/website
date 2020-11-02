@@ -1,20 +1,82 @@
-nav {
-    a {
-        &:hover, &:active {
+
+/* Header SCSS */
+
+#header {
+
+    // Custom Brand
+    .brand {
+        width: 80px;
+        height: 70px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // Custom Bar
+    .navbar-bg {
+        font-family: _font(code);
+        letter-spacing: 1px;
+        background: _palette(white);
+    }
+
+    // Custom Toggler
+    .hamburger {
+        color: _palette(accent7);
+        border: none;
+    }
+
+    // Custom Nav Links
+    .section-link {
+        font-family: _font(emphasis);
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: _palette(accent7);
+        margin: 0 30px;
+        padding-top: 1%;
+
+        &:hover {
             text-decoration: none;
         }
     }
-    &.navbar {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.5rem 2rem;
-    }
-    .collapse {
-        &.navbar-collapse {
-            justify-content: flex-end;
+
+    .request-link {
+        font-family: _font(emphasis);
+        font-weight: 400;
+        font-size: 1.5rem;
+        color:  _palette(accent7);
+        margin: 0 10px;
+        border: 1.5px solid  _palette(accent7);
+        border-radius: 5px;
+        padding: 5px 15px;
+        
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
         }
     }
+
+    /* Other Overrides on Bootstrap Navbar SCSS */
+    // .nav-link.section-link {
+    //     &:hover {
+    //         color: _palette(fg) !important;
+    //     }
+    // }
+
+    .navbar-toggler, .navbar-toggler-icon {
+        border: none;
+    }
+    
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    // .navbar-toggler:hover,
+    // .navbar-toggler-icon:hover {
+    //     transition: .6s;
+    //     transform: rotate(90deg);
+    // }
 }

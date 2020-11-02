@@ -1,5 +1,4 @@
 import React from 'react';
-import { useImage } from "../hooks/useImage";
 import p2 from "../assets/images/location.svg";
 import p1 from "../assets/images/truck.svg";
 import p3 from "../assets/images/trolley.svg";

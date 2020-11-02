@@ -6,7 +6,7 @@ import {
     faPhoneAlt 
 } from '@fortawesome/free-solid-svg-icons'
 
-export default function Footer(props) {
+export default function Footer() {
     return (
         <footer class="page-footer font-small unique-color-dark pt-2 pb-2">
             <div class="container text-center text-md-left mt-5">
@@ -39,5 +39,5 @@ export default function Footer(props) {
                 <p>Copyright © 2020 SOVI Transport Service Corp. All rights reserved.</p>
             </div>
         </footer>
-    );
+    )
 }
