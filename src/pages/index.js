@@ -15,8 +15,8 @@ class HomeIndex extends React.Component {
             <Layout>
                 <Helmet title="Home"></Helmet>
                 <Banner/>
-                <EquipmentSection/>
                 <AboutSection/>
+                <EquipmentSection/>
                 <ServiceSection/>
                 <Testimonials/>
                 <ContactSection/>

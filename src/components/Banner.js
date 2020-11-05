@@ -18,10 +18,10 @@ export default function Banner() {
                     src={banner1}
                     alt="First slide"
                 />
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <h2>COMPANY HEADER 1</h2>
                     <p>Nulla vitae elit libero, a phacetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
@@ -29,10 +29,10 @@ export default function Banner() {
                     src={banner2}
                     alt="Second slide"
                 />
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <h2>COMPANY HEADER 2</h2>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
@@ -40,10 +40,10 @@ export default function Banner() {
                     src={banner3}
                     alt="Third slide"
                 />
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <h2>COMPANY HEADER 3</h2>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
         </Carousel>
     )

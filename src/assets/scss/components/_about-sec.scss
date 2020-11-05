@@ -1,16 +1,33 @@
+
 .about-us {
-    background-color: _palette(bg-secondary);
+    background-color: _palette(fg);
     padding: 4rem 0;
     &.choose-us {
         text-align: center;
     }
 
-    h3 {
-        font-family: _font(emphasis);
-        text-transform: uppercase;
+    .header {
+        padding: 3.5rem 0;
+    }
+
+    .heading-one, .heading-two {
+        font-size: 2.5rem;
+        font-weight: _font(w-bold);
+    }
+
+    .heading-one {
+        color: _palette(p-med2);
+    }
+
+    .heading-two {
+        color: _palette(p-med);
+    }
+
+    .illustration {
+        width: 35rem;
+        height: 25rem;
     }
 }
-
 
 
 @include breakpoint(medium) {

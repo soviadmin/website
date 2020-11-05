@@ -32,8 +32,16 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'minimal-ui',
-        icon: 'src/assets/images/web-icon.png', // This path is relative to the root of the site. #663399
+        icon: 'src/assets/images/favicon.ico', // This path is relative to the root of the site. #663399
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
     },
     `gatsby-plugin-offline`,
   ],

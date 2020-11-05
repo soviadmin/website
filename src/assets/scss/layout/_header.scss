@@ -1,82 +1,90 @@
-
 /* Header SCSS */
 
 #header {
+  // Custom Brand
+  .brand {
+    font-size: 1.5rem;
+    font-weight: _font(w-xbold);
 
-    // Custom Brand
-    .brand {
-        width: 80px;
-        height: 70px;
-
-        &:hover {
-            cursor: pointer;
-        }
+    .logo {
+      width: 50px;
+      height: 50px;
     }
 
-    // Custom Bar
-    .navbar-bg {
-        font-family: _font(code);
-        letter-spacing: 1px;
-        background: _palette(white);
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    // Custom Toggler
-    .hamburger {
-        color: _palette(accent7);
-        border: none;
+  // Custom Bar
+  .navbar-bg {
+    font-family: _font(family);
+    letter-spacing: 1px;
+    background: _palette(fg);
+  }
+
+  // Custom Toggler
+  .hamburger {
+    color: _palette(p-med);
+    border: none;
+  }
+
+  // Custom Nav Links
+  .section-link {
+    font-family: _font(family);
+    font-weight: _font(w-bold);
+    font-size: 1rem;
+    color: _palette(p-med);
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      color: _palette(p-blue);
+      text-decoration: none;
     }
+  }
 
-    // Custom Nav Links
-    .section-link {
-        font-family: _font(emphasis);
-        font-weight: 400;
-        font-size: 1.5rem;
-        color: _palette(accent7);
-        margin: 0 30px;
-        padding-top: 1%;
+  .request-link {
+    font-family: _font(family);
+    font-weight: _font(w-bold);
+    background-color: _palette(p-blue);
+    color: _palette(fg);
+    font-size: 1rem;
+    margin: 0 10px;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in;
 
-        &:hover {
-            text-decoration: none;
-        }
+    &:hover {
+      background-color: _palette(p-darkblue);
+      cursor: pointer;
+      text-decoration: none;
     }
+  }
 
-    .request-link {
-        font-family: _font(emphasis);
-        font-weight: 400;
-        font-size: 1.5rem;
-        color:  _palette(accent7);
-        margin: 0 10px;
-        border: 1.5px solid  _palette(accent7);
-        border-radius: 5px;
-        padding: 5px 15px;
-        
-        &:hover {
-            cursor: pointer;
-            text-decoration: none;
-        }
-    }
+  /* Other Overrides on Bootstrap Navbar SCSS */
+  // .nav-link.section-link {
+  //     &:hover {
+  //         color: _palette(fg) !important;
+  //     }
+  // }
 
-    /* Other Overrides on Bootstrap Navbar SCSS */
-    // .nav-link.section-link {
-    //     &:hover {
-    //         color: _palette(fg) !important;
-    //     }
-    // }
+  .navbar-toggler,
+  .navbar-toggler-icon {
+    border: none;
+  }
 
-    .navbar-toggler, .navbar-toggler-icon {
-        border: none;
-    }
-    
-    .navbar-toggler:focus,
-    .navbar-toggler:active,
-    .navbar-toggler-icon:focus {
-        outline: none;
-        box-shadow: none;
-    }
-    
-    // .navbar-toggler:hover,
-    // .navbar-toggler-icon:hover {
-    //     transition: .6s;
-    //     transform: rotate(90deg);
-    // }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  // .navbar-toggler:hover,
+  // .navbar-toggler-icon:hover {
+  //     transition: .6s;
+  //     transform: rotate(90deg);
+  // }
 }

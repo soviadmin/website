@@ -19,24 +19,30 @@ $size: (
 );
 // Font.
 $font: (
-    family:				('Source Sans Pro', sans-serif),
-    family-fixed:		('Courier New', monospace),
-    emphasis:           ('Bebas Neue'),
-    weight:				300,
-    weight-bold:		600,
-    letter-spacing:		0.025em,
-    letter-spacing-alt:	0.25em
+    family:				    ('Quicksand', sans-serif),
+    w-light:				300,
+    w-bold:		            600,
+    w-xbold:		        700,
+    letter-spacing:		    0.025em,
+    letter-spacing-alt:	    0.25em,
 );
 
 // Palette.
 $palette: (
-    white:                  #fff,
-    bg-footer:              rgb(52, 49, 65),
-    bg-secondary:           #f7f7fc,
-    bg-dark:                rgb(79, 74, 104),
-    font-light:             #737491,
+    //Base
+    fg:                     #fff,
     blk:                    #000,
+    gr:                     #999,
 
+    //Primary
+    p-dark:                   #222831,
+    p-med:                    #393E46,
+    p-med2:                   rgb(87, 97, 110), 
+    p-blue:                   #1BADB4,
+    p-blue2:                  rgb(34, 155, 161),
+    p-light:                  #eee,
+    p-light2:                 #8d8ea1,
+    
 );
 
 
