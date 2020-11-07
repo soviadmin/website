@@ -4,7 +4,7 @@ import AboutIllustration from "../svg/illustration1.svg";
 
 export default function AboutSection(props) {
     return (
-        <div className="about-us">
+        <div className="about-sec">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-xs-12 header">
