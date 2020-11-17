@@ -1,10 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 import Link from "gatsby"
 import Helmet from "react-helmet"
 import { Tab, Row, Col, Nav } from "react-bootstrap"
 import Layout from "../components/layout"
+import { useLocation } from 'react-router-dom';
 
-const Service = () => (
+const Service = () => {
+  
+  const [param, setParam] = useState("");
+
+  // let location = useLocation();
+  // let path = location.pathname.toLocaleLowerCase();
+  // console.log(path);
+    function handleClick(e) {
+    // setLocation(true);
+    // console.log(location);
+  }
+  return (
   <Layout>
     <Helmet title="Service"></Helmet>
     <div className="service-page">
@@ -19,10 +31,10 @@ const Service = () => (
               <Col sm={4}>
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Service 1</Nav.Link>
+                    <Nav.Link eventKey="first" > Service 1</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Service 2</Nav.Link>
+                    <Nav.Link eventKey="second" onClick={handleClick}>Service 2</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="third">Service 3</Nav.Link>
@@ -60,6 +72,7 @@ const Service = () => (
       </div>
     </div>
   </Layout>
-)
+  );
+}
 
 export default Service

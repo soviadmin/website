@@ -5,16 +5,15 @@
 //   const imgContainer = useStaticQuery (
 //     graphql`
 //       query {
-          
+//         home01: file(relativePath: { eq: "svg/illustration1.svg" }) {
+//             childImageSharp {
+//               fluid(quality: 100) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//         }
 //       }
 //     `
 //   );
 //   return imgContainer;
-// }
-// pic01: file(relativePath: { eq: "baking/b_lcake1.jpg" }) {
-//   childImageSharp {
-//     fluid(quality: 100) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
 // }

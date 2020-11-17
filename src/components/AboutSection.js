@@ -1,8 +1,11 @@
 import React from 'react';
 import AboutIllustration from "../svg/illustration1.svg";
+import Img from "gatsby-image"
+import { useImage } from "../hooks/useImage"
 
-
-export default function AboutSection(props) {
+export default function AboutSection(props) {   
+    // const imgContainer = useImage();
+    
     return (
         <div className="about-sec">
             <div className="container">
@@ -18,6 +21,7 @@ export default function AboutSection(props) {
                         </p>
                     </div>
                     <div className="col-lg-6 col-xs-12">
+                        
                         <AboutIllustration className="illustration"/>
                     </div>
                 </div>

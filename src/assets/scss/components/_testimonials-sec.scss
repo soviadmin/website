@@ -4,7 +4,7 @@
 
   &.why-choose-us {
     background-color: _palette(p-blue4);
-    text-align: left;
+    text-align: center;
   }
 
   .heading-one,
@@ -27,5 +27,15 @@
 
   &.partners {
     background-color: _palette(p-blue);
+  }
+  .testi-icon {
+    width: 5rem;
+    height: 5rem;
+    }
+  @include breakpoint(small1) {
+    .heading-one,
+    .heading-two {
+        text-align: center;
+    }
   }
 }

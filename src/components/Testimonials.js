@@ -1,4 +1,8 @@
 import React from "react"
+import FastSVG from "../svg/fast.svg"
+import QualitySVG from "../svg/quality.svg"
+import ReliSVG from "../svg/reliability.svg"
+
 
 export default function Testimonials() {
   // const imgContainer = useImage();
@@ -9,6 +13,7 @@ export default function Testimonials() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-xs-12 pr-5 pl-5">
+              <FastSVG className="testi-icon"/>
               <h5>Fast execution</h5>
               <p>
                 Find aute irure dolor in reprehend in voluptate velit esse
@@ -16,6 +21,7 @@ export default function Testimonials() {
               </p>
             </div>
             <div className="col-lg-4 col-xs-12 pr-5 pl-5">
+              <ReliSVG className="testi-icon"/>
               <h5>Reliability</h5>
               <p>
                 Find aute irure dolor in reprehend in voluptate velit esse
@@ -23,6 +29,7 @@ export default function Testimonials() {
               </p>
             </div>
             <div className="col-lg-4 col-xs-12 pr-5 pl-5">
+              <QualitySVG className="testi-icon"/>
               <h5>Quality assurance</h5>
               <p>
                 Find aute irure dolor in reprehend in voluptate velit esse
