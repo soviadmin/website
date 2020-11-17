@@ -1,0 +1,33 @@
+
+.service-page {
+    background: #fff;
+
+    .header {
+        padding: 5% 4% 2% 8%;
+        background: _palette(p-blue5);
+        color: _palette(fg);
+    }
+
+    .title {
+        color: _palette(fg);
+    }
+
+    .intro {
+        padding: 5% 8% 4% 8%;
+    }
+
+    //Overriding Bootstrap Nav
+    .nav-link {
+        background: _palette(p-light3);
+        color: _palette(fg);
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+
+    }
+
+    .nav-link.active {
+        background: _palette(p-blue);
+    }
+
+}

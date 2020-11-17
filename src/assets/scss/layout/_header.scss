@@ -4,7 +4,7 @@
   // Custom Brand
   .brand {
     font-size: 1.5rem;
-    font-weight: _font(w-xbold);
+    font-weight: _font(w-bold);
 
     .logo {
       width: 50px;
@@ -32,7 +32,7 @@
   // Custom Nav Links
   .section-link {
     font-family: _font(family);
-    font-weight: _font(w-bold);
+    font-weight: _font(w-med);
     font-size: 1rem;
     color: _palette(p-med);
     margin: 0 1rem;
@@ -47,7 +47,7 @@
 
   .request-link {
     font-family: _font(family);
-    font-weight: _font(w-bold);
+    font-weight: _font(w-med);
     background-color: _palette(p-blue);
     color: _palette(fg);
     font-size: 1rem;

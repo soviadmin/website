@@ -1,24 +1,20 @@
-import React from 'react';
-import { useImage } from "../hooks/useImage";
+import React from "react"
+import { useImage } from "../hooks/useImage"
 
 export default function ContactSection() {
-    // const imgContainer = useImage();
-    return (
-        <div className="get-quote">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-7 col-xs-12">
-                        <h3>Get a free quote now</h3>
-                        <p className="mr-5 mt-4">
-                            Find aute irure dolor in reprehend in voluptate velit esse cillu
-                        </p>
-                    </div>
-                    <div className="col-lg-5 col-xs-12">
-                        
-                    </div>
-                </div>
-            </div>
-            {/* <button type="button" class="btn btn-primary mt-5">More about us</button> */}
-        </div>
-    )
+  // const imgContainer = useImage();
+  return (
+    <div className="get-quote">
+      <div className="container">
+        <h3 className="contact-heading">Contact Us</h3>
+        <p className="contact-para">
+          Find aute irure dolor in reprehend in voluptate velit esse cillu
+          voluptate velit esse cillu.
+        </p>
+        <a href="mailto:abc@example.com">
+          <button class="btn btn-primary email-btn">Request for Quote</button>
+        </a>
+      </div>
+    </div>
+  )
 }

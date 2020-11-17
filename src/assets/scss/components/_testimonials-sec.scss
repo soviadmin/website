@@ -1,20 +1,31 @@
 .testimonials {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: _palette(p-light2);
-    &.why-choose-us {
-        background-color: _palette(p-blue3);
-        h2 {
-            margin-bottom: 3rem;
-            color: _palette(p-med);
-        }
-    }
-    &.partners {
-        background-color: #fff;
-        h2 {
-            margin-bottom: 3rem;
-            color: _palette(p-med);
-        }
-    }
-    
+  padding: 3rem 6rem;
+  background-color: _palette(p-light2);
+
+  &.why-choose-us {
+    background-color: _palette(p-blue4);
+    text-align: left;
+  }
+
+  .heading-one,
+  .heading-two {
+    margin-bottom: 3rem;
+    color: _palette(fg);
+    text-transform: capitalize;
+    font-weight: _font(w-bold);
+  }
+
+  .heading-one {
+    text-align: left;
+    color: _palette(p-med);
+  }
+
+  .heading-two {
+    text-align: right;
+    color: _palette(p-dark);
+  }
+
+  &.partners {
+    background-color: _palette(p-blue);
+  }
 }

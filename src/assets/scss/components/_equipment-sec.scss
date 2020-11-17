@@ -1,11 +1,14 @@
 .feature-eq {
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 6rem;
   background-color: _palette(p-light2);
 
-  h2 {
+  .heading {
     margin-bottom: 3rem;
     color: _palette(fg);
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: _font(w-bold);
   }
 
   .row {
@@ -19,16 +22,16 @@
 
   .view-btn {
     margin: none;
-    background: _palette(p-blue);
-    box-shadow: 0 3px 11px _palette(p-med3);
+    background: _palette(p-dark);
+    box-shadow: 0 3px 11px #757688;
     border: none;
     border-radius: 3rem;
     padding: 0.5rem 2rem;
     font-size: 1.2rem;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 
     &:hover {
-        background: _palette(p-blue2);
+      background: _palette(blk);
     }
   }
 }

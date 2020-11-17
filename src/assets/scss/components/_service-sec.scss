@@ -1,23 +1,27 @@
 .our-services {
+  text-align: center;
+  padding: 3rem 6rem;
+  background-color: _palette(fg);
+
+  .heading {
+    margin-bottom: 3rem;
+    color: _palette(p-med);
+    text-align: right;
+    text-transform: capitalize;
+    font-weight: _font(w-bold);
+  }
+
+  .card {
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
     text-align: center;
-    padding: 4rem 0;
-    background-color: _palette(fg);
+    box-shadow: -0.0625rem 0 0.625rem 0 rgba(0, 0, 0, 0.07),
+      0.3125rem 1.25rem 2.5rem 0 rgba(62, 52, 77, 0.068) !important;
 
-    h2 {
-        margin-bottom: 3rem;
-        color: _palette(p-med);
+    &:hover {
+      opacity: 0.7;
+      transition: 0.2s ease-out;
     }
-
-    .card {
-        border-radius: 1rem;
-        border: none;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: -0.0625rem 0 0.625rem 0 rgba(0,0,0,0.07),0.3125rem 1.25rem 2.5rem 0 rgba(62, 52, 77, 0.068) !important;
-        
-        &:hover {
-            opacity: 0.7;
-            transition: .2s ease-out;
-        }
-    }
+  }
 }

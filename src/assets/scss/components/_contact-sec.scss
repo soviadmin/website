@@ -1,9 +1,47 @@
 .get-quote {
-    background-color: _palette(bg-dark);
-    padding: 4rem 0;
-    color: rgba(255, 255, 255, 0.705);
-    h3 {
-        text-transform: none;
-        color: white;
+  background-color: _palette(p-med);
+  padding: 4rem 0;
+  color: rgba(255, 255, 255, 0.705);
+
+  .container {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: #454b54;
+    box-shadow: 0 2px 5px _palette(p-dark);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .contact-heading {
+    text-transform: none;
+    color: white;
+    margin: 1rem;
+  }
+
+  .contact-para {
+    margin: 0 0 3rem;
+  }
+
+  .email-btn {
+    margin: none;
+    background: transparent;
+    box-shadow: 0 3px 11px #3e3e3e;
+    border: solid 2px _palette(p-blue);
+    color: _palette(p-blue);
+    border-radius: 3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background: _palette(p-blue);
+      color: _palette(fg);
     }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }

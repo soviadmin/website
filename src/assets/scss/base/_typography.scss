@@ -7,8 +7,10 @@
 
 /* Type */
 	a {
-		// border-bottom: dotted 1px;
+		font-family: _font(family);
 		text-decoration: none;
+		font-size: 1.2rem;
+
 		&:hover {
 			border-bottom-color: transparent;
 		}
@@ -21,7 +23,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: _font(family);
-		font-weight: _font(w-bold);
+		font-weight: _font(w-med);
 		color: _palette(p-dark);
 		letter-spacing: 0.5px;
 		text-transform: capitalize;
