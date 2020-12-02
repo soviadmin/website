@@ -1,0 +1,23 @@
+.social-icon {
+    border-radius: 6rem;
+    background-color: transparent;
+    border: 1px solid _palette(fg);
+    width: 2.8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    padding: .5rem .5rem;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: .6rem;
+    &:hover {
+        background-color: _palette(fg);
+        color: _palette(p-med3);
+    }  
+}
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  

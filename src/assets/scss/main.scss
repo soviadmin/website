@@ -7,7 +7,7 @@
 
 @include skel-breakpoints((
 
-		xlarge: '(min-width: 1200px)', // Extra large devices (large desktops) - no upper bound on width
+		xlarge: '(max-width: 1200px)', // Extra large devices (large desktops) - no upper bound on width
 		large: '(max-width: 1199.98px)', // Large devices (desktops, less than 1200px)
 		medium: '(max-width: 991.98px)', // Medium devices (tablets, less than 992px)
 		small1: '(max-width: 768.5px)', // Small devices (landscape phones, less than 768px)
@@ -18,9 +18,9 @@
         // large: '(max-width: 1200px)',
         // medium: '(max-width: 992px)',
         // small: '(max-width: 768px)',
-        // xmall: '(max-width: 540px)',
-        // xxmall: '(max-width: 480px)',
-		// xxxmall: '(max-width: 360px)',
+        xsmall1: '(max-width: 540px)',
+        xsmall2: '(max-width: 480px)',
+		xsmall3: '(max-width: 360px)',
     ));
 
 // Base.
@@ -36,6 +36,9 @@
 	@import 'components/service-sec';
 	@import 'components/contact-sec';
 	@import 'components/testimonials-sec';
+	@import 'components/button';
+	@import 'components/icon';
+	@import 'components/map';
 
 
 // Layout.

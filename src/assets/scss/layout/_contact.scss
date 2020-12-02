@@ -1,0 +1,79 @@
+
+.contact-page {
+    background: #fff;
+
+    .header {
+        padding: 5% 4% 2% 8%;
+        background: _palette(p-blue5);
+        color: _palette(fg);
+    }
+
+    .title {
+        color: _palette(fg);
+    }
+    .contact-inner-section {
+        margin-top: 25rem;
+        background-color: _palette(fg);
+        padding: 4rem 0;
+        .heading {
+            margin-bottom: 3rem;
+            color: _palette(p-med);
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: _font(w-bold);
+        }
+        h5 {
+            font-weight: 900;
+        }
+        hr {
+            background-color: _palette(p-blue5);
+            height: 0.1rem;
+        }
+        .ct-icon {
+            font-size: 1.3rem;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+            font-family: _font(family);
+            border-radius: .9rem;
+            border: 1px solid #b1b1b1;
+            padding: .7rem;
+            outline: none;
+        }
+        input[type="button"] {
+            width: fit-content;
+            margin-top: 1rem;
+        }
+    }
+    @include breakpoint(xlarge) {
+        .contact-inner-section {
+            margin-top: 23rem;
+        }
+    }
+    @include breakpoint(medium) {
+        .contact-inner-section {
+            margin-top: 22rem;
+        }
+    }
+    @include breakpoint(small1) {//768
+        .contact-inner-section {
+            margin-top: 25rem;
+        }
+    }
+    @include breakpoint(xsmall) {//575.98px
+        .contact-inner-section {
+            margin-top: 20rem;
+        }
+    }
+    @include breakpoint(xsmall2) {//480
+        .contact-inner-section {
+            margin-top: 23rem;
+        }
+    }
+    @include breakpoint(xsmall3) {//360
+        .contact-inner-section {
+            margin-top: 20rem;
+        }
+    }
+}

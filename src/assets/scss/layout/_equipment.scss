@@ -1,0 +1,38 @@
+
+.equipment-page {
+    background: #fff;
+
+    .header {
+        padding: 5% 4% 2% 8%;
+        background: _palette(p-blue5);
+        color: _palette(fg);
+    }
+
+    .title {
+        color: _palette(fg);
+    }
+
+    .equipment-tabs {
+        margin: 3rem;
+    }
+    //Overidding Bootstrap Nav, Tab
+    .nav-link {
+        background: _palette(p-light3);
+        color: _palette(fg);
+        border-radius: 1rem;
+        margin-right: 1rem;
+        padding: .8rem 1rem;
+    }
+
+    .nav-link.active {
+        transition: .4s ease-out;
+        background: _palette(p-blue);
+    }
+    .tab-content {
+        padding: 3rem 5rem 5rem;
+        h2 {
+            text-transform: capitalize;
+        }
+    }
+
+}

@@ -1,0 +1,28 @@
+.my-btn {
+    margin: none;
+    border-radius: 3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in;
+
+    &.filled-btn {
+        border:none;
+        color: _palette(fg);
+        background: _palette(p-blue);
+        &:hover {
+          background: _palette(p-blue2);
+        }
+      }
+      &.outlined-btn {
+        border: solid 2px _palette(p-blue);
+        background: transparent;
+        color: _palette(p-blue);
+        // box-shadow: 0 3px 11px #3e3e3e;
+    
+        &:hover {
+          background: _palette(p-blue);
+          color: _palette(fg);
+          border:none;
+        }
+    }
+}

@@ -1,11 +1,11 @@
 .feature-eq {
   text-align: center;
   padding: 3rem 6rem;
-  background-color: _palette(p-light2);
+  background-color: _palette(p-blue3);
 
   .heading {
     margin-bottom: 3rem;
-    color: _palette(fg);
+    color: _palette(p-med);
     text-align: left;
     text-transform: capitalize;
     font-weight: _font(w-bold);
@@ -19,24 +19,24 @@
     width: 8rem;
     text-align: center;
   }
-
-  .view-btn {
-    margin: none;
-    background: _palette(p-dark);
-    box-shadow: 0 3px 11px #757688;
-    border: none;
-    border-radius: 3rem;
-    padding: 0.5rem 2rem;
-    font-size: 1.2rem;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      background: _palette(blk);
+                
+  //Overriding Bootstrap carousel indicator           
+  .carousel-indicators {
+    li {
+      width: .6rem;
+      height: .6rem;
+      border-top: none;
+      border-bottom: none;
+      border-radius: 100rem;
+      background-color: _palette(p-blue2);
+      margin-bottom: 1rem;
     }
   }
+  
   @include breakpoint(small1) {
     .heading {
         text-align: center;
     }
   }
 }
+

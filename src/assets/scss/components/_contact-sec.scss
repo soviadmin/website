@@ -1,5 +1,5 @@
 .get-quote {
-  background-color: _palette(p-med);
+  background-color: _palette(p-blue);
   padding: 4rem 0;
   color: rgba(255, 255, 255, 0.705);
 
@@ -8,7 +8,7 @@
     margin: 0 auto;
     width: 50%;
     background-color: #454b54;
-    box-shadow: 0 2px 5px _palette(p-dark);
+    box-shadow: 0 3px 21px #608282;
     padding: 2rem;
     border-radius: 5px;
     text-align: center;
@@ -24,24 +24,8 @@
     margin: 0 0 3rem;
   }
 
-  .email-btn {
-    margin: none;
-    background: transparent;
-    box-shadow: 0 3px 11px #3e3e3e;
-    border: solid 2px _palette(p-blue);
-    color: _palette(p-blue);
-    border-radius: 3rem;
-    padding: 0.5rem 2rem;
-    font-size: 1.2rem;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      background: _palette(p-blue);
-      color: _palette(fg);
-    }
-
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
   }
+  
 }

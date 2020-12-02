@@ -3,7 +3,8 @@ import Link from "gatsby"
 import Helmet from "react-helmet"
 import { Tab, Row, Col, Nav } from "react-bootstrap"
 import Layout from "../components/layout"
-import { useLocation } from 'react-router-dom';
+import { navigate } from '@reach/router';
+// import { Link, NavLink } from 'react-router-dom'
 
 const Service = () => {
   
@@ -11,11 +12,18 @@ const Service = () => {
 
   // let location = useLocation();
   // let path = location.pathname.toLocaleLowerCase();
-  // console.log(path);
-    function handleClick(e) {
+  let location = window.location.href;
+  console.log(location);
+  // console.log(location.a);
+  function handleClick(e) {
+      navigate('?location=service_02');
+  }
+      // var newurl = window.location.href + '?param=hi';
+      // window.history.pushState({path:newurl},'',newurl);
+  
     // setLocation(true);
     // console.log(location);
-  }
+  
   return (
   <Layout>
     <Helmet title="Service"></Helmet>
@@ -31,38 +39,38 @@ const Service = () => {
               <Col sm={4}>
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item>
-                    <Nav.Link eventKey="first" > Service 1</Nav.Link>
+                    <Nav.Link eventKey="first" href="/service#target=freight">Freight</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second" onClick={handleClick}>Service 2</Nav.Link>
+                    <Nav.Link eventKey="second" href="/service#target=oog-solution">OOG Solution</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Service 3</Nav.Link>
+                    <Nav.Link eventKey="third" href="/service#target=custom-clearance">Custom Clearance</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="fourth">Service 4</Nav.Link>
+                    <Nav.Link eventKey="fourth" href="/service#target=trucking">Trucking</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="fifth">Service 5</Nav.Link>
+                    <Nav.Link eventKey="fifth" href="/service#target=express">Express</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
               <Col sm={8}>
                 <Tab.Content>
                   <Tab.Pane id="tab1" eventKey="first">
-                    <h1> Tab oneeee</h1>
+                    <h1>Freight</h1>
                   </Tab.Pane>
                   <Tab.Pane id="tab2" eventKey="second">
-                    <h1> Tab twoooo</h1>
+                    <h1>OOG Solution</h1>
                   </Tab.Pane>
                   <Tab.Pane id="tab3" eventKey="third">
-                    <h1> Tab threeee</h1>
+                    <h1>Custom Clearance</h1>
                   </Tab.Pane>
                   <Tab.Pane id="tab4" eventKey="fourth">
-                    <h1> Tab fourrrrr</h1>
+                    <h1>Trucking</h1>
                   </Tab.Pane>
                   <Tab.Pane path="/tab5" eventKey="fifth">
-                    <h1> Tab fiveeee</h1>
+                    <h1>Express</h1>
                   </Tab.Pane>
                 </Tab.Content>
               </Col>

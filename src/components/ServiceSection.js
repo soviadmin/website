@@ -1,6 +1,13 @@
 import React from "react"
+import Link from 'gatsby'
+import { navigate } from '@reach/router';
 
 export default function ServiceSection(props) {
+  
+  function handleClick(e) {
+    navigate('/service/location=02');
+  }
+
   return (
     <div className="our-services">
       <h1 className="heading">Our Services.</h1>
@@ -9,33 +16,31 @@ export default function ServiceSection(props) {
           <div className="col-lg-4 col-xs-12">
             <div class="card mb-5">
               <div class="card-body">
-                <h5 class="card-title">Service 1</h5>
-                <a href="/service" class="card-text">
-                  Find aute irure dolor in reprehend in voluptate velit esse
-                  cillum.
-                </a>
+                <h5 class="card-title">Freight</h5>
+                <p className="card-text">
+                  Ocean & Air
+                </p>
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-xs-12">
-            <div class="card mb-5">
-              <div class="card-body">
-                <h5 class="card-title">Service 3</h5>
-                <a href="/service" class="card-text">
-                  Find aute irure dolor in reprehend in voluptate velit esse
-                  cillum.
-                </a>
+              <div class="card mb-5">
+                <div class="card-body">
+                  <h5 class="card-title">OOG Solution</h5>
+                  <p className="card-text">
+                    FR/OT/Buck
+                  </p>
+                </div>
               </div>
-            </div>
           </div>
           <div className="col-lg-4 col-xs-12">
             <div class="card mb-5">
               <div class="card-body">
-                <h5 class="card-title">Service 4</h5>
-                <a href="/service" class="card-text">
+                <h5 class="card-title">Custom Clearance</h5>
+                <p className="card-text">
                   Find aute irure dolor in reprehend in voluptate velit esse
                   cillum.
-                </a>
+                </p>
               </div>
             </div>
           </div>
@@ -45,28 +50,32 @@ export default function ServiceSection(props) {
           <div className="col-lg-4 col-xs-12">
             <div class="card mb-5">
               <div class="card-body">
-                <h5 class="card-title">Service 4</h5>
-                <a href="/service" class="card-text">
+                <h5 class="card-title">Trucking</h5>
+                <p className="card-text">
                   Find aute irure dolor in reprehend in voluptate velit esse
                   cillum.
-                </a>
+                </p>
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-xs-12">
             <div class="card mb-5">
               <div class="card-body">
-                <h5 class="card-title">Service 5</h5>
-                <a href="/service" class="card-text">
+                <h5 class="card-title">Express</h5>
+                <p className="card-text">
                   Find aute irure dolor in reprehend in voluptate velit esse
                   cillum.
-                </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <button type="button" class="btn btn-primary mt-5">More about us</button> */}
+      <a href="/service">
+        <button type="button" class="btn btn-primary my-btn filled-btn mt-3 mb-3">
+          See all services  
+        </button>
+      </a>
     </div>
   )
 }

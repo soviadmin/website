@@ -2,7 +2,7 @@ footer {
   .container {
     background-color: _palette(bg-footer);
     color: white;
-    padding: 3rem 5rem 1rem;
+    padding: 3rem 1rem 1rem;
   }
 
   a {
@@ -47,5 +47,13 @@ footer {
   .copyright {
     color: rgba(243, 233, 255, 0.658);
     font-size: 1rem;
+    padding: 2rem 0;
+  }
+  
+  @include breakpoint(small2) {
+    .copyright {
+      font-size: .9rem;
+      padding: 2rem 5rem;
+    }
   }
 }

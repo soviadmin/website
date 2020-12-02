@@ -3,8 +3,11 @@
   background-color: _palette(p-light2);
 
   &.why-choose-us {
-    background-color: _palette(p-blue4);
+    background-color: _palette(p-med);
     text-align: center;
+    p, h5 {
+      color: white !important;
+    }
   }
 
   .heading-one,
@@ -17,7 +20,7 @@
 
   .heading-one {
     text-align: left;
-    color: _palette(p-med);
+    color: _palette(fg);
   }
 
   .heading-two {
@@ -26,11 +29,12 @@
   }
 
   &.partners {
-    background-color: _palette(p-blue);
+    background-color: _palette(fg);
   }
   .testi-icon {
     width: 5rem;
     height: 5rem;
+    margin-bottom: 1rem;
     }
   @include breakpoint(small1) {
     .heading-one,
