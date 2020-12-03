@@ -10,6 +10,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import emailjs from 'emailjs-com'
 import MyMap from '../map/MyMap'
+import {
+    Alert,
+    Button
+} from 'react-bootstrap'
 
 const Contact = () => {
     const [state, setState] = useState({
@@ -19,6 +23,10 @@ const Contact = () => {
         clientMobile: '',
         clientMessage: ''
     });
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(false);
+
+
     function handleChange(event) {
         event.preventDefault();
         const { name, value } = event.target;
@@ -26,8 +34,9 @@ const Contact = () => {
     }
     
     function handleSubmit(event) {
+        console.log("hit submit");
+
         event.preventDefault();
-        
         const data = {
             subject: state.clientSubject,
             from_name: state.clientName, 
@@ -43,8 +52,13 @@ const Contact = () => {
             process.env.GATSBY_EMAILJS_USER_ID
           ).then(res => {
             console.log('Email successfully sent!');
+            setShowSuccess(true);
+            setState()
         })// Handle errors
-        .catch(err => console.error('Unable to send email due to error:', err));
+        .catch(err => {
+            console.error('Unable to send email due to error:', err);
+            setShowError(true);
+        });
         
         event.target.reset();
     }
@@ -132,7 +146,13 @@ const Contact = () => {
                                         style={{width: '100%', height: '150px'}}
                                     />
                                 </div>
-                                <input type="submit" value="Submit" type="button" className="btn btn-primary my-btn filled-btn"/>
+                                <Alert show={showSuccess} variant="success" onClose={() => setShowSuccess(false)} dismissible>
+                                    <p className="mb-0">Your email has been sent!</p>
+                                </Alert>
+                                <Alert show={showError} variant="danger" onClose={() => setShowError(false)} dismissible>
+                                    <p className="mb-0">Failed to send email. Please try again.</p>
+                                </Alert>
+                                <input type="submit" value="Submit" className="btn btn-primary my-btn filled-btn"/>
                             </form>
                         </div>
                         
