@@ -8,7 +8,6 @@ import ServiceSection from '../components/ServiceSection'
 import Testimonials from '../components/Testimonials'
 import ContactSection from '../components/ContactSection'
 
-
 class HomeIndex extends React.Component {
     render() {
         return (

@@ -14,12 +14,13 @@
   .row {
     margin-bottom: 5rem;
   }
-
-  .feature-pic {
-    width: 8rem;
-    text-align: center;
-  }
-                
+  .eq-image {
+    padding: 0rem 3rem;
+    // text-align: center;
+  } 
+  .eq-name {
+    font-weight: 600;
+  }          
   //Overriding Bootstrap carousel indicator           
   .carousel-indicators {
     li {
@@ -33,10 +34,17 @@
     }
   }
   
+  @include breakpoint(medium) {
+    padding: 3rem 2rem;
+    .heading {
+      font-size: 2rem;
+    }
+  }
   @include breakpoint(small1) {
     .heading {
         text-align: center;
     }
+    padding: 3rem 1rem;
   }
 }
 

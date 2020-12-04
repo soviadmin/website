@@ -3,18 +3,23 @@
     background: #fff;
 
     .header {
-        padding: 5% 4% 2% 8%;
-        background: _palette(p-blue5);
+        padding: 4% 4% 2% 8%;
+        background: _palette(p-blue);
         color: _palette(fg);
     }
-
     .title {
         color: _palette(fg);
     }
-
     .equipment-tabs {
         margin: 3rem;
     }
+    .eq-image {
+        padding: 0rem 3rem;
+    } 
+    .eq-name {
+        font-weight: 600;
+        text-align: center;
+    }  
     //Overidding Bootstrap Nav, Tab
     .nav-link {
         background: _palette(p-light3);

@@ -3,8 +3,8 @@
     background: #fff;
 
     .header {
-        padding: 5% 4% 2% 8%;
-        background: _palette(p-blue5);
+        padding: 4% 4% 2% 8%;
+        background: _palette(p-blue);
         color: _palette(fg);
     }
 
@@ -46,6 +46,12 @@
             margin-top: 1rem;
         }
     }
+    .send-email-note {
+        font-size: 1rem;
+        font-style: italic;
+    }
+    
+
     @include breakpoint(xlarge) {
         .contact-inner-section {
             margin-top: 23rem;

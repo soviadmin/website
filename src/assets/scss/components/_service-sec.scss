@@ -24,4 +24,23 @@
       transition: 0.2s ease-out;
     }
   }
+  .service-row2 {
+    margin: 0 10rem;
+  }
+  @include breakpoint(large) {
+    .service-row2 {
+      margin: 0 9rem;
+    }
+  }
+  @include breakpoint(medium) {
+    .service-row2 {
+      margin: 0 0rem;
+    }
+    .heading {
+      font-size: 2rem;
+    }
+  }
+  @include breakpoint(xsmall) {//575
+    padding: 3rem 2rem;
+  }
 }

@@ -9,13 +9,13 @@ export default function Header() {
         <header id="header">
             <Navbar fixed="top" expand="lg" collapseOnSelect="true" bg="light">
                 <Navbar.Brand className="brand">
-                <img
-                src={logo}
-                width="140"
-                height="60"
-                className="d-inline-block align-top"
-                alt="SOVI Logistics logo"
-                />
+                    <img
+                    src={logo}
+                    width="140"
+                    height="60"
+                    className="d-inline-block align-top"
+                    alt="SOVI Logistics logo"
+                    />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburger" />
                 <Navbar.Collapse id="basic-navbar-nav">

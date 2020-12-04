@@ -4,3 +4,18 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 // Follow this link for more info on BS custom theming https://getbootstrap.com/docs/4.0/getting-started/theming/
+//Overidding Bootstrap breadcrumbs
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    padding: 0;
+    .breadcrumb-item, a {
+        font-family: _font(family);
+        font-size: 1rem;
+        color: _palette(fg);
+        
+        &.active {
+            color: _palette(p-blue6);
+        }
+    }
+}
