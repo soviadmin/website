@@ -9,7 +9,6 @@ import banner3 from '../assets/images/banner3.jpeg';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function Banner() {
-    // const imgContainer = useImage();
     return (
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <Carousel id="banner">

@@ -27,11 +27,11 @@ const About = () => {
             });
         }
     }, [isVisible]);
+    
     return (
     <Layout>
         <Helmet title="About"></Helmet>
         <div className="about-page">
-            
             <header className="header">
                 <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
                     <nav aria-label="breadcrumb">
@@ -65,7 +65,7 @@ const About = () => {
                 </div>
                     <div className="stats">
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-                            <h2 className="stats-heading">Over 20 customers have used SOVI service</h2>
+                            <h2 className="stats-heading">Over 1,500 customers have used SOVI services</h2>
                         </ScrollAnimation>
                         <div className="row" ref={ref}>
                             <div className="col-sm-4">
