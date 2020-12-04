@@ -57,42 +57,29 @@ export function AllEquipment() {
         }
         return rand;
     }
-    const allItems = [
+    const allItems = 
         [
             [imgContainer.equipment40_01.childImageSharp.fluid, "40' Open Top Container"],
             [imgContainer.equipment40_02.childImageSharp.fluid, "40' High Cube Flat Rack"],
             [imgContainer.equipment40_03.childImageSharp.fluid, "40' High Cube Super Rack"],
-        ],
-        [
             [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
             [imgContainer.equipment40_05.childImageSharp.fluid, "40' Flat Rack with 47 MT Pay Load"],
             [imgContainer.equipment40_06.childImageSharp.fluid, "40' Flat Rack with Collapsible Ends"],
-        ],
-        [
             [imgContainer.equipment40_07.childImageSharp.fluid, "40' High Cube Hard Top Open Top"],
             [imgContainer.equipment20_01.childImageSharp.fluid, "20' Open Top Container"],
             [imgContainer.equipment20_02.childImageSharp.fluid, "20' High Cube Open Top"],
-        ],
-        [
             [imgContainer.equipment20_03.childImageSharp.fluid, "20' Flat Rack with 31 MT Pay Load"],
             [imgContainer.equipment20_04.childImageSharp.fluid, "20' High Cube Hard Top"]
-            
-        ]
-    ];
+        ];
     return (
-        <div className="container">
-            {allItems.map((row)=> { 
+        <div className="row">
+            {allItems.map((groupItem)=> {
             return (
-                <div className="row">
-                    {row.map((rowItem) => {
-                        return (
-                          <div className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item" key={randomKey()}>
-                            <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-                                <Img key={randomKey()} fluid={rowItem[0]} />
-                                <p className="eq-name mb-5">{rowItem[1]}</p>
-                            </ScrollAnimation>
-                          </div>
-                        )})}
+                <div className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item" key={randomKey()}>
+                    <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                        <Img key={randomKey()} fluid={groupItem[0]} />
+                        <p className="eq-name mb-5">{groupItem[1]}</p>
+                    </ScrollAnimation>
                 </div>
             )})}
         </div>
@@ -111,30 +98,22 @@ export function Special() {
         }
         return rand;
     }
-    const specialItems = [
-        [
-            [imgContainer.equipment40_01.childImageSharp.fluid, "40' Open Top Container"],
-            [imgContainer.equipment20_01.childImageSharp.fluid, "20' Open Top Container"],
-            [imgContainer.equipment40_06.childImageSharp.fluid, "40' Flat Rack with Collapsible Ends"],
-        ],
-        [
-            [imgContainer.equipment20_02.childImageSharp.fluid, "20' High Cube Open Top"],
-        ],
+    const specialItems = 
+    [
+        [imgContainer.equipment40_01.childImageSharp.fluid, "40' Open Top Container"],
+        [imgContainer.equipment20_01.childImageSharp.fluid, "20' Open Top Container"],
+        [imgContainer.equipment40_06.childImageSharp.fluid, "40' Flat Rack with Collapsible Ends"],
+        [imgContainer.equipment20_02.childImageSharp.fluid, "20' High Cube Open Top"],
     ];
     return (
-        <div className="container">
-            {specialItems.map((row)=> { 
+        <div className="row">
+            {specialItems.map((groupItem)=> {
             return (
-                <div className="row">
-                    {row.map((rowItem) => {
-                        return (
-                          <div className="col-xl-4 col-lg-6 col-sm-12 eq-image" key={randomKey()}>
-                            <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-                                <Img key={randomKey()} fluid={rowItem[0]} />
-                                <p className="eq-name mb-5">{rowItem[1]}</p>
-                            </ScrollAnimation>
-                          </div>
-                        )})}
+                <div className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item" key={randomKey()}>
+                    <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                        <Img key={randomKey()} fluid={groupItem[0]} />
+                        <p className="eq-name mb-5">{groupItem[1]}</p>
+                    </ScrollAnimation>
                 </div>
             )})}
         </div>
@@ -155,34 +134,23 @@ export function SuperSpecial() {
     }
     const superSpecialItems = 
     [
-        [
-          [imgContainer.equipment40_02.childImageSharp.fluid, "40' High Cube Flat Rack"],
-          [imgContainer.equipment40_07.childImageSharp.fluid, "40' High Cube Hard Top Open Top"],
-          [imgContainer.equipment20_03.childImageSharp.fluid, "20' Flat Rack with 31 MT Pay Load"]
-        ],
-        [
-          [imgContainer.equipment40_05.childImageSharp.fluid, "40' Flat Rack with 47 MT Pay Load"],
-          [imgContainer.equipment40_03.childImageSharp.fluid, "40' High Cube Super Rack"],
-          [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"]
-        ],
-        [
-          [imgContainer.equipment20_04.childImageSharp.fluid, "20' High Cube Hard Top"]
-        ],
+        [imgContainer.equipment40_02.childImageSharp.fluid, "40' High Cube Flat Rack"],
+        [imgContainer.equipment40_07.childImageSharp.fluid, "40' High Cube Hard Top Open Top"],
+        [imgContainer.equipment20_03.childImageSharp.fluid, "20' Flat Rack with 31 MT Pay Load"],
+        [imgContainer.equipment40_05.childImageSharp.fluid, "40' Flat Rack with 47 MT Pay Load"],
+        [imgContainer.equipment40_03.childImageSharp.fluid, "40' High Cube Super Rack"],
+        [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
+        [imgContainer.equipment20_04.childImageSharp.fluid, "20' High Cube Hard Top"]
     ];
     return (
-        <div className="container">
-            {superSpecialItems.map((row)=> { 
+        <div className="row">
+            {superSpecialItems.map((groupItem)=> {
             return (
-                <div className="row">
-                    {row.map((rowItem) => {
-                        return (
-                          <div className="col-xl-4 col-lg-6 col-sm-12 eq-image" key={randomKey()}>
-                                <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-                                    <Img key={randomKey()} fluid={rowItem[0]} />
-                                    <p className="eq-name mb-5">{rowItem[1]}</p>
-                                </ScrollAnimation>
-                          </div>
-                        )})}
+                <div className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item" key={randomKey()}>
+                    <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                        <Img key={randomKey()} fluid={groupItem[0]} />
+                        <p className="eq-name mb-5">{groupItem[1]}</p>
+                    </ScrollAnimation>
                 </div>
             )})}
         </div>
