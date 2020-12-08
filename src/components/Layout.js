@@ -1,48 +1,40 @@
-import React from 'react'
-import '../assets/scss/main.scss'
-import Header from './Header'
-import Footer from './Footer'
+import React, { Component } from "react"
+import "../assets/scss/main.scss"
+import Header from "./Header"
+import Footer from "./Footer"
 
-class Layout extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isMenuVisible: false,
-            loading: 'is-loading'
-        }
-        // this.handleToggleMenu = this.handleToggleMenu.bind(this)
+class Layout extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      language: "en",
     }
+    this.handleSetLanguage = this.handleSetLanguage.bind(this)
+  }
 
-    // componentDidMount () {
-    //     this.timeoutId = setTimeout(() => {
-    //         this.setState({loading: ''});
-    //     }, 100);
-    // }
+  handleSetLanguage(lang) {
+    this.setState(state => ({
+      language: lang,
+    }))
+  }
 
-    // componentWillUnmount () {
-    //     if (this.timeoutId) {
-    //         clearTimeout(this.timeoutId);
-    //     }
-    // }
+  render() {
+    const childrenWithProps = React.Children.map(this.props.children, child =>
+      React.cloneElement(child, {
+        language: this.state.language,
+      })
+    )
 
-    // handleToggleMenu() {
-    //     this.setState({
-    //         isMenuVisible: !this.state.isMenuVisible
-    //     })
-    // }
-
-    render() {
-        const { children } = this.props
-        return (
-            <div>
-                {/* <div id="wrapper"> */}
-                    <Header />
-                    {children}
-                    <Footer />
-                {/* </div> */}
-            </div>
-        )
-    }
+    return (
+      <div>
+        {/* <div id="wrapper"> */}
+        <Header toggleLanguage={this.handleSetLanguage} />
+        {childrenWithProps.map(childrenElement => childrenElement)}
+        <Footer language={this.state.language} />
+        {/* </div> */}
+      </div>
+    )
+  }
 }
 
 export default Layout

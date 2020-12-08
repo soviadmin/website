@@ -20,8 +20,9 @@
       0.3125rem 0.25rem 1.3rem rgba(184, 184, 184, 0.144) !important;
 
     &:hover {
-      opacity: 0.7;
+      color: _palette(fg);
       transition: 0.2s ease-out;
+      background: _palette(p-light3);
     }
   }
   .service-row2 {
@@ -40,7 +41,8 @@
       font-size: 2rem;
     }
   }
-  @include breakpoint(xsmall) {//575
+  @include breakpoint(xsmall) {
+    //575
     padding: 3rem 2rem;
   }
 }

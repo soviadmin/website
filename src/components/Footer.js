@@ -1,62 +1,177 @@
-import React, {useState, useEffect} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faMapMarkerAlt,
-    faEnvelope,
-    faPhoneAlt,
-    faClock,
-} from '@fortawesome/free-solid-svg-icons'
-import { 
-    faFacebookF,
-    faLinkedinIn
-} from "@fortawesome/free-brands-svg-icons"
+import React, { useState, useEffect } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faMapMarkerAlt,
+  faEnvelope,
+  faPhoneAlt,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons"
+import { faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 
-export default function Footer() {
-    return (
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h6 class="text-uppercase">SOVI Transport Service Corp</h6>
-                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: "90px"}}/>
-                        <p><FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3"/>279 Lý Tự Trọng St, 3rd Floor, Dist. 1, HCMC, Vietnam</p>
-                        <p><FontAwesomeIcon icon={faClock} className="mr-3"/>Mon-Fri: 09:00AM - 06:00PM</p>
-                        <p><FontAwesomeIcon icon={faEnvelope} className="mr-3"/> info@example.com</p>
-                        <p><FontAwesomeIcon icon={faPhoneAlt} className="mr-3"/>+84-310-931-337</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h6 class="text-uppercase">Services</h6>
-                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: "60px"}}/>
-                        <p><a href="/service">Freight</a></p>
-                        <p><a href="/service">OOG</a> </p>
-                        <p><a href="/service">Custom Clearance</a></p>
-                        <p><a href="/service">Trucking</a> </p>
-                        <p><a href="/service">Express</a> </p>
-                    </div>
-                    <div class="col-md-2">
-                        <h6 class="text-uppercase">Other Links</h6>
-                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: "60px"}}/>
-                        <p><a href="/">Home</a></p>
-                        <p><a href="/about">About</a> </p>
-                        <p><a href="/equipment">Equipment</a></p>
-                        <p><a href="/service">Service</a> </p>
-                        <p><a href="/contact">Contact</a> </p>
-                    </div>
-                    <div class="col-md-2">
-                        <h6 class="text-uppercase">Follow us</h6>
-                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: "60px"}}/>
-                        <ul>
-                            <li className="social-icon"><a href="https://www.facebook.com/sovi.tran.31" ><FontAwesomeIcon icon={faFacebookF}/></a></li>
-                            <li className="social-icon"><a href="#" ><FontAwesomeIcon icon={faLinkedinIn}/></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr className="footer-hr"/>
-            <div class="text-center">
-                <p className="copyright">Copyright © 2020 SOVI Transport Service Corp. All rights reserved.</p>
-            </div>
+export default function Footer(props) {
+  let content = {
+    EN: {
+      menu1: {
+        title: "SOVI Transport Service Corp",
+        item1: "279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        item2: "Mon-Fri: 09:00AM - 06:00PM",
+        item3: "info@example.com",
+        item4: "(+84) 310 931 337",
+      },
+      menu2: {
+        title: "Services",
+        item1: "Freight",
+        item2: "OOG Solutions",
+        item3: "Custom Clearance",
+        item4: "Trucking",
+        item5: "Express",
+      },
+      menu3: {
+        title: "Navigation",
+        item1: "Home",
+        item2: "About",
+        item3: "Equipment",
+        item4: "Service",
+        item5: "Contact",
+      },
+      menu4: {
+        title: "Follow us on",
+      },
+      copyright: "© SOVI Transport Service Corp 2020. All rights reserved.",
+    },
 
-        </footer>
-    )
+    VI: {
+      menu1: {
+        title: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
+        item1: "279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        item2: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
+        item3: "info@example.com",
+        item4: "(+84) 310 931 337",
+      },
+      menu2: {
+        title: "Dịch vụ",
+        item1: "Cước vận chuyển",
+        item2: "Giải pháp hàng quá khổ",
+        item3: "Khai báo hải quan",
+        item4: "Vận chuyển đường bộ",
+        item5: "Phát chuyển nhanh",
+      },
+      menu3: {
+        title: "Quay lại",
+        item1: "Trang chủ",
+        item2: "Về chúng tôi",
+        item3: "Thiết bị",
+        item4: "Dịch vụ",
+        item5: "Liên hệ",
+      },
+      menu4: {
+        title: "Theo dõi chúng tôi tại",
+      },
+      copyright:
+        "Bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
+    },
+  }
+
+  props.language === "en" ? (content = content.EN) : (content = content.VI)
+
+  return (
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 address">
+            <h6 class="text-uppercase">{content.menu1.title}</h6>
+            <hr
+              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style={{ width: "90px" }}
+            />
+            <p>
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3" />
+              {content.menu1.item1}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faClock} className="mr-3" />
+              {content.menu1.item2}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} className="mr-3" />
+              {content.menu1.item3}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faPhoneAlt} className="mr-3" />
+              {content.menu1.item4}
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-uppercase">{content.menu2.title}</h6>
+            <hr
+              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style={{ width: "60px" }}
+            />
+            <p>
+              <a href="/service">{content.menu2.item1}</a>
+            </p>
+            <p>
+              <a href="/service">{content.menu2.item2}</a>
+            </p>
+            <p>
+              <a href="/service">{content.menu2.item3}</a>
+            </p>
+            <p>
+              <a href="/service">{content.menu2.item4}</a>
+            </p>
+            <p>
+              <a href="/service">{content.menu2.item5}</a>
+            </p>
+          </div>
+          <div class="col-md-3 other">
+            <h6 class="text-uppercase">{content.menu3.title}</h6>
+            <hr
+              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style={{ width: "60px" }}
+            />
+            <p>
+              <a href="/">{content.menu3.item1}</a>
+            </p>
+            <p>
+              <a href="/about">{content.menu3.item2}</a>
+            </p>
+            <p>
+              <a href="/equipment">{content.menu3.item3}</a>
+            </p>
+            <p>
+              <a href="/service">{content.menu3.item4}</a>
+            </p>
+            <p>
+              <a href="/contact">{content.menu3.item5}</a>
+            </p>
+          </div>
+          <div className="row">
+            <div class="col-12">
+              <h6 class="text-uppercase">{content.menu4.title}</h6>
+              <hr
+                class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                style={{ width: "60px" }}
+              />
+              <ul>
+                <li className="social-icon">
+                  <a href="https://www.facebook.com/sovi.tran.31">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
+                </li>
+                <li className="social-icon">
+                  <a href="#">
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr className="footer-hr" />
+      <div class="text-center">
+        <p className="copyright">{content.copyright}</p>
+      </div>
+    </footer>
+  )
 }

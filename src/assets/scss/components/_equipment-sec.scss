@@ -13,19 +13,20 @@
 
   .row {
     margin-bottom: 5rem;
+    height: 16rem; //fixed height for carousel so inconsistent imgs won't other sections
   }
   .eq-image {
     padding: 0rem 3rem;
     // text-align: center;
-  } 
+  }
   .eq-name {
     font-weight: 600;
-  }          
-  //Overriding Bootstrap carousel indicator           
+  }
+  //Overriding Bootstrap carousel indicator
   .carousel-indicators {
     li {
-      width: .6rem;
-      height: .6rem;
+      width: 0.6rem;
+      height: 0.6rem;
       border-top: none;
       border-bottom: none;
       border-radius: 100rem;
@@ -33,7 +34,7 @@
       margin-bottom: 1rem;
     }
   }
-  
+
   @include breakpoint(medium) {
     padding: 3rem 2rem;
     .heading {
@@ -42,9 +43,8 @@
   }
   @include breakpoint(small1) {
     .heading {
-        text-align: center;
+      text-align: center;
     }
     padding: 3rem 1rem;
   }
 }
-

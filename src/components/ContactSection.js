@@ -1,20 +1,36 @@
 import React from "react"
 import { useImage } from "../hooks/useImage"
-import ScrollAnimation from 'react-animate-on-scroll'
+import ScrollAnimation from "react-animate-on-scroll"
 
-export default function ContactSection() {
-  // const imgContainer = useImage();
+export default function ContactSection(props) {
+  let content = {
+    EN: {
+      title: "Contact us",
+      text:
+        "Send us your message by filling out the email form. Our staff will be happy to get in touch with you",
+      button: "Request for Quote",
+    },
+
+    VI: {
+      title: "Liên hệ với chúng tôi",
+      text:
+        "Gửi thông tin yêu cầu của bạn bằng cách điền vào biểu mẫu. Nhân viên của chúng tôi rất vui lòng được liên hệ lại với bạn",
+      button: "Liên hệ",
+    },
+  }
+
+  props.language === "en" ? (content = content.EN) : (content = content.VI)
+
   return (
     <div className="get-quote">
       <ScrollAnimation animateIn="pulse" animateOnce={true}>
         <div className="container">
-          <h3 className="contact-heading">Contact Us</h3>
-          <p className="contact-para m-5">
-            Find aute irure dolor in reprehend in voluptate velit esse cillu
-            voluptate velit esse cillu.
-          </p>
+          <h3 className="contact-heading">{content.title}</h3>
+          <p className="contact-para m-5">{content.text}.</p>
           <a href="/contact">
-            <button class="btn btn-primary my-btn outlined-btn mt-2 mb-3">Request for Quote</button>
+            <button class="btn btn-primary my-btn outlined-btn mt-2 mb-3">
+              {content.button}
+            </button>
           </a>
         </div>
       </ScrollAnimation>

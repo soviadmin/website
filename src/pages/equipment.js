@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/layout'
 import { Tab, Tabs } from "react-bootstrap"
 import ScrollAnimation from 'react-animate-on-scroll'
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
+import Layout from "../components/Layout.js"
 
 const Equipment = () => {
     return (

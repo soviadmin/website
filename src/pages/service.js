@@ -1,10 +1,10 @@
 import React, {useState} from "react"
-import Link from "gatsby"
 import Helmet from "react-helmet"
 import { Tab, Row, Col, Nav } from "react-bootstrap"
-import Layout from "../components/layout"
+import Layout from "../components/Layout.js"
 import { navigate } from '@reach/router';
 import ScrollAnimation from 'react-animate-on-scroll'
+
 
 // import { Link, NavLink } from 'react-router-dom'
 

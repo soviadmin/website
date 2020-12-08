@@ -57,10 +57,20 @@
     transition: all 0.2s ease-in;
 
     &:hover {
-      background-color: _palette(p-darkblue);
+      background-color: _palette(p-blue2);
       cursor: pointer;
       text-decoration: none;
     }
+  }
+
+  .language-box {
+    border-radius: 1.5rem;
+    width: 4.5rem;
+    cursor: pointer;
+  }
+
+  .flag {
+    width: 10px;
   }
 
   /* Other Overrides on Bootstrap Navbar SCSS */

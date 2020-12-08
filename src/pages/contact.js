@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import Layout from '../components/Layout.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faMapMarkerAlt,
@@ -144,10 +144,10 @@ const Contact = () => {
                                 <p className="send-email-note mt-0">Have a question or request? Let us know your thoughts by filling this form.</p>
                                 <form className="test-mailing" onSubmit={handleSubmit}>
                                     <div>
-                                        <input onChange={handleChange} value={state.clientSubject} type="text" name="clientSubject" placeholder="Subject*" maxLength={200} required/>
-                                        <input onChange={handleChange} value={state.clientName} type="text" name="clientName" placeholder="Full Name*" maxLength={50} required/>
-                                        <input onChange={handleChange} value={state.clientEmail} type="text" name="clientEmail" placeholder="Email*" maxLength={50} required/>
-                                        <input onChange={handleChange} value={state.clientMobile} type="text" name="clientMobile" placeholder="Mobile Phone" maxLength={50}/>
+                                        <input onChange={handleChange} value={state.clientSubject} type="text" name="clientSubject" placeholder="Subject*" maxLength={200} required autoComplete="off"/>
+                                        <input onChange={handleChange} value={state.clientName} type="text" name="clientName" placeholder="Full Name*" maxLength={50} required autoComplete="off"/>
+                                        <input onChange={handleChange} value={state.clientEmail} type="text" name="clientEmail" placeholder="Email*" maxLength={50} required autoComplete="off"/>
+                                        <input onChange={handleChange} value={state.clientMobile} type="text" name="clientMobile" placeholder="Mobile Phone" maxLength={50} autoComplete="off"/>
                                         <textarea
                                             name="clientMessage"
                                             onChange={handleChange}
