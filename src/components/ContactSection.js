@@ -1,6 +1,7 @@
 import React from "react"
 import { useImage } from "../hooks/useImage"
 import ScrollAnimation from "react-animate-on-scroll"
+import EmailForm from "./EmailForm"
 
 export default function ContactSection(props) {
   let content = {
@@ -22,16 +23,18 @@ export default function ContactSection(props) {
   props.language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
-    <div className="get-quote">
+    <div className="get-quote">      
       <ScrollAnimation animateIn="pulse" animateOnce={true}>
         <div className="container">
-          <h3 className="contact-heading">{content.title}</h3>
+          <h1 className="contact-heading">{content.title}</h1>
           <p className="contact-para m-5">{content.text}.</p>
-          <a href="/contact">
+          
+          <EmailForm type="home"/>
+          {/* <a href="/contact">
             <button class="btn btn-primary my-btn outlined-btn mt-2 mb-3">
               {content.button}
             </button>
-          </a>
+          </a> */}
         </div>
       </ScrollAnimation>
     </div>

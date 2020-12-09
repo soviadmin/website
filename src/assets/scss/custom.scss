@@ -19,3 +19,16 @@
         }
     }
 }
+.breadcrumb-item {
+    display: flex;
+  
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumb-item {
+      padding-left: $breadcrumb-item-padding;
+  
+      &::before {
+        color: _palette(fg);
+        content: escape-svg(quote(">"));
+      }
+    }
+}

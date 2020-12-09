@@ -4,13 +4,17 @@
     padding: 0.5rem 2rem;
     font-size: 1.2rem;
     transition: all 0.2s ease-in;
+    * {
+      font-family: _font(family);
+    }
 
     &.filled-btn {
         border:none;
         color: _palette(fg);
-        background: _palette(p-blue);
+        background: _palette(p-blue2);
         &:hover {
-          background: _palette(p-blue2);
+          background: _palette(p-blue7);
+          
         }
       }
       &.outlined-btn {

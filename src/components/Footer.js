@@ -37,7 +37,7 @@ export default function Footer(props) {
       menu4: {
         title: "Follow us on",
       },
-      copyright: "© SOVI Transport Service Corp 2020. All rights reserved.",
+      copyright: "2020 © SOVI Transport Service Corp. All rights reserved.",
     },
 
     VI: {
