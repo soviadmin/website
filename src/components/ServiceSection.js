@@ -13,7 +13,7 @@ export default function ServiceSection(props) {
       },
       ser2: {
         name: "OOG Solution",
-        desc: "FR/OT/Buck",
+        desc: "Flatrack/Open Top/Buck",
       },
       ser3: {
         name: "Custom Clearance",
@@ -39,7 +39,7 @@ export default function ServiceSection(props) {
       },
       ser2: {
         name: "Giải pháp hàng quá khổ",
-        desc: "FR/OT/Buck",
+        desc: "Flatrack/Open Top/Buck",
       },
       ser3: {
         name: "Khai báo hải quan",

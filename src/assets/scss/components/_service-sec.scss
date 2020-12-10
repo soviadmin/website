@@ -20,9 +20,13 @@
       0.3125rem 0.25rem 1.3rem rgba(184, 184, 184, 0.144) !important;
 
     &:hover {
+      h5{
+        color: _palette(fg);
+        transition: 0.2s ease-out;
+      }
       color: _palette(fg);
       transition: 0.2s ease-out;
-      background: _palette(p-light3);
+      background: _palette(p-med);
     }
   }
   .service-row2 {

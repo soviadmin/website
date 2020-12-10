@@ -29,6 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `oog`,
+        path: `${__dirname}/src/assets/images/oog`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `svg`,
         path: `${__dirname}/src/svg`
       },

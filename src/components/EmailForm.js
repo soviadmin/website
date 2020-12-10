@@ -16,7 +16,6 @@ const EmailForm = (props) => {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showError, setShowError] = useState(false);
 
-
     function handleChange(event) {
         event.preventDefault();
         const { name, value } = event.target;
@@ -32,21 +31,32 @@ const EmailForm = (props) => {
             phone: state.clientMobile,
             message: state.clientMessage, 
         };
+        try {
+            emailjs.send(
+                process.env.GATSBY_EMAILJS_SERVICE_ID, 
+                process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+                data, 
+                process.env.GATSBY_EMAILJS_USER_ID
+              ).then(res => {
+                console.log('Email successfully sent!');
+                setShowSuccess(true);
+                setState((state) => ({ ...state, 
+                    clientSubject: '',
+                    clientName: '',
+                    clientEmail: '',
+                    clientMobile: '',
+                    clientMessage: ''
+                }));
+            })// Handle errors
+            .catch(err => {
+                console.error('Unable to send email due to error:', err);
+                setShowError(true);
+            });
+        }
+        catch (error) {
+            console.log(error);
+        }
         
-        emailjs.send(
-            process.env.GATSBY_EMAILJS_SERVICE_ID, 
-            process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-            data, 
-            process.env.GATSBY_EMAILJS_USER_ID
-          ).then(res => {
-            console.log('Email successfully sent!');
-            setShowSuccess(true);
-            setState()
-        })// Handle errors
-        .catch(err => {
-            console.error('Unable to send email due to error:', err);
-            setShowError(true);
-        });
         
         event.target.reset();
     }

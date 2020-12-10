@@ -82,6 +82,132 @@ export const useImage = () => {
               }
             }
         }
+        oog04: file(relativePath: { eq: "oog/sovi4.JPG" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog05: file(relativePath: { eq: "oog/sovi5.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog06: file(relativePath: { eq: "oog/sovi6.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog07: file(relativePath: { eq: "oog/sovi7.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog08: file(relativePath: { eq: "oog/sovi8.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog09: file(relativePath: { eq: "oog/sovi9.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog17: file(relativePath: { eq: "oog/sovi17.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog18: file(relativePath: { eq: "oog/sovi18.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog20: file(relativePath: { eq: "oog/sovi20.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog23: file(relativePath: { eq: "oog/sovi23.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog25: file(relativePath: { eq: "oog/sovi25.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog29: file(relativePath: { eq: "oog/sovi29.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog31: file(relativePath: { eq: "oog/sovi31.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oog36: file(relativePath: { eq: "oog/sovi36.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        } 
+        oog39: file(relativePath: { eq: "oog/sovi39.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        } 
+        oog45: file(relativePath: { eq: "oog/sovi45.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        } 
+        oog46: file(relativePath: { eq: "oog/sovi46.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        } 
+        oog49: file(relativePath: { eq: "oog/sovi49.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `
   );

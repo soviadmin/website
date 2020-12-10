@@ -75,13 +75,13 @@ export default function Footer(props) {
   props.language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 address">
-            <h6 class="text-uppercase">{content.menu1.title}</h6>
+    <footer className="page-footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 address">
+            <h6 className="text-uppercase">{content.menu1.title}</h6>
             <hr
-              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "90px" }}
             />
             <p>
@@ -101,10 +101,10 @@ export default function Footer(props) {
               {content.menu1.item4}
             </p>
           </div>
-          <div class="col-md-3">
-            <h6 class="text-uppercase">{content.menu2.title}</h6>
+          <div className="col-md-3">
+            <h6 className="text-uppercase">{content.menu2.title}</h6>
             <hr
-              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "60px" }}
             />
             <p>
@@ -123,10 +123,10 @@ export default function Footer(props) {
               <a href="/service">{content.menu2.item5}</a>
             </p>
           </div>
-          <div class="col-md-3 other">
-            <h6 class="text-uppercase">{content.menu3.title}</h6>
+          <div className="col-md-3 other">
+            <h6 className="text-uppercase">{content.menu3.title}</h6>
             <hr
-              class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
               style={{ width: "60px" }}
             />
             <p>
@@ -146,10 +146,10 @@ export default function Footer(props) {
             </p>
           </div>
           <div className="row">
-            <div class="col-12">
-              <h6 class="text-uppercase">{content.menu4.title}</h6>
+            <div className="col-12">
+              <h6 className="text-uppercase">{content.menu4.title}</h6>
               <hr
-                class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: "60px" }}
               />
               <ul>
@@ -169,7 +169,7 @@ export default function Footer(props) {
         </div>
       </div>
       <hr className="footer-hr" />
-      <div class="text-center">
+      <div className="text-center">
         <p className="copyright">{content.copyright}</p>
       </div>
     </footer>

@@ -30,5 +30,14 @@
         transition: .4s ease-out;
         background: _palette(p-blue);
     }
-
+    .container {
+        text-align: center;
+        justify-content: center;
+    }
+    ol {
+        li {
+            font-family: _palette(family);
+            font-weight: 200;
+        }
+    }
 }
