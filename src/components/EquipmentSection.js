@@ -3,6 +3,8 @@ import Carousel from "react-bootstrap/Carousel"
 import ScrollAnimation from "react-animate-on-scroll"
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function EquipmentSection(props) {
   const imgContainer = useImage()
@@ -102,6 +104,10 @@ export default function EquipmentSection(props) {
         <a href="/equipment">
           <button type="button" className="btn btn-primary my-btn filled-btn">
             {content.button}
+            <FontAwesomeIcon
+              style={{ marginLeft: "5px", paddingTop: "3px" }}
+              icon={faCaretRight}
+            />
           </button>
         </a>
       </ScrollAnimation>

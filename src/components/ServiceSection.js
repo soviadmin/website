@@ -2,6 +2,8 @@ import React from "react"
 import Link from "gatsby"
 import { navigate } from "@reach/router"
 import ScrollAnimation from "react-animate-on-scroll"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function ServiceSection(props) {
   let content = {
@@ -124,6 +126,10 @@ export default function ServiceSection(props) {
             className="btn btn-primary my-btn filled-btn mt-3 mb-3"
           >
             {content.button}
+            <FontAwesomeIcon
+              style={{ marginLeft: "5px", paddingTop: "3px" }}
+              icon={faCaretRight}
+            />
           </button>
         </a>
       </ScrollAnimation>

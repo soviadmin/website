@@ -3,6 +3,8 @@ import AboutIllustration from "../svg/illustration1.svg"
 import Img from "gatsby-image"
 import { useImage } from "../hooks/useImage"
 import ScrollAnimation from "react-animate-on-scroll"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function AboutSection(props) {
   // const imgContainer = useImage();
@@ -10,11 +12,13 @@ export default function AboutSection(props) {
     EN: {
       title1: "From Ocean to Air",
       title2: "We've got your back",
+      link: "More about us",
     },
 
     VI: {
       title1: "Từ biển đến hàng không",
       title2: "Đã có chúng tôi lo",
+      link: "Tìm hiểu thêm về chúng tôi",
     },
   }
 
@@ -36,6 +40,13 @@ export default function AboutSection(props) {
                 lacinia gravida. Suspendisse porta molestie arcu, eu maximus
                 mauris tincidunt hendrerit.
               </p>
+              <a href="/about" className="about-link">
+                {content.link}{" "}
+                <FontAwesomeIcon
+                  style={{ paddingTop: "3px" }}
+                  icon={faCaretRight}
+                />
+              </a>
             </ScrollAnimation>
           </div>
           <div className="col-lg-6 col-xs-12">

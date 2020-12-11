@@ -1,77 +1,90 @@
-
 .about-sec {
-    background-color: _palette(fg);
-    padding: 4rem 0;
-    &.choose-us {
-        text-align: center;
-    }
+  background-color: _palette(fg);
+  padding: 4rem 0;
+  &.choose-us {
+    text-align: center;
+  }
 
-    .header {
-        padding: 3.5rem 0;
-    }
+  .header {
+    padding: 3.5rem 0;
+  }
 
-    .heading-one, .heading-two {
-        font-size: 2.5rem;
-        font-weight: _font(w-bold);
-    }
+  .heading-one,
+  .heading-two {
+    font-size: 2.5rem;
+    font-weight: _font(w-bold);
+  }
 
-    .heading-one {
-        color: _palette(p-med2);
-    }
+  .heading-one {
+    color: _palette(p-med2);
+  }
 
-    .heading-two {
-        color: _palette(p-med);
-    }
+  .heading-two {
+    color: _palette(p-med);
+  }
 
+  .about-link {
+    cursor: pointer;
+    color: _palette(p-blue);
+    font-weight: _font(w-bold);
+    transition: all 0.2s;
+
+    &:hover {
+      color: _palette(p-dark);
+      text-decoration: none;
+    }
+  }
+
+  .illustration {
+    width: 35rem;
+    height: 25rem;
+  }
+
+  @include breakpoint(large) {
+    text-align: center;
     .illustration {
-        width: 35rem;
-        height: 25rem;
+      width: 30rem;
+      height: 25rem;
     }
-    @include breakpoint(large) {
-        text-align: center;
-        .illustration {
-            width: 30rem;
-            height: 25rem;
-        }
+  }
+  @include breakpoint(medium) {
+    .illustration {
+      width: 32rem;
+      height: 18rem;
     }
-    @include breakpoint(medium) {
-        .illustration {
-            width: 32rem;
-            height: 18rem;
-        }
-        .heading-one, .heading-two {
-            font-size: 2rem;
-          }
+    .heading-one,
+    .heading-two {
+      font-size: 2rem;
     }
-    @include breakpoint(xsmall) {
-        .illustration {
-            width: 30rem;
-            height: 18rem;
-        }
+  }
+  @include breakpoint(xsmall) {
+    .illustration {
+      width: 30rem;
+      height: 18rem;
     }
-    @include breakpoint(xsmall1) {
-        .illustration {
-            width: 27rem;
-            height: 18rem;
-        }
+  }
+  @include breakpoint(xsmall1) {
+    .illustration {
+      width: 27rem;
+      height: 18rem;
     }
-    @include breakpoint(xsmall2) {
-        .illustration {
-            width: 20rem;
-            height: 12rem;
-        }
+  }
+  @include breakpoint(xsmall2) {
+    .illustration {
+      width: 20rem;
+      height: 12rem;
     }
-    @include breakpoint(xsmall3) {
-        .illustration {
-            width: 17rem;
-            height: 10rem;
-        }
+  }
+  @include breakpoint(xsmall3) {
+    .illustration {
+      width: 17rem;
+      height: 10rem;
     }
+  }
 }
 
-
 @include breakpoint(medium) {
-    .about-us {
-        text-align: center;
-    }
+  .about-us {
+    text-align: center;
+  }
 }

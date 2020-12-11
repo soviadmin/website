@@ -2,6 +2,12 @@ import React, { useState } from "react"
 import { Nav, Navbar, Form } from "react-bootstrap"
 import { Link } from "gatsby"
 import logo from "../assets/images/logo.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faEnvelope,
+  faPhoneAlt,
+  faFax,
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function Header(props) {
   let languageStoredInLocalStorage = localStorage.getItem("language")
@@ -40,6 +46,31 @@ export default function Header(props) {
   return (
     <header id="header">
       <Navbar fixed="top" expand="lg" collapseOnSelect="true" bg="light">
+        <div className="row contact-header">
+          <div className="col-3">
+            <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" />
+            (+84) 310 931 337
+          </div>
+          <div className="col-3">
+            <FontAwesomeIcon icon={faFax} className="contact-icon" />
+            1234567890
+          </div>
+          <div className="col-3">
+            <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
+            info@example.com
+          </div>
+          <div className="col-3">
+            <Form.Control
+              as="select"
+              className="language-box"
+              value={language}
+              onChange={handleSetLanguage}
+            >
+              <option value="en">EN</option>
+              <option value="vi">VI</option>
+            </Form.Control>
+          </div>
+        </div>
         <Navbar.Brand className="brand">
           <img
             src={logo}
@@ -70,15 +101,6 @@ export default function Header(props) {
             <Link className="request-link" to="/contact">
               {content.nav6}
             </Link>
-            <Form.Control
-              as="select"
-              className="language-box"
-              value={language}
-              onChange={handleSetLanguage}
-            >
-              <option value="en">EN</option>
-              <option value="vi">VI</option>
-            </Form.Control>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -87,5 +109,5 @@ export default function Header(props) {
 }
 
 function storeLanguageInLocalStorage(language) {
-    localStorage.setItem("language", language);
-  }
+  localStorage.setItem("language", language)
+}
