@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Nav, Navbar, Form } from "react-bootstrap"
 import { Link } from "gatsby"
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faEnvelope,
@@ -81,13 +81,15 @@ export default function Header(props) {
           </div>
         </div>
         <Navbar.Brand className="brand">
-          <img
-            src={logo}
-            width="140"
-            height="60"
-            className="d-inline-block align-top"
-            alt="SOVI Logistics logo"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              width="140"
+              height="60"
+              className="d-inline-block align-top"
+              alt="SOVI Logistics logo"
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburger" />
         <Navbar.Collapse id="basic-navbar-nav">

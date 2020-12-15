@@ -26,7 +26,7 @@ export default function Testimonials(props) {
   // const imgContainer = useImage();
   let content = {
     EN: {
-      title1: "See why people choose us",
+      title1: "Why choose us ?",
       why1: {
         label: "Fast execution",
         text:
@@ -46,7 +46,7 @@ export default function Testimonials(props) {
     },
 
     VI: {
-      title1: "Vì sao khách hàng chọn chúng tôi",
+      title1: "Vì sao khách hàng chọn SOVI",
       why1: {
         label: "Xử lý tốc độ nhanh",
         text:
