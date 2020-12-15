@@ -30,17 +30,17 @@ export default function Testimonials(props) {
       why1: {
         label: "Fast execution",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "Save customers' time with steadfast response rate and cargo processing",
       },
       why2: {
         label: "Reliability",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "A team of professionally trained and responsible workers behind every work",
       },
       why3: {
         label: "Quality assurance",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "Prioritize customers' benefits and good experiences over costs",
       },
       title2: "Our partners",
     },
@@ -48,19 +48,19 @@ export default function Testimonials(props) {
     VI: {
       title1: "Vì sao khách hàng chọn SOVI",
       why1: {
-        label: "Xử lý tốc độ nhanh",
+        label: "Hiệu quả nhanh chóng",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "Tiết kiệm thời gian cho khách hàng bởi tốc độ phản hồi và xử lý kiện hàng nhanh chóng",
       },
       why2: {
         label: "Đáng tin cậy",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "Các dự án đều được đảm nhiệm bởi đội ngũ nhân viên chuyên nghiệp và tận tâm",
       },
       why3: {
         label: "Đảm bảo chất lượng",
         text:
-          "Find aute irure dolor in reprehend in voluptate velit esse cillum dolore eu",
+          "Chúng tôi luôn đảm bảo trải nghiệm tốt nhất cho khách hàng trong suốt quá trình vận chuyển",
       },
       title2: "Các đối tác của SOVI",
     },

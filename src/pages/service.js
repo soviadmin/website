@@ -43,6 +43,9 @@ const Service = () => {
       },
       ser3: {
         name: "Custom Clearance",
+        subheading: "Our custom clearance services center in 2 major types",
+        item1: "Customs transit formalities",
+        item2: "Customs clearance for import-export cargo",
       },
       ser4: {
         name: "Trucking",
@@ -66,10 +69,13 @@ const Service = () => {
       ser2: {
         name: "Giải pháp hàng quá khổ",
         subheading:
-          "Tại Sovi, chúng tôi cung cấp nhiều giải pháp hàng đầu về xử lý hàng quá khổ, với Flat Rack và Open Top là một trong những sở trường có tiếng nhất của chúng tôi",
+          "Tại Sovi, chúng tôi cung cấp nhiều giải pháp hàng đầu về xử lý hàng quá khổ, trong đó Flat Rack và Open Top là một trong những sản phẩm nổi bật nhất.",
       },
       ser3: {
         name: "Khai báo hải quan",
+        subheading: "Our custom clearance services center in 2 major types",
+        item1: "Customs transit formalities",
+        item2: "Customs clearance for import-export cargo",
       },
       ser4: {
         name: "Vận chuyển đường bộ",
@@ -113,7 +119,7 @@ const Service = () => {
                     <Nav variant="pills" className="flex-column">
                       <Nav.Item>
                         <Nav.Link
-                          eventKey="first"
+                          eventKey="freight"
                           href="/service#target=freight"
                         >
                           {content.ser1.name}
@@ -121,7 +127,7 @@ const Service = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link
-                          eventKey="second"
+                          eventKey="oog"
                           href="/service#target=oog-solution"
                         >
                           {content.ser2.name}
@@ -129,7 +135,7 @@ const Service = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link
-                          eventKey="third"
+                          eventKey="cc"
                           href="/service#target=custom-clearance"
                         >
                           {content.ser3.name}
@@ -137,7 +143,7 @@ const Service = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link
-                          eventKey="fourth"
+                          eventKey="trucking"
                           href="/service#target=trucking"
                         >
                           {content.ser4.name}
@@ -145,7 +151,7 @@ const Service = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link
-                          eventKey="fifth"
+                          eventKey="express"
                           href="/service#target=express"
                         >
                           {content.ser5.name}
@@ -155,7 +161,7 @@ const Service = () => {
                   </Col>
                   <Col sm={8}>
                     <Tab.Content>
-                      <Tab.Pane id="tab1" eventKey="first">
+                      <Tab.Pane id="tab1" eventKey="freight">
                         <h1>{content.ser1.name}</h1>
                         <p>{content.ser1.subheading}:</p>
                         <ol>
@@ -163,18 +169,23 @@ const Service = () => {
                           <li>{content.ser1.item2}</li>
                         </ol>
                       </Tab.Pane>
-                      <Tab.Pane id="tab2" eventKey="second">
+                      <Tab.Pane id="tab2" eventKey="oog">
                         <h1>{content.ser2.name}</h1>
                         <p>{content.ser2.subheading}.</p>
                         <OOGSolution />
                       </Tab.Pane>
-                      <Tab.Pane id="tab3" eventKey="third">
+                      <Tab.Pane id="tab3" eventKey="cc">
                         <h1>{content.ser3.name}</h1>
+                        <p>{content.ser3.subheading}:</p>
+                        <ol>
+                          <li>{content.ser3.item1}</li>
+                          <li>{content.ser3.item2}</li>
+                        </ol>
                       </Tab.Pane>
-                      <Tab.Pane id="tab4" eventKey="fourth">
+                      <Tab.Pane id="tab4" eventKey="trucking">
                         <h1>{content.ser4.name}</h1>
                       </Tab.Pane>
-                      <Tab.Pane path="/tab5" eventKey="fifth">
+                      <Tab.Pane path="/tab5" eventKey="express">
                         <h1>{content.ser5.name}</h1>
                       </Tab.Pane>
                     </Tab.Content>

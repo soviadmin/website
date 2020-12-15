@@ -21,19 +21,19 @@ export default function ServiceSection(props) {
       },
       ser2: {
         name: "OOG Solution",
-        desc: "Flatrack/Open Top/Buck",
+        desc: "Flat Rack/Open Top/Buck",
       },
       ser3: {
         name: "Custom Clearance",
-        desc: "FR/OT/Buck",
+        desc: "Transit formalities & Cargo",
       },
       ser4: {
         name: "Trucking",
-        desc: "FR/OT/Buck",
+        desc: "More info",
       },
       ser5: {
         name: "Express",
-        desc: "FR/OT/Buck",
+        desc: "Nationwide Services Available",
       },
       button: "See all services",
       button: "See all services",
@@ -47,11 +47,11 @@ export default function ServiceSection(props) {
       },
       ser2: {
         name: "Giải pháp hàng quá khổ",
-        desc: "Flatrack/Open Top/Buck",
+        desc: "Flat Rack/Open Top/Buck",
       },
       ser3: {
         name: "Khai báo hải quan",
-        desc: "Thêm thông tin",
+        desc: "Thủ tục & Hàng hoá",
       },
       ser4: {
         name: "Vận chuyển đường bộ",
@@ -59,7 +59,7 @@ export default function ServiceSection(props) {
       },
       ser5: {
         name: "Phát chuyển nhanh",
-        desc: "Thêm thông tin",
+        desc: "Chuyển phát toàn quốc",
       },
       button: "Xem tất cả dịch vụ",
     },

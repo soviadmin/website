@@ -15,7 +15,7 @@ export default function ContactSection(props) {
     VI: {
       title: "Liên hệ với chúng tôi",
       text:
-        "Gửi thông tin yêu cầu của bạn bằng cách điền vào biểu mẫu. Nhân viên của chúng tôi rất vui lòng được liên hệ lại với bạn",
+        "Gửi thông tin yêu cầu của bạn bằng cách điền vào biểu mẫu. Nhân viên của chúng tôi sẽ phản hồi nhanh nhất có thể",
       button: "Liên hệ",
     },
   }

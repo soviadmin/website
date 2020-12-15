@@ -40,4 +40,9 @@
       font-size: 2rem;
     }
   }
+  @include breakpoint(xsmall) {
+    .container {
+      width: 95%;
+    }
+  }
 }

@@ -8,22 +8,38 @@
 
 @include skel-breakpoints(
   (
+    xxlarge: "(max-width: 1260px)",
+    //Bi  
+
     xlarge: "(max-width: 1200px)",
     // Extra large devices (large desktops) - no upper bound on width
     large: "(max-width: 1199.98px)",
     // Large devices (desktops, less than 1200px)
+
+    large2: "(max-width: 1030px)",
+    //Bi
+
     medium: "(max-width: 991.98px)",
     // Medium devices (tablets, less than 992px)
+
+    medium2: "(max-width: 900px)",
+    //Bi  
+
     small1: "(max-width: 768.5px)",
     // Small devices (landscape phones, less than 768px)
     small2: "(max-width: 709.98px)",
     // CUSTOM Small devices (landscape phones, less than 710px)
+
+    small3: "(max-width: 660px)",
+    //Bi  
+
     xsmall: "(max-width: 575.98px)",
     // Extra small devices (portrait phones, less than 576px)
     // xlarge: '(max-width: 1280px)',
     // large: '(max-width: 1200px)',
     // medium: '(max-width: 992px)',
     // small: '(max-width: 768px)',
+    
     xsmall1: "(max-width: 540px)",
     xsmall2: "(max-width: 480px)",
     xsmall3: "(max-width: 360px)",

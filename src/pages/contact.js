@@ -12,6 +12,7 @@ import emailjs from "emailjs-com"
 import MyMap from "../map/MyMap"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "../components/EmailForm.js"
+import { propTypes } from "react-bootstrap/esm/Image"
 
 const Contact = () => {
   let content = {
@@ -70,11 +71,11 @@ const Contact = () => {
         <header className="header">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <a href="/">{content.breadcrumb1}</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   {content.breadcrumb2}
                 </li>
               </ol>
@@ -82,6 +83,8 @@ const Contact = () => {
             <h1 className="title">{content.heading}</h1>
           </ScrollAnimation>
         </header>
+        
+        <MyMap className="map" />
 
         <div className="contact-inner-section">
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
@@ -93,7 +96,7 @@ const Contact = () => {
                 <div className="col-lg-6 col-md-12">
                   <h3>{content.info.title}</h3>
                   <hr
-                    class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                    className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
                     style={{ width: "90px" }}
                   />
                   <div className="head-office-wrapper pr-lg-5">
@@ -152,17 +155,16 @@ const Contact = () => {
                 <div className="col-lg-6 col-md-12">
                   <h3>{content.form.heading}</h3>
                   <hr
-                    class="accent-2 mb-4 mt-0 d-inline-block mx-auto"
+                    className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
                     style={{ width: "90px" }}
                   />
                   <p className="send-email-note mt-0">
                     {content.form.subheading}.
                   </p>
-                  <EmailForm />
+                  <EmailForm language={languageStoredInLocalStorage}/>
                 </div>
               </div>
             </div>
-            <MyMap className="map" />
           </ScrollAnimation>
         </div>
       </div>

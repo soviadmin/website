@@ -4,23 +4,116 @@
   .carousel-caption {
     font-size: 10rem;
     background: #b1b1b1c4;
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-transform: uppercase;
     width: 33%;
-    height: 25rem;
+    height: fit-content;
     bottom: none;
     top: 15%;
     left: 10%;
   }
 
   .heading1 {
+    text-align: left;
     font-size: 2rem;
     letter-spacing: 4px;
     margin-bottom: 5px;
   }
 
   .heading2 {
+    text-align: left;
     font-size: 3.5rem;
     color: _palette(fg);
   }
+  @include breakpoint(xxlarge) {
+    .carousel-caption {
+      width: 37%;
+    }
+  }
+  @include breakpoint(large) {
+    .heading1 {
+      font-size: 1.8rem;
+    }
+    .heading2 {
+      font-size: 3.2rem;
+    }
+  }
+  @include breakpoint(large2) {
+    .carousel-caption {
+      width: 37%;
+    }
+    .heading1 {
+      font-size: 1.4rem;
+    }
+    .heading2 {
+      font-size: 2.8rem;
+    }
+  }
+  @include breakpoint(medium2) {//938
+    .carousel-caption {
+      width: 40%;
+    }
+    .heading1 {
+      font-size: 1.2rem;
+    }
+    .heading2 {
+      font-size: 2.6rem;
+    }
+  }
+  @include breakpoint(small1) {
+    .carousel-caption {
+      width: 43%;
+    }
+    .heading1 {
+      font-size: 1rem;
+    }
+    .heading2 {
+      font-size: 2.2rem;
+    }
+  }
+  @include breakpoint(small3) {
+    .carousel-caption {
+      width: 50%;
+    }
+    .heading1 {
+      font-size: .9rem;
+    }
+    .heading2 {
+      font-size: 2rem;
+    }
+  }
+  @include breakpoint(xsmall1) {
+    .carousel-caption {
+      width: 50%;
+    }
+    .heading1 {
+      font-size: .5rem;
+    }
+    .heading2 {
+      font-size: 1.5rem;
+    }
+  }
+  @include breakpoint(xsmall2) {
+    .carousel-caption {
+      width: 60%;
+    }
+    .heading1 {
+      font-size: .4rem;
+    }
+    .heading2 {
+      font-size: 1.3rem;
+    }
+  }
+  @include breakpoint(xsmall3) {
+    .carousel-caption {
+      width: 60%;
+    }
+    .heading1 {
+      font-size: .3rem;
+    }
+    .heading2 {
+      font-size: 1rem;
+    }
+  }
+
 }

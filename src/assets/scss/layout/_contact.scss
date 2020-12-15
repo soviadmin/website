@@ -11,6 +11,7 @@
     color: _palette(fg);
   }
   .contact-inner-section {
+    margin-top: 25rem;
     background-color: _palette(fg);
     padding: 4rem 0;
     .heading {
@@ -37,7 +38,7 @@
   }
 
 
-  @include breakpoint(xlarge) {
+  @include breakpoint(xlarge) {//1200px
     .contact-inner-section {
       margin-top: 23rem;
     }
@@ -55,8 +56,16 @@
   }
   @include breakpoint(xsmall) {
     //575.98px
+    .heading {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
     .contact-inner-section {
       margin-top: 20rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
     }
   }
   @include breakpoint(xsmall2) {

@@ -9,12 +9,15 @@
   .title {
     color: _palette(fg);
   }
-
   .intro {
     padding: 5% 8% 4% 8%;
   }
   .intro-image {
     width: 100%;
+  }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
   }
   .stats {
     background: _palette(p-light);
@@ -46,5 +49,26 @@
   .claim-image {
     width: 20rem;
     height: 20rem;
+  }
+  @include breakpoint(medium) {
+    .numbers {
+      font-size: 2.2rem;
+    }
+  }
+  @include breakpoint(small2) {
+    .numbers {
+      font-size: 1.9rem;
+    }
+  }
+  @include breakpoint(xsmall) {
+    .numbers {
+      font-size: 2.2rem;
+    }
+  }
+  @include breakpoint(xsmall3) {//360
+    .claim-image {
+      width: 16rem;
+      height: 16rem;
+    }
   }
 }

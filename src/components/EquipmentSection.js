@@ -27,15 +27,15 @@ export default function EquipmentSection(props) {
 
     VI: {
       title: "Các thiết bị nổi bật",
-      eq1: "Thiết bị 1",
-      eq2: "Thiết bị 2",
-      eq3: "Thiết bị 3",
-      eq4: "Thiết bị 4",
-      eq5: "Thiết bị 5",
-      eq6: "Thiết bị 6",
-      eq7: "Thiết bị 7",
-      eq8: "Thiết bị 8",
-      eq9: "Thiết bị 9",
+      eq1: "40' High Cube Flat Rack",
+      eq2: "40' High Cube Hard Top Open Top",
+      eq3: "20' Flat Rack with 31 MT Pay Load",
+      eq4: "40' Flat Rack with 47 MT Pay Load",
+      eq5: "40' High Cube Super Rack",
+      eq6: "40' Super Rack",
+      eq7: "20' High Cube Hard Top",
+      eq8: "40' Open Top Container",
+      eq9: "40' Flat Rack with Collapsible Ends",
       button: "Xem tất cả thiết bị",
     },
   }
@@ -102,7 +102,7 @@ export default function EquipmentSection(props) {
 
       <ScrollAnimation animateIn="pulse" animateOnce={true}>
         <a href="/equipment">
-          <button type="button" className="btn btn-primary my-btn filled-btn">
+          <button type="button" className="btn btn-primary my-btn filled-btn mt-4">
             {content.button}
             <FontAwesomeIcon
               style={{ marginLeft: "5px", paddingTop: "3px" }}

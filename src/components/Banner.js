@@ -38,7 +38,7 @@ export default function Banner(props) {
             <h3 className="heading2">{content.heading2}</h3>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1000}>
+        {/* <Carousel.Item interval={1000}>
           <img
             className="d-block w-100 banner-image"
             src={banner1}
@@ -51,7 +51,7 @@ export default function Banner(props) {
             src={banner2}
             alt="Third slide"
           />
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
     </ScrollAnimation>
   )

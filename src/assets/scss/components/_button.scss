@@ -11,10 +11,9 @@
     &.filled-btn {
         border:none;
         color: _palette(fg);
-        background: _palette(p-blue2);
+        background: _palette(p-blue7);
         &:hover {
-          background: _palette(p-blue7);
-          
+          background: _palette(p-blue8);
         }
       }
       &.outlined-btn {

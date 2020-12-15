@@ -41,6 +41,7 @@
   }
 
   @include breakpoint(large) {
+    padding: 2rem;
     text-align: center;
     .illustration {
       width: 30rem;
@@ -64,6 +65,7 @@
     }
   }
   @include breakpoint(xsmall1) {
+    padding: 1rem;
     .illustration {
       width: 27rem;
       height: 18rem;
