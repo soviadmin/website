@@ -72,7 +72,7 @@ export default function Testimonials(props) {
     <div>
       <div className="testimonials why-choose-us">
         <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-          <h1 className="heading-one">{content.title1}.</h1>
+          <h1 className="heading-one">{content.title1}</h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className="container">
@@ -98,7 +98,7 @@ export default function Testimonials(props) {
       </div>
       <div className="testimonials partners">
         <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
-          <h1 className="heading-two">{content.title2}.</h1>
+          <h1 className="heading-two">{content.title2}</h1>
         </ScrollAnimation>
         <div className="container">
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>

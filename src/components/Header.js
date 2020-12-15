@@ -19,6 +19,7 @@ export default function Header(props) {
     setLanguage(e.target.value)
     storeLanguageInLocalStorage(e.target.value)
     props.toggleLanguage(e.target.value)
+    window.location.reload()
   }
 
   let content = {
@@ -29,15 +30,17 @@ export default function Header(props) {
       nav4: "Equipment",
       nav5: "Contact",
       nav6: "Request for Quote",
+      language: "English",
     },
 
     VI: {
       nav1: "Trang chủ",
-      nav2: "Về SOVI",
+      nav2: "Giới thiệu",
       nav3: "Dịch vụ",
       nav4: "Thiết bị",
       nav5: "Liên hệ",
       nav6: "Yêu cầu báo giá",
+      language: "Tiếng Việt",
     },
   }
 
@@ -45,7 +48,12 @@ export default function Header(props) {
 
   return (
     <header id="header">
-      <Navbar fixed="top" expand="lg" collapseOnSelect="true" bg="light">
+      <Navbar
+        fixed="top"
+        expand="lg"
+        collapseOnSelect="true"
+        className="navbar-bg"
+      >
         <div className="row contact-header">
           <div className="col-3">
             <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" />
@@ -60,6 +68,7 @@ export default function Header(props) {
             info@example.com
           </div>
           <div className="col-3">
+            <Form.Label className="select-label">{content.language}</Form.Label>
             <Form.Control
               as="select"
               className="language-box"

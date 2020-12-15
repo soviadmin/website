@@ -1,67 +1,71 @@
-
 .equipment-page {
-    background: #fff;
+  background: #fff;
 
-    .header {
-        padding: 4% 4% 2% 8%;
-        background: _palette(p-blue);
-        color: _palette(fg);
-    }
-    .title {
-        color: _palette(fg);
-    }
-    .equipment-tabs {
-        margin: 3rem;
-    }
-    .eq-image {
-        padding: 0rem 3rem;
-    } 
-    .eq-name {
-        font-weight: 600;
-        text-align: center;
-    }  
-    //Overidding Bootstrap Nav, Tab
-    .nav-link {
-        background: _palette(p-light3);
-        color: _palette(fg);
-        border-radius: 1rem;
-        margin-right: 1rem;
-        margin-bottom: .4rem;
-        padding: .8rem 1rem;
-    }
+  .header {
+    padding: 4% 4% 2% 8%;
+    background: _palette(p-blue);
+    color: _palette(fg);
+  }
+  .title {
+    color: _palette(fg);
+  }
+  .equipment-tabs {
+    margin: 3rem;
+  }
+  .eq-image {
+    padding: 0rem 3rem;
+  }
+  .eq-name {
+    font-weight: 600;
+    text-align: center;
+  }
+  //Overidding Bootstrap Nav, Tab
+  .nav-link {
+    background: _palette(p-light3);
+    color: _palette(fg);
+    border-radius: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.4rem;
+    padding: 0.8rem 1rem;
+  }
 
-    .nav-link.active {
-        transition: .4s ease-out;
-        background: _palette(p-blue);
+  .nav-link.active {
+    transition: 0.4s ease-out;
+    background: _palette(p-blue);
+  }
+  .tab-content {
+    padding: 3rem 5rem 5rem;
+    h2 {
+      text-transform: capitalize;
     }
+  }
+
+  .note {
+    font-size: 1rem;
+    color: #818fa0;
+    text-align: center;
+  }
+
+  @include breakpoint(medium) {
     .tab-content {
-        padding: 3rem 5rem 5rem;
-        h2 {
-            text-transform: capitalize;
-        }
+      padding: 3rem 1rem;
     }
-    @include breakpoint(medium) {
-        .tab-content {
-            padding: 3rem 1rem;
-        }
-       
+  }
+  @include breakpoint(small2) {
+    .nav-link {
+      font-size: 1rem;
     }
-    @include breakpoint(small2) {
-        .nav-link {
-            font-size: 1rem;
-        }
+  }
+  @include breakpoint(xsmall) {
+    .tab-content {
+      padding: 3rem 0rem;
     }
-    @include breakpoint(xsmall) {
-        .tab-content {
-            padding: 3rem 0rem;
-        }
+  }
+  @include breakpoint(xsmall) {
+    .nav-link {
+      border-radius: 0.7rem;
+      margin-right: 0.2rem;
+      padding: 0.5rem 0.7rem;
     }
-    @include breakpoint(xsmall) {
-        .nav-link {
-            border-radius: .7rem;
-            margin-right: .2rem;
-            padding: .5rem .7rem;
-        }
-    }
-
+  }
 }

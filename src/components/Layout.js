@@ -1,40 +1,30 @@
-import React, { Component } from "react"
+import React, { Component, useState } from "react"
 import "../assets/scss/main.scss"
 import Header from "./Header"
 import Footer from "./Footer"
 
-class Layout extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      language: "en",
-    }
-    this.handleSetLanguage = this.handleSetLanguage.bind(this)
+export default function Layout(props) {
+  let languageStoredInLocalStorage = localStorage.getItem("language")
+
+  const [language, setLanguage] = useState(
+    languageStoredInLocalStorage ? languageStoredInLocalStorage : "en"
+  )
+
+  const handleSetLanguage = newlanguage => {
+    setLanguage(newlanguage)
   }
 
-  handleSetLanguage(lang) {
-    this.setState(state => ({
-      language: lang,
-    }))
-  }
+  let childrenWithProps = React.Children.map(props.children, child =>
+    React.cloneElement(child, {
+      language: language,
+    })
+  )
 
-  render() {
-    const childrenWithProps = React.Children.map(this.props.children, child =>
-      React.cloneElement(child, {
-        language: this.state.language,
-      })
-    )
-
-    return (
-      <div>
-        {/* <div id="wrapper"> */}
-        <Header toggleLanguage={this.handleSetLanguage} />
-        {childrenWithProps.map(childrenElement => childrenElement)}
-        <Footer language={this.state.language} />
-        {/* </div> */}
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Header toggleLanguage={handleSetLanguage} />
+      {childrenWithProps.map(childrenElement => childrenElement)}
+      <Footer language={language} />
+    </div>
+  )
 }
-
-export default Layout

@@ -23,13 +23,13 @@ export default function ContactSection(props) {
   props.language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
-    <div className="get-quote">      
+    <div className="get-quote">
       <ScrollAnimation animateIn="pulse" animateOnce={true}>
         <div className="container">
           <h1 className="contact-heading">{content.title}</h1>
           <p className="contact-para m-5">{content.text}.</p>
-          
-          <EmailForm type="home"/>
+
+          <EmailForm type="home" language={props.language} />
           {/* <a href="/contact">
             <button class="btn btn-primary my-btn outlined-btn mt-2 mb-3">
               {content.button}

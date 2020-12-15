@@ -1,53 +1,50 @@
-
 .about-page {
-    background: #fff;
+  background: #fff;
 
-    .header {
-        padding: 4% 4% 2% 8%;
-        background: _palette(p-blue);
-        color: _palette(fg);
-    }
-    .title {
-        color: _palette(fg);
-    }
+  .header {
+    padding: 4% 4% 2% 8%;
+    background: _palette(p-blue);
+    color: _palette(fg);
+  }
+  .title {
+    color: _palette(fg);
+  }
 
-    .intro {
-        padding: 5% 8% 4% 8%;
-    }
-    .intro-image {
-        width: 40rem;
-        height: 20rem;
-    }
-    .stats {
-        background: _palette(p-light);
-        text-align: center;
-        color: _palette(p-med);
-        padding: 4% 8% 2% 8%;
-    }
+  .intro {
+    padding: 5% 8% 4% 8%;
+  }
+  .intro-image {
+    width: 100%;
+  }
+  .stats {
+    background: _palette(p-light);
+    text-align: center;
+    color: _palette(p-med);
+    padding: 4% 8% 2% 8%;
+  }
 
-    .stats-heading {
-        margin-bottom: 5%;
-        color: _palette(p-blue);
-    }
+  .stats-heading {
+    margin-bottom: 5%;
+    color: _palette(p-blue);
+  }
 
-    .numbers{
-        font-size: 3rem;
-        color: #3AD29F;
-        font-weight: _font(w-light);
-    }
+  .numbers {
+    font-size: 3rem;
+    color: #3ad29f;
+    font-weight: _font(w-light);
+  }
 
-    .claim {
-        text-align: center;
-        padding: 5% 10%;
-    }
+  .claim {
+    text-align: center;
+    padding: 5% 10%;
+  }
 
-    .claim-heading {
-        margin-bottom: 5%;
-    }
+  .claim-heading {
+    margin-bottom: 5%;
+  }
 
-    .claim-image {
-        width: 20rem;
-        height: 20rem;
-    }
-
+  .claim-image {
+    width: 20rem;
+    height: 20rem;
+  }
 }

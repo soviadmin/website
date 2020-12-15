@@ -12,7 +12,7 @@ export default function Footer(props) {
   let content = {
     EN: {
       menu1: {
-        title: "SOVI Transport Service Corp",
+        title: "Song Viet Transport Service Corp",
         item1: "279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         item2: "Mon-Fri: 09:00AM - 06:00PM",
         item3: "info@example.com",
@@ -37,7 +37,8 @@ export default function Footer(props) {
       menu4: {
         title: "Follow us on",
       },
-      copyright: "2020 © SOVI Transport Service Corp. All rights reserved.",
+      copyright:
+        "2020 © Song Viet Transport Service Corp. All rights reserved.",
     },
 
     VI: {
@@ -68,7 +69,7 @@ export default function Footer(props) {
         title: "Theo dõi chúng tôi tại",
       },
       copyright:
-        "Bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
+        "Mọi bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
     },
   }
 
@@ -168,7 +169,7 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
-      <hr className="footer-hr" />
+      {/* <hr className="footer-hr" /> */}
       <div className="text-center">
         <p className="copyright">{content.copyright}</p>
       </div>

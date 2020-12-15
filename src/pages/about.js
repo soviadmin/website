@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react"
 import Helmet from "react-helmet"
-import AboutImage from "../svg/about-image.svg"
 import SafetyClaim from "../svg/safety.svg"
 import AnimatedNumber from "react-animated-number"
 import useOnScreen from "../hooks/useOnScreen"
 import ScrollAnimation from "react-animate-on-scroll"
 import Layout from "../components/Layout.js"
+import groupImg from "../assets/images/group.jpg"
 
-const About = props => {
+const About = () => {
   const [state, setState] = useState({
     perc_customer: 0,
     num_tasks: 0,
@@ -29,9 +29,10 @@ const About = props => {
 
   let content = {
     EN: {
+      title: "About",
       breadcrumb1: "Home",
       breadcrumb2: "About",
-      title: "About us",
+      heading: "About us",
       sec1: {
         heading: "We are dedicated providers",
         text:
@@ -51,9 +52,10 @@ const About = props => {
     },
 
     VI: {
+      title: "Giới thiệu",
       breadcrumb1: "Trang chủ",
-      breadcrumb2: "Về chúng tôi",
-      title: "Về chúng tôi",
+      breadcrumb2: "Giới thiệu",
+      heading: "Về chúng tôi",
       sec1: {
         heading: "Chúng tôi là nhà cung cấp dịch vụ chu đáo và tận tâm",
         text:
@@ -73,11 +75,14 @@ const About = props => {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  let languageStoredInLocalStorage = localStorage.getItem("language")
+  languageStoredInLocalStorage === "en"
+    ? (content = content.EN)
+    : (content = content.VI)
 
   return (
     <Layout>
-      <Helmet title="About"></Helmet>
+      <Helmet title={content.title}></Helmet>
       <div className="about-page">
         <header className="header">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
@@ -91,7 +96,7 @@ const About = props => {
                 </li>
               </ol>
             </nav>
-            <h1 className="title">{content.title}</h1>
+            <h1 className="title">{content.heading}</h1>
           </ScrollAnimation>
         </header>
 
@@ -105,7 +110,7 @@ const About = props => {
             </div>
             <div className="col-md-6">
               <ScrollAnimation animateIn="bounceIn" animateOnce={true}>
-                <AboutImage className="intro-image" />
+                <img src={groupImg} className="intro-image" />
               </ScrollAnimation>
             </div>
           </div>

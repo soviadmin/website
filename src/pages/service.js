@@ -12,9 +12,9 @@ const Service = () => {
 
   // let location = useLocation();
   // let path = location.pathname.toLocaleLowerCase();
+
   let location = window.location.href
   console.log(location)
-  // console.log(location.a);
   function handleClick(e) {
     navigate("?location=service_02")
   }
@@ -24,23 +24,84 @@ const Service = () => {
   // setLocation(true);
   // console.log(location);
 
+  let content = {
+    EN: {
+      title: "Service",
+      breadcrumb1: "Home",
+      breadcrumb2: "Service",
+      heading: "Our Services",
+      ser1: {
+        name: "Freight",
+        subheading: "SOVI specializes in two major freight types",
+        item1: "Air Freight",
+        item2: "Ocean Freight",
+      },
+      ser2: {
+        name: "OOG Solutions",
+        subheading:
+          "At SOVI, we offer a variety of premier OOG solutions with Flat Rack and Open Top as our most well-known specialties",
+      },
+      ser3: {
+        name: "Custom Clearance",
+      },
+      ser4: {
+        name: "Trucking",
+      },
+      ser5: {
+        name: "Express",
+      },
+    },
+
+    VI: {
+      title: "Dịch vụ",
+      breadcrumb1: "Trang chủ",
+      breadcrumb2: "Dịch vụ",
+      heading: "Dịch vụ của chúng tôi",
+      ser1: {
+        name: "Cước vận chuyển",
+        subheading: "SOVI chuyên về hai loại cước vận chuyển chính",
+        item1: "Đường hàng không",
+        item2: "Đường biển",
+      },
+      ser2: {
+        name: "Giải pháp hàng quá khổ",
+        subheading:
+          "Tại Sovi, chúng tôi cung cấp nhiều giải pháp hàng đầu về xử lý hàng quá khổ, với Flat Rack và Open Top là một trong những sở trường có tiếng nhất của chúng tôi",
+      },
+      ser3: {
+        name: "Khai báo hải quan",
+      },
+      ser4: {
+        name: "Vận chuyển đường bộ",
+      },
+      ser5: {
+        name: "Phát chuyển nhanh",
+      },
+    },
+  }
+
+  let languageStoredInLocalStorage = localStorage.getItem("language")
+  languageStoredInLocalStorage === "en"
+    ? (content = content.EN)
+    : (content = content.VI)
+
   return (
     <Layout>
-      <Helmet title="Service"></Helmet>
+      <Helmet title={content.title}></Helmet>
       <div className="service-page">
         <header className="header">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="/">Home</a>
+                  <a href="/">{content.breadcrumb1}</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Service
+                  {content.breadcrumb2}
                 </li>
               </ol>
             </nav>
-            <h1 className="title">Our Services</h1>
+            <h1 className="title">{content.heading}</h1>
           </ScrollAnimation>
         </header>
         <div>
@@ -55,7 +116,7 @@ const Service = () => {
                           eventKey="first"
                           href="/service#target=freight"
                         >
-                          Freight
+                          {content.ser1.name}
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
@@ -63,7 +124,7 @@ const Service = () => {
                           eventKey="second"
                           href="/service#target=oog-solution"
                         >
-                          OOG Solution
+                          {content.ser2.name}
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
@@ -71,7 +132,7 @@ const Service = () => {
                           eventKey="third"
                           href="/service#target=custom-clearance"
                         >
-                          Custom Clearance
+                          {content.ser3.name}
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
@@ -79,7 +140,7 @@ const Service = () => {
                           eventKey="fourth"
                           href="/service#target=trucking"
                         >
-                          Trucking
+                          {content.ser4.name}
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
@@ -87,7 +148,7 @@ const Service = () => {
                           eventKey="fifth"
                           href="/service#target=express"
                         >
-                          Express
+                          {content.ser5.name}
                         </Nav.Link>
                       </Nav.Item>
                     </Nav>
@@ -95,30 +156,26 @@ const Service = () => {
                   <Col sm={8}>
                     <Tab.Content>
                       <Tab.Pane id="tab1" eventKey="first">
-                        <h1>Freight</h1>
-                        <p>SOVI specializes in two major freight types:</p>
+                        <h1>{content.ser1.name}</h1>
+                        <p>{content.ser1.subheading}:</p>
                         <ol>
-                          <li>Air freight</li>
-                          <li>Ocean freight</li>
+                          <li>{content.ser1.item1}</li>
+                          <li>{content.ser1.item2}</li>
                         </ol>
                       </Tab.Pane>
                       <Tab.Pane id="tab2" eventKey="second">
-                        <h1>OOG Solution</h1>
-                        <p>
-                          At SOVI, we offer a variety of premier OOG solutions
-                          with Flat Rack and Open Top as our most well-known
-                          specialties.
-                        </p>
+                        <h1>{content.ser2.name}</h1>
+                        <p>{content.ser2.subheading}.</p>
                         <OOGSolution />
                       </Tab.Pane>
                       <Tab.Pane id="tab3" eventKey="third">
-                        <h1>Custom Clearance</h1>
+                        <h1>{content.ser3.name}</h1>
                       </Tab.Pane>
                       <Tab.Pane id="tab4" eventKey="fourth">
-                        <h1>Trucking</h1>
+                        <h1>{content.ser4.name}</h1>
                       </Tab.Pane>
                       <Tab.Pane path="/tab5" eventKey="fifth">
-                        <h1>Express</h1>
+                        <h1>{content.ser5.name}</h1>
                       </Tab.Pane>
                     </Tab.Content>
                   </Col>

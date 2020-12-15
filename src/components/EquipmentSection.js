@@ -72,7 +72,7 @@ export default function EquipmentSection(props) {
   return (
     <div className="feature-eq">
       <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-        <h1 className="heading">{content.title}.</h1>
+        <h1 className="heading">{content.title}</h1>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <Carousel id="banner">

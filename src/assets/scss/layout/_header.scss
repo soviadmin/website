@@ -7,8 +7,8 @@
     height: 2.5rem;
     width: 100%;
     margin: 0;
-    background: _palette(p-dark);
-    color: white;
+    background: _palette(fg);
+    color: _palette(p-med3);
     position: absolute;
     top: 0;
     left: 0;
@@ -46,12 +46,13 @@
   .navbar-bg {
     font-family: _font(family);
     letter-spacing: 1px;
-    background: _palette(fg);
+    background: _palette(p-med);
   }
 
   // Custom Toggler
   .hamburger {
-    color: _palette(p-med);
+    color: _palette(fg);
+    background: _palette(fg);
     border: none;
   }
 
@@ -60,7 +61,7 @@
     font-family: _font(family);
     font-weight: _font(w-med);
     font-size: 1rem;
-    color: _palette(p-med);
+    color: _palette(fg);
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease-in;
@@ -89,9 +90,14 @@
     }
   }
 
+  .select-label {
+    margin: 0;
+    margin-right: 10px;
+  }
+
   .language-box {
     border-radius: 5px;
-    margin-left: 11rem;
+    display: inline-block;
     width: 3rem;
     cursor: pointer;
     height: 1.5rem;

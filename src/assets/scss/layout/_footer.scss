@@ -1,6 +1,7 @@
 footer {
+  background-color: _palette(p-dark);
+
   .container {
-    background-color: _palette(bg-footer);
     color: white;
     padding: 3rem 1rem 1rem;
   }
@@ -46,17 +47,19 @@ footer {
     height: 0.1rem;
   }
 
-  .footer-hr {
-    background: rgba(143, 130, 160, 0.658);
-    height: 0.3px;
-    width: 60%;
-  }
+  // .footer-hr {
+  //   background: rgba(143, 130, 160, 0.658);
+  //   height: 0.3px;
+  //   width: 60%;
+  // }
 
   .copyright {
-    color: rgba(243, 233, 255, 0.658);
+    color: #f3e9ff4a;
     font-size: 1rem;
     padding: 2rem 0;
     cursor: default;
+    background: _palette(p-med2);
+    margin: 0;
   }
 
   @include breakpoint(small2) {

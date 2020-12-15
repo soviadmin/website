@@ -11,27 +11,38 @@
     font-weight: _font(w-bold);
   }
 
-  .card {
+  .card,
+  a {
     border-radius: 1rem;
     border: none;
     cursor: pointer;
     text-align: center;
     box-shadow: -0.0625rem 0 0.625rem 0 rgba(95, 182, 204, 0.13),
       0.3125rem 0.25rem 1.3rem rgba(184, 184, 184, 0.144) !important;
+    text-decoration: none;
+    color: _palette(p-dark);
 
     &:hover {
-      h5{
+      h5 {
         color: _palette(fg);
-        transition: 0.2s ease-out;
       }
+
       color: _palette(fg);
       transition: 0.2s ease-out;
       background: _palette(p-med);
     }
   }
+
   .service-row2 {
     margin: 0 10rem;
   }
+
+  .service-icon {
+    width: 5rem;
+    height: 6rem;
+    margin: 0rem auto 1rem;
+  }
+
   @include breakpoint(large) {
     .service-row2 {
       margin: 0 9rem;

@@ -5,6 +5,12 @@ import ScrollAnimation from "react-animate-on-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
+import OOGIcon from "../svg/oog.svg"
+import CustomClearanceIcon from "../svg/customs.svg"
+import TruckingIcon from "../svg/trucking.svg"
+import FreightIcon from "../svg/freight.svg"
+import ExpressIcon from "../svg/express.svg"
+
 export default function ServiceSection(props) {
   let content = {
     EN: {
@@ -68,53 +74,82 @@ export default function ServiceSection(props) {
   return (
     <div className="our-services">
       <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-        <h1 className="heading">{content.title}.</h1>
+        <h1 className="heading">{content.title}</h1>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-xs-12">
-              <div className="card mb-5">
-                <div className="card-body">
-                  <h5 className="card-title">{content.ser1.name}</h5>
-                  <p className="card-text">{content.ser1.desc}</p>
+              <a href="/service#target=freight">
+                <div className="card mb-5">
+                  <div className="card-body">
+                    <FreightIcon className="service-icon" />
+                    <h5 className="card-title">{content.ser1.name}</h5>
+                    <p className="card-text">{content.ser1.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="col-lg-4 col-xs-12">
-              <div className="card mb-5">
-                <div className="card-body">
-                  <h5 className="card-title">{content.ser2.name}</h5>
-                  <p className="card-text">{content.ser2.desc}</p>
+              <a href="/service#target=oog-solution">
+                <div className="card mb-5">
+                  <div className="card-body">
+                    <OOGIcon className="service-icon" />
+                    <h5 className="card-title">{content.ser2.name}</h5>
+                    <p className="card-text">{content.ser2.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="col-lg-4 col-xs-12">
-              <div className="card mb-5">
-                <div className="card-body">
-                  <h5 className="card-title">{content.ser3.name}</h5>
-                  <p className="card-text">{content.ser3.desc}</p>
+              <a href="/service#target=custom-clearance">
+                <div className="card mb-5">
+                  <div className="card-body">
+                    <CustomClearanceIcon className="service-icon" />
+                    <h5 className="card-title">{content.ser3.name}</h5>
+                    <p className="card-text">{content.ser3.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           {/* ROW 2 */}
           <div className="row service-row2">
             <div className="col-lg-6 col-xs-12">
-              <div className="card mb-5">
-                <div className="card-body">
-                  <h5 className="card-title">{content.ser4.name}</h5>
-                  <p className="card-text">{content.ser4.desc}</p>
+              <a href="/service#target=trucking">
+                <div className="card mb-5">
+                  <TruckingIcon
+                    className="service-icon"
+                    style={{
+                      width: "10rem",
+                      marginBottom: "-1rem",
+                      marginTop: "2rem",
+                    }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{content.ser4.name}</h5>
+                    <p className="card-text">{content.ser4.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="col-lg-6 col-xs-12">
-              <div className="card mb-5">
-                <div className="card-body">
-                  <h5 className="card-title">{content.ser5.name}</h5>
-                  <p className="card-text">{content.ser5.desc}</p>
+              <a href="/service#target=express">
+                <div className="card mb-5">
+                  <ExpressIcon
+                    className="service-icon"
+                    style={{
+                      width: "6rem",
+                      marginBottom: "0rem",
+                      marginTop: "1rem",
+                    }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{content.ser5.name}</h5>
+                    <p className="card-text">{content.ser5.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

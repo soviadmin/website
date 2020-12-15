@@ -1,60 +1,59 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/skel';
-@import 'custom';
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/skel";
+@import "custom";
 //@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
 
-@include skel-breakpoints((
-
-		xlarge: '(max-width: 1200px)', // Extra large devices (large desktops) - no upper bound on width
-		large: '(max-width: 1199.98px)', // Large devices (desktops, less than 1200px)
-		medium: '(max-width: 991.98px)', // Medium devices (tablets, less than 992px)
-		small1: '(max-width: 768.5px)', // Small devices (landscape phones, less than 768px)
-		small2: '(max-width: 709.98px)', // CUSTOM Small devices (landscape phones, less than 710px)
-		xsmall: '(max-width: 575.98px)', // Extra small devices (portrait phones, less than 576px)
-
-		// xlarge: '(max-width: 1280px)',
-        // large: '(max-width: 1200px)',
-        // medium: '(max-width: 992px)',
-        // small: '(max-width: 768px)',
-        xsmall1: '(max-width: 540px)',
-        xsmall2: '(max-width: 480px)',
-		xsmall3: '(max-width: 360px)',
-    ));
+@include skel-breakpoints(
+  (
+    xlarge: "(max-width: 1200px)",
+    // Extra large devices (large desktops) - no upper bound on width
+    large: "(max-width: 1199.98px)",
+    // Large devices (desktops, less than 1200px)
+    medium: "(max-width: 991.98px)",
+    // Medium devices (tablets, less than 992px)
+    small1: "(max-width: 768.5px)",
+    // Small devices (landscape phones, less than 768px)
+    small2: "(max-width: 709.98px)",
+    // CUSTOM Small devices (landscape phones, less than 710px)
+    xsmall: "(max-width: 575.98px)",
+    // Extra small devices (portrait phones, less than 576px)
+    // xlarge: '(max-width: 1280px)',
+    // large: '(max-width: 1200px)',
+    // medium: '(max-width: 992px)',
+    // small: '(max-width: 768px)',
+    xsmall1: "(max-width: 540px)",
+    xsmall2: "(max-width: 480px)",
+    xsmall3: "(max-width: 360px)",
+  )
+);
 
 // Base.
 
-	@import 'base/page';
-	@import 'base/typography';
+@import "base/page";
+@import "base/typography";
 
 // Component.
 
-	@import 'components/fade-scroll';
-	@import 'components/equipment-sec';
-	@import 'components/about-sec';
-	@import 'components/service-sec';
-	@import 'components/contact-sec';
-	@import 'components/testimonials-sec';
-	@import 'components/button';
-	@import 'components/icon';
-	@import 'components/map';
-	@import 'components/email-form';
-	@import 'components/oog-service';
-
+@import "components/fade-scroll";
+@import "components/equipment-sec";
+@import "components/about-sec";
+@import "components/service-sec";
+@import "components/contact-sec";
+@import "components/testimonials-sec";
+@import "components/button";
+@import "components/icon";
+@import "components/map";
+@import "components/email-form";
+@import "components/oog-service";
 
 // Layout.
 
-	@import 'layout/footer';
-	@import 'layout/header';
-	@import 'layout/about';
-	@import 'layout/service';
-	@import 'layout/equipment';
-	@import 'layout/contact';
-
-
-
-
-	
-    
+@import "layout/footer";
+@import "layout/header";
+@import "layout/about";
+@import "layout/service";
+@import "layout/equipment";
+@import "layout/contact";
