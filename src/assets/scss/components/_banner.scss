@@ -13,6 +13,10 @@
     left: 10%;
   }
 
+  .carousel-indicators {
+    display: none;
+  }
+
   .heading1 {
     text-align: left;
     font-size: 2rem;
@@ -25,6 +29,7 @@
     font-size: 3.5rem;
     color: _palette(fg);
   }
+
   @include breakpoint(xxlarge) {
     .carousel-caption {
       width: 37%;
@@ -49,7 +54,8 @@
       font-size: 2.8rem;
     }
   }
-  @include breakpoint(medium2) {//938
+  @include breakpoint(medium2) {
+    //938
     .carousel-caption {
       width: 40%;
     }
@@ -76,7 +82,7 @@
       width: 50%;
     }
     .heading1 {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
     .heading2 {
       font-size: 2rem;
@@ -87,7 +93,7 @@
       width: 50%;
     }
     .heading1 {
-      font-size: .5rem;
+      font-size: 0.5rem;
     }
     .heading2 {
       font-size: 1.5rem;
@@ -98,7 +104,7 @@
       width: 60%;
     }
     .heading1 {
-      font-size: .4rem;
+      font-size: 0.4rem;
     }
     .heading2 {
       font-size: 1.3rem;
@@ -109,11 +115,10 @@
       width: 60%;
     }
     .heading1 {
-      font-size: .3rem;
+      font-size: 0.3rem;
     }
     .heading2 {
       font-size: 1rem;
     }
   }
-
 }

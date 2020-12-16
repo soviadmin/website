@@ -55,7 +55,7 @@ const About = () => {
       sec3: {
         heading: "At SOVI, safety is our first priority",
         text:
-          "As a safety-driven company, we made sure to strictly follow safety procedures before work at all times. Our team are committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations.",
+          "As a safety-driven company, we made sure to strictly follow safety procedures before work at all times. Our team is committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations.",
       },
     },
 
@@ -78,7 +78,7 @@ const About = () => {
       sec3: {
         heading: "An toàn là ưu tiên hàng đầu tại SOVI",
         text:
-          "Chúng tôi luôn chủ động thực hiện nghiêm ngặt các biện pháp an toàn lao động. Đội ngũ nhận viên SOVI cam kết chỉ sử dụng thiết bị và công cụ đã được đảm bảo an toàn tuyệt đối và báo cáo mọi tình huống nguy hiểm nhanh nhất có thể.",
+          "Chúng tôi luôn chủ động thực hiện nghiêm ngặt các biện pháp an toàn lao động. Đội ngũ nhân viên SOVI cam kết chỉ sử dụng thiết bị và công cụ đã được đảm bảo an toàn tuyệt đối và báo cáo mọi tình huống nguy hiểm nhanh nhất có thể.",
       },
     },
   }

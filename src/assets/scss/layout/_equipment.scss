@@ -9,8 +9,13 @@
   .title {
     color: _palette(fg);
   }
+
+  .equipment-desc {
+    padding: 5% 8% 0;
+  }
+
   .equipment-tabs {
-    margin: 3rem;
+    padding: 2rem 3rem 3rem;
   }
   .eq-image {
     padding: 0rem 3rem;

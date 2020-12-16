@@ -25,6 +25,9 @@ const Equipment = () => {
       tab2: "SOVI's Special",
       tab3: "SOVI's Super Special",
       note: "Scroll down to see more",
+      desc: "Description",
+      descContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
 
     VI: {
@@ -36,6 +39,9 @@ const Equipment = () => {
       tab2: "Loại đặc biệt",
       tab3: "Loại chuyên dụng",
       note: "Lướt xuống để xem",
+      desc: "Giới thiệu",
+      descContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
   }
 
@@ -61,6 +67,10 @@ const Equipment = () => {
           </ScrollAnimation>
         </header>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <div className="equipment-desc">
+            <h2>{content.desc}</h2>
+            <p>{content.descContent}</p>
+          </div>
           <div className="equipment-tabs">
             <p className="note">
               <em>{content.note}</em>

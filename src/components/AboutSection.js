@@ -15,8 +15,8 @@ export default function AboutSection(props) {
 
     VI: {
       title1: "Từ biển đến hàng không",
-      title2: "Đã có chúng tôi lo",
-      link: "Tìm hiểu thêm về chúng tôi",
+      title2: "Chúng tôi luôn hỗ trợ bạn",
+      link: "Tìm hiểu thêm về công ty SOVI",
     },
   }
 
