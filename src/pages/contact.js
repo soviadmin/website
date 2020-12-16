@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/Layout.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -8,13 +8,19 @@ import {
   faPhoneAlt,
   faClock,
 } from "@fortawesome/free-solid-svg-icons"
-import emailjs from "emailjs-com"
 import MyMap from "../map/MyMap"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "../components/EmailForm.js"
-import { propTypes } from "react-bootstrap/esm/Image"
 
 const Contact = () => {
+  const [language, setLanguage] = useState("en")
+  const languageStoredInLocalStorage = useRef()
+
+  useEffect(() => {
+    languageStoredInLocalStorage.current = localStorage.getItem("language")
+    setLanguage(languageStoredInLocalStorage.current)
+  }, [])
+
   let content = {
     EN: {
       title: "Contact",
@@ -59,10 +65,7 @@ const Contact = () => {
     },
   }
 
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-  languageStoredInLocalStorage === "en"
-    ? (content = content.EN)
-    : (content = content.VI)
+  language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
     <Layout>
@@ -83,7 +86,7 @@ const Contact = () => {
             <h1 className="title">{content.heading}</h1>
           </ScrollAnimation>
         </header>
-        
+
         <MyMap className="map" />
 
         <div className="contact-inner-section">
@@ -161,7 +164,7 @@ const Contact = () => {
                   <p className="send-email-note mt-0">
                     {content.form.subheading}.
                   </p>
-                  <EmailForm language={languageStoredInLocalStorage}/>
+                  <EmailForm language={language} />
                 </div>
               </div>
             </div>

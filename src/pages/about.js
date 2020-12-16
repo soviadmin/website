@@ -13,19 +13,27 @@ const About = () => {
     num_tasks: 0,
     num_hours: 0,
   })
+
+  const [language, setLanguage] = useState("en")
   const ref = useRef()
   const isVisible = useOnScreen(ref)
+  const languageStoredInLocalStorage = useRef()
 
-  useEffect(() => {
-    if (isVisible === true) {
-      setState({
-        ...state,
-        perc_customer: 97,
-        num_tasks: 1000000,
-        num_hours: 4000000,
-      })
-    }
-  }, [isVisible])
+  useEffect(
+    state => {
+      if (isVisible === true) {
+        setState({
+          ...state,
+          perc_customer: 97,
+          num_tasks: 1000000,
+          num_hours: 4000000,
+        })
+      }
+      languageStoredInLocalStorage.current = localStorage.getItem("language")
+      setLanguage(languageStoredInLocalStorage.current)
+    },
+    [isVisible]
+  )
 
   let content = {
     EN: {
@@ -47,7 +55,7 @@ const About = () => {
       sec3: {
         heading: "At SOVI, safety is our first priority",
         text:
-        "As a safety-driven company, we made sure to strictly follow safety procedures before work at all times. Our team are committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations."
+          "As a safety-driven company, we made sure to strictly follow safety procedures before work at all times. Our team are committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations.",
       },
     },
 
@@ -70,15 +78,12 @@ const About = () => {
       sec3: {
         heading: "An toàn là ưu tiên hàng đầu tại SOVI",
         text:
-          "Chúng tôi luôn chủ động thực hiện nghiêm ngặt các biện pháp an toàn lao động. Đội ngũ nhận viên SOVI cam kết chỉ sử dụng thiết bị và công cụ đã được đảm bảo an toàn tuyệt đối và báo cáo mọi tình huống nguy hiểm nhanh nhất có thể."
+          "Chúng tôi luôn chủ động thực hiện nghiêm ngặt các biện pháp an toàn lao động. Đội ngũ nhận viên SOVI cam kết chỉ sử dụng thiết bị và công cụ đã được đảm bảo an toàn tuyệt đối và báo cáo mọi tình huống nguy hiểm nhanh nhất có thể.",
       },
     },
   }
 
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-  languageStoredInLocalStorage === "en"
-    ? (content = content.EN)
-    : (content = content.VI)
+  language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
     <Layout>
@@ -110,7 +115,7 @@ const About = () => {
             </div>
             <div className="col-md-6">
               <ScrollAnimation animateIn="bounceIn" animateOnce={true}>
-                <img src={groupImg} className="intro-image" />
+                <img src={groupImg} className="intro-image" alt="People" />
               </ScrollAnimation>
             </div>
           </div>

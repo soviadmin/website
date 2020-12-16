@@ -1,28 +1,19 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Helmet from "react-helmet"
 import { Tab, Row, Col, Nav } from "react-bootstrap"
 import Layout from "../components/Layout.js"
-import { navigate } from "@reach/router"
 import ScrollAnimation from "react-animate-on-scroll"
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
 
 const Service = () => {
-  const [param, setParam] = useState("")
+  const [language, setLanguage] = useState("en")
+  const languageStoredInLocalStorage = useRef()
 
-  // let location = useLocation();
-  // let path = location.pathname.toLocaleLowerCase();
-
-  let location = window.location.href
-  console.log(location)
-  function handleClick(e) {
-    navigate("?location=service_02")
-  }
-  // var newurl = window.location.href + '?param=hi';
-  // window.history.pushState({path:newurl},'',newurl);
-
-  // setLocation(true);
-  // console.log(location);
+  useEffect(() => {
+    languageStoredInLocalStorage.current = localStorage.getItem("language")
+    setLanguage(languageStoredInLocalStorage.current)
+  }, [])
 
   let content = {
     EN: {
@@ -86,10 +77,7 @@ const Service = () => {
     },
   }
 
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-  languageStoredInLocalStorage === "en"
-    ? (content = content.EN)
-    : (content = content.VI)
+  language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
     <Layout>
@@ -204,7 +192,7 @@ export const OOGSolution = () => {
   const [itemKey, setKey] = useState(0)
 
   function randomKey() {
-    const rand = 1 + Math.random() * 100
+    let rand = 1 + Math.random() * 100
     if (rand === itemKey) {
       rand = rand + 100
       setKey(rand)
@@ -257,16 +245,14 @@ export const OOGSolution = () => {
               href="#custCarousel"
               data-slide="prev"
             >
-              {" "}
-              <span class="carousel-control-prev-icon"></span>{" "}
-            </a>{" "}
+              <span class="carousel-control-prev-icon"></span>
+            </a>
             <a
               class="carousel-control-next"
               href="#custCarousel"
               data-slide="next"
             >
-              {" "}
-              <span class="carousel-control-next-icon"></span>{" "}
+              <span class="carousel-control-next-icon"></span>
             </a>
             <ol className="carousel-indicators list-inline">
               {oogImg.map(item => {

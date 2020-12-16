@@ -1,14 +1,10 @@
-import React, { Component, useState } from "react"
+import React, { useState, useEffect } from "react"
 import "../assets/scss/main.scss"
 import Header from "./Header"
 import Footer from "./Footer"
 
 export default function Layout(props) {
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-
-  const [language, setLanguage] = useState(
-    languageStoredInLocalStorage ? languageStoredInLocalStorage : "en"
-  )
+  const [language, setLanguage] = useState("en")
 
   const handleSetLanguage = newlanguage => {
     setLanguage(newlanguage)
@@ -19,6 +15,10 @@ export default function Layout(props) {
       language: language,
     })
   )
+
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language"))
+  }, [language])
 
   return (
     <div>

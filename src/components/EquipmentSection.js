@@ -43,7 +43,7 @@ export default function EquipmentSection(props) {
   props.language === "en" ? (content = content.EN) : (content = content.VI)
 
   function randomKey() {
-    const rand = 1 + Math.random() * 100
+    let rand = 1 + Math.random() * 100
     if (rand === itemKey) {
       rand = rand + 100
       setKey(rand)
@@ -102,7 +102,10 @@ export default function EquipmentSection(props) {
 
       <ScrollAnimation animateIn="pulse" animateOnce={true}>
         <a href="/equipment">
-          <button type="button" className="btn btn-primary my-btn filled-btn mt-4">
+          <button
+            type="button"
+            className="btn btn-primary my-btn filled-btn mt-4"
+          >
             {content.button}
             <FontAwesomeIcon
               style={{ marginLeft: "5px", paddingTop: "3px" }}

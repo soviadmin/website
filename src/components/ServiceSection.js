@@ -1,6 +1,5 @@
 import React from "react"
-import Link from "gatsby"
-import { navigate } from "@reach/router"
+// import { navigate } from "@reach/router"
 import ScrollAnimation from "react-animate-on-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
@@ -36,7 +35,6 @@ export default function ServiceSection(props) {
         desc: "Nationwide Services Available",
       },
       button: "See all services",
-      button: "See all services",
     },
 
     VI: {
@@ -67,9 +65,9 @@ export default function ServiceSection(props) {
 
   props.language === "en" ? (content = content.EN) : (content = content.VI)
 
-  function handleClick(e) {
-    navigate("/service/location=02")
-  }
+  // function handleClick(e) {
+  //   navigate("/service/location=02")
+  // }
 
   return (
     <div className="our-services">

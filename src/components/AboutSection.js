@@ -1,7 +1,5 @@
 import React from "react"
 import AboutIllustration from "../svg/illustration1.svg"
-import Img from "gatsby-image"
-import { useImage } from "../hooks/useImage"
 import ScrollAnimation from "react-animate-on-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faMapMarkerAlt,
@@ -160,7 +160,7 @@ export default function Footer(props) {
                   </a>
                 </li>
                 <li className="social-icon">
-                  <a href="#">
+                  <a href="https://www.facebook.com/sovi.tran.31">
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
                 </li>

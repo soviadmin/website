@@ -1,5 +1,4 @@
 import React from "react"
-import { useImage } from "../hooks/useImage"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "./EmailForm"
 
