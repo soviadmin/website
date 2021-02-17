@@ -31,8 +31,8 @@ const Service = () => {
       breadcrumb2: "Service",
       heading: "Our Services",
       ser1: {
-        name: "Freight",
-        subheading: "SOVI specializes in two major freight types",
+        name: "Ocean & Air Freight",
+        subheading: "Over the past few years, we have partnered with reputable airlines and transport companies to support the following routes:",//"SOVI specializes in two major freight types",
         item1: "Air Freight",
         item2: "Ocean Freight",
       },
@@ -49,9 +49,11 @@ const Service = () => {
       },
       ser4: {
         name: "Trucking",
+        subheading: "Please contact us for more details.",
       },
       ser5: {
         name: "Express",
+        subheading: "Please contact us for more details.",
       },
     },
 
@@ -61,10 +63,10 @@ const Service = () => {
       breadcrumb2: "Dịch vụ",
       heading: "Dịch vụ của chúng tôi",
       ser1: {
-        name: "Cước vận chuyển",
-        subheading: "SOVI chuyên về hai loại cước vận chuyển chính",
-        item1: "Đường hàng không",
-        item2: "Đường biển",
+        name: "Cước vận chuyển đường biển/hàng không",
+        subheading: "Trong những năm qua, chúng tôi đã thiết lập mối quan hệ với các đơn vị hàng không, vận tải uy tín để hỗ trợ các tuyến đường sau:",
+        item1: "Đường hàng không: (lập bảng các tuyến)",
+        item2: "Đường biển: (lập bảng các tuyến)",
       },
       ser2: {
         name: "Giải pháp hàng quá khổ",
@@ -73,15 +75,17 @@ const Service = () => {
       },
       ser3: {
         name: "Khai báo hải quan",
-        subheading: "Our custom clearance services center in 2 major types",
-        item1: "Customs transit formalities",
-        item2: "Customs clearance for import-export cargo",
+        subheading: "Chúng tôi cung cấp dịch vụ khai báo hải quan theo 2 loại hình chính:",
+        item1: "Thủ tục quá cảnh",
+        item2: "Thủ tục khai báo hàng hoá xuất nhập khẩu",
       },
       ser4: {
         name: "Vận chuyển đường bộ",
+        subheading: "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
       },
       ser5: {
         name: "Phát chuyển nhanh",
+        subheading: "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
       },
     },
   }
@@ -163,7 +167,7 @@ const Service = () => {
                     <Tab.Content>
                       <Tab.Pane id="tab1" eventKey="freight">
                         <h1>{content.ser1.name}</h1>
-                        <p>{content.ser1.subheading}:</p>
+                        <p>{content.ser1.subheading}</p>
                         <ol>
                           <li>{content.ser1.item1}</li>
                           <li>{content.ser1.item2}</li>
@@ -171,7 +175,7 @@ const Service = () => {
                       </Tab.Pane>
                       <Tab.Pane id="tab2" eventKey="oog">
                         <h1>{content.ser2.name}</h1>
-                        <p>{content.ser2.subheading}.</p>
+                        <p>{content.ser2.subheading}</p>
                         <OOGSolution />
                       </Tab.Pane>
                       <Tab.Pane id="tab3" eventKey="cc">
@@ -184,9 +188,11 @@ const Service = () => {
                       </Tab.Pane>
                       <Tab.Pane id="tab4" eventKey="trucking">
                         <h1>{content.ser4.name}</h1>
+                        <p><em>{content.ser4.subheading}</em></p>
                       </Tab.Pane>
                       <Tab.Pane path="/tab5" eventKey="express">
                         <h1>{content.ser5.name}</h1>
+                        <p><em>{content.ser5.subheading}</em></p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Col>

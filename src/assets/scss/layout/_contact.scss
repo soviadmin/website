@@ -11,7 +11,8 @@
     color: _palette(fg);
   }
   .contact-inner-section {
-    margin-top: 25rem;
+    //Uncomment this if using Google Map API
+    // margin-top: 25rem;
     background-color: _palette(fg);
     padding: 4rem 0;
     .heading {
@@ -40,18 +41,20 @@
 
   @include breakpoint(xlarge) {//1200px
     .contact-inner-section {
-      margin-top: 23rem;
+      // margin-top: 23rem;
+      padding: 3rem 0;
     }
   }
   @include breakpoint(medium) {
     .contact-inner-section {
-      margin-top: 22rem;
+      // margin-top: 22rem;
     }
   }
   @include breakpoint(small1) {
     //768
     .contact-inner-section {
-      margin-top: 25rem;
+      padding: 2rem 0;
+      // margin-top: 25rem;
     }
   }
   @include breakpoint(xsmall) {
@@ -63,7 +66,7 @@
       font-size: 1.6rem;
     }
     .contact-inner-section {
-      margin-top: 20rem;
+      // margin-top: 20rem;
       padding-left: 1.2rem;
       padding-right: 1.2rem;
     }
@@ -71,13 +74,13 @@
   @include breakpoint(xsmall2) {
     //480
     .contact-inner-section {
-      margin-top: 23rem;
+      // margin-top: 23rem;
     }
   }
   @include breakpoint(xsmall3) {
     //360
     .contact-inner-section {
-      margin-top: 20rem;
+      // margin-top: 20rem;
     }
   }
 }

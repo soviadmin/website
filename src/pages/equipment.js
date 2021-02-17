@@ -13,9 +13,9 @@ const Equipment = () => {
       breadcrumb1: "Home",
       breadcrumb2: "Equipment",
       heading: "Equipment Gallery",
-      tab1: "All Equipment",
-      tab2: "SOVI's Special",
-      tab3: "SOVI's Super Special",
+      tab1: "All-purpose Containers",
+      tab2: "Cold/Tank Containers", //"SOVI's Special",
+      tab3: "Flat Rack/Super Rack",
       note: "Scroll down to see more",
     },
 
@@ -23,10 +23,10 @@ const Equipment = () => {
       title: "Thiết bị",
       breadcrumb1: "Trang chủ",
       breadcrumb2: "Thiết bị",
-      heading: "Thư viện thiết bị",
-      tab1: "Tất cả thiết bị",
-      tab2: "Loại đặc biệt",
-      tab3: "Loại chuyên dụng",
+      heading: "Kho thiết bị",
+      tab1: "Container Đa dụng",
+      tab2: "Container Tank/Lạnh",
+      tab3: "Flat Rack/Super Rack",
       note: "Lướt xuống để xem",
     },
   }
@@ -73,7 +73,7 @@ const Equipment = () => {
                 <Special />
               </Tab>
               <Tab eventKey="hard-top" title={content.tab3}>
-                <SuperSpecial />
+                <FlatRack />
               </Tab>
             </Tabs>
           </div>
@@ -102,23 +102,23 @@ export function AllEquipment() {
       imgContainer.equipment40_01.childImageSharp.fluid,
       "40' Open Top Container",
     ],
-    [
-      imgContainer.equipment40_02.childImageSharp.fluid,
-      "40' High Cube Flat Rack",
-    ],
-    [
-      imgContainer.equipment40_03.childImageSharp.fluid,
-      "40' High Cube Super Rack",
-    ],
-    [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
-    [
-      imgContainer.equipment40_05.childImageSharp.fluid,
-      "40' Flat Rack with 47 MT Pay Load",
-    ],
-    [
-      imgContainer.equipment40_06.childImageSharp.fluid,
-      "40' Flat Rack with Collapsible Ends",
-    ],
+    // [
+    //   imgContainer.equipment40_02.childImageSharp.fluid,
+    //   "40' High Cube Flat Rack",
+    // ],
+    // [
+    //   imgContainer.equipment40_03.childImageSharp.fluid,
+    //   "40' High Cube Super Rack",
+    // ],
+    // [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
+    // [
+    //   imgContainer.equipment40_05.childImageSharp.fluid,
+    //   "40' Flat Rack with 47 MT Pay Load",
+    // ],
+    // [
+    //   imgContainer.equipment40_06.childImageSharp.fluid,
+    //   "40' Flat Rack with Collapsible Ends",
+    // ],
     [
       imgContainer.equipment40_07.childImageSharp.fluid,
       "40' High Cube Hard Top Open Top",
@@ -131,10 +131,10 @@ export function AllEquipment() {
       imgContainer.equipment20_02.childImageSharp.fluid,
       "20' High Cube Open Top",
     ],
-    [
-      imgContainer.equipment20_03.childImageSharp.fluid,
-      "20' Flat Rack with 31 MT Pay Load",
-    ],
+    // [
+    //   imgContainer.equipment20_03.childImageSharp.fluid,
+    //   "20' Flat Rack with 31 MT Pay Load",
+    // ],
     [
       imgContainer.equipment20_04.childImageSharp.fluid,
       "20' High Cube Hard Top",
@@ -158,7 +158,7 @@ export function AllEquipment() {
     </div>
   )
 }
-
+//Loại chuyên dụng
 export function Special() {
   const [itemKey, setKey] = useState(0)
   const imgContainer = useImage()
@@ -180,10 +180,10 @@ export function Special() {
       imgContainer.equipment20_01.childImageSharp.fluid,
       "20' Open Top Container",
     ],
-    [
-      imgContainer.equipment40_06.childImageSharp.fluid,
-      "40' Flat Rack with Collapsible Ends",
-    ],
+    // [
+    //   imgContainer.equipment40_06.childImageSharp.fluid,
+    //   "40' Flat Rack with Collapsible Ends",
+    // ],
     [
       imgContainer.equipment20_02.childImageSharp.fluid,
       "20' High Cube Open Top",
@@ -207,8 +207,8 @@ export function Special() {
     </div>
   )
 }
-
-export function SuperSpecial() {
+//Loại đặc biệt - SOVI'S Super Special
+export function FlatRack() {
   const [itemKey, setKey] = useState(0)
   const imgContainer = useImage()
 
@@ -222,30 +222,54 @@ export function SuperSpecial() {
   }
   const superSpecialItems = [
     [
+      imgContainer.equipment20_03.childImageSharp.fluid,
+      "20' Flat Rack with 31 MT Pay Load",
+    ],
+    [
       imgContainer.equipment40_02.childImageSharp.fluid,
       "40' High Cube Flat Rack",
     ],
+    // [
+    //   imgContainer.equipment40_07.childImageSharp.fluid,
+    //   "40' High Cube Hard Top Open Top",
+    // ],
     [
-      imgContainer.equipment40_07.childImageSharp.fluid,
-      "40' High Cube Hard Top Open Top",
+      imgContainer.equipment40_03.childImageSharp.fluid,
+      "40' High Cube Super Rack",
     ],
     [
-      imgContainer.equipment20_03.childImageSharp.fluid,
-      "20' Flat Rack with 31 MT Pay Load",
+      imgContainer.equipment40_04.childImageSharp.fluid,
+      "40' Super Rack"
     ],
     [
       imgContainer.equipment40_05.childImageSharp.fluid,
       "40' Flat Rack with 47 MT Pay Load",
     ],
     [
-      imgContainer.equipment40_03.childImageSharp.fluid,
-      "40' High Cube Super Rack",
+      imgContainer.equipment40_06.childImageSharp.fluid,
+      "40' Flat Rack with Collapsible Ends",
     ],
-    [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
-    [
-      imgContainer.equipment20_04.childImageSharp.fluid,
-      "20' High Cube Hard Top",
-    ],
+    
+
+ // [
+    //   imgContainer.equipment40_02.childImageSharp.fluid,
+    //   "40' High Cube Flat Rack",
+    // ],
+    // [
+    //   imgContainer.equipment40_03.childImageSharp.fluid,
+    //   "40' High Cube Super Rack",
+    // ],
+    // [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
+    // [
+    //   imgContainer.equipment40_05.childImageSharp.fluid,
+    //   "40' Flat Rack with 47 MT Pay Load",
+    // ],
+   
+
+    // [
+    //   imgContainer.equipment20_04.childImageSharp.fluid,
+    //   "20' High Cube Hard Top",
+    // ],
   ]
   return (
     <div className="row">

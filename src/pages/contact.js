@@ -13,8 +13,11 @@ import MyMap from "../map/MyMap"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "../components/EmailForm.js"
 import { propTypes } from "react-bootstrap/esm/Image"
+import { useImage } from "../hooks/useImage"
+import Img from "gatsby-image"
 
 const Contact = () => {
+  const imgContainer = useImage();
   let content = {
     EN: {
       title: "Contact",
@@ -33,7 +36,7 @@ const Contact = () => {
       form: {
         heading: "Send us an email",
         subheading:
-          "Have a question or request? Let us know your thoughts by filling this form",
+          "Have a question or request? Let us know by filling this form",
       },
     },
 
@@ -84,7 +87,8 @@ const Contact = () => {
           </ScrollAnimation>
         </header>
         
-        <MyMap className="map" />
+        {/* Edit this map's CSS using margin-top of _contact.scss/contact-inner-section class */}
+        {/* <MyMap className="map" /> */}
 
         <div className="contact-inner-section">
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
@@ -151,6 +155,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
+                  <Img className="mb-sm-4 mb-4 mr-lg-3" fluid={imgContainer.sovi_map.childImageSharp.fluid}/>
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <h3>{content.form.heading}</h3>

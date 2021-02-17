@@ -21,8 +21,8 @@ const About = () => {
       setState({
         ...state,
         perc_customer: 97,
-        num_tasks: 1000000,
-        num_hours: 4000000,
+        perc_tasks: 95,
+        num_hours: 210000,
       })
     }
   }, [isVisible])
@@ -47,7 +47,7 @@ const About = () => {
       sec3: {
         heading: "At SOVI, safety is our first priority",
         text:
-        "As a safety-driven company, we made sure to strictly follow safety procedures before work at all times. Our team are committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations."
+        "As a safety-driven company, we made sure to strictly follow safety procedures at all times. Our team is committed to using completely safe tools and equipment while taking prompt actions to report dangerous situations."
       },
     },
 
@@ -62,7 +62,7 @@ const About = () => {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
       },
       sec2: {
-        heading: "Hơn 1500 khách hàng đã dùng dịch vụ tại SOVI",
+        heading: "SOVI đã cung ứng dịch vụ cho các công ty logistics hàng đầu thế giới", //"Hơn 1500 khách hàng đã dùng dịch vụ tại SOVI",
         subheading1: "Khách hàng hài lòng với dịch vụ",
         subheading2: "Số nhiệm vụ đã hoàn thành",
         subheading3: "Giờ làm việc",
@@ -133,22 +133,20 @@ const About = () => {
               </div>
               <div className="col-sm-4">
                 <AnimatedNumber
-                  value={state.num_tasks}
+                  value={state.perc_tasks}
                   className="numbers"
-                  formatValue={v =>
-                    v.toLocaleString("en-US", { minimumFractionDigits: 0 })
-                  }
+                  formatValue={v => v.toFixed(0)}
                   duration={1000}
                   frameStyle={perc => ({ opacity: perc / 100 })}
                 />
-                <span className="numbers">+</span>
+                <span className="numbers">%</span>
                 <p>{content.sec2.subheading2}</p>
               </div>
               <div className="col-sm-4">
                 <AnimatedNumber
                   value={state.num_hours}
                   className="numbers"
-                  formatValue={v => v.toLocaleString()}
+                  formatValue={v => v.toLocaleString("en-US", { minimumFractionDigits: 0 })}
                   duration={1000}
                   frameStyle={perc => ({ opacity: perc / 100 })}
                 />

@@ -51,7 +51,7 @@ export default function ServiceSection(props) {
       },
       ser3: {
         name: "Khai báo hải quan",
-        desc: "Thủ tục & Hàng hoá",
+        desc: "Quá cảnh & Xuất nhập khẩu",//"Thủ tục & Hàng hoá",
       },
       ser4: {
         name: "Vận chuyển đường bộ",

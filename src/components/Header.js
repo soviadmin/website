@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Nav, Navbar, Form } from "react-bootstrap"
 import { Link } from "gatsby"
-import logo from "../assets/images/logo2.png"
+import logo from "../assets/images/logo/logo2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faEnvelope,
@@ -67,7 +67,7 @@ export default function Header(props) {
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
             info@example.com
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-sm-12 language-header">
             <Form.Label className="select-label">{content.language}</Form.Label>
             <Form.Control
               as="select"

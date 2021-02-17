@@ -134,10 +134,23 @@
   // }
   @include breakpoint(medium) {
     .contact-header {
-      display: none;
+      position: relative;
+      > div {
+        display: none;
+        text-align: right;
+      }
+      .language-header {
+        display: block;
+      }
+    }
+    .language-header {
+      display: block;
     }
     .navbar {
-      padding-top: 0.5rem;
+      padding: 0rem 0rem;
+    }
+    .hamburger {
+      margin-right: 1rem;
     }
   }
 }

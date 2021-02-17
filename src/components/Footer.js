@@ -159,11 +159,11 @@ export default function Footer(props) {
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
-                <li className="social-icon">
+                {/* <li className="social-icon">
                   <a href="#">
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

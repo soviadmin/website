@@ -36,6 +36,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `equipment`,
+        path: `${__dirname}/src/assets/images/equipment`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `icon`,
+        path: `${__dirname}/src/assets/images/icon`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logo`,
+        path: `${__dirname}/src/assets/images/logo`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `map`,
+        path: `${__dirname}/src/assets/images/map`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `svg`,
         path: `${__dirname}/src/svg`
       },
@@ -49,7 +77,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'minimal-ui',
-        icon: 'src/assets/images/favicon.ico', // This path is relative to the root of the site. #663399
+        icon: 'src/assets/images/logo/favicon.ico', // This path is relative to the root of the site. #663399
       },
     },
     {

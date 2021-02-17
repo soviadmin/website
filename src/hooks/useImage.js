@@ -5,77 +5,77 @@ export const useImage = () => {
   const imgContainer = useStaticQuery (
     graphql`
       query {
-        equipment40_01: file(relativePath: { eq: "40opentop.png" }) {
+        equipment40_01: file(relativePath: { eq: "equipment/40opentop.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_02: file(relativePath: { eq: "40highcube_flatrack.png" }) {
+        equipment40_02: file(relativePath: { eq: "equipment/40highcube_flatrack.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_03: file(relativePath: { eq: "40highcube_superrack.png" }) {
+        equipment40_03: file(relativePath: { eq: "equipment/40highcube_superrack.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_04: file(relativePath: { eq: "40superrack.png" }) {
+        equipment40_04: file(relativePath: { eq: "equipment/40superrack.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_05: file(relativePath: { eq: "40flatrack_47mt.png" }) {
+        equipment40_05: file(relativePath: { eq: "equipment/40flatrack_47mt.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_06: file(relativePath: { eq: "40flatrack_collapsible_end.png" }) {
+        equipment40_06: file(relativePath: { eq: "equipment/40flatrack_collapsible_end.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment40_07: file(relativePath: { eq: "40highcube_hardtop_opentop.png" }) {
+        equipment40_07: file(relativePath: { eq: "equipment/40highcube_hardtop_opentop.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment20_01: file(relativePath: { eq: "20opentop.png" }) {
+        equipment20_01: file(relativePath: { eq: "equipment/20opentop.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment20_02: file(relativePath: { eq: "20highcube_opentop.png" }) {
+        equipment20_02: file(relativePath: { eq: "equipment/20highcube_opentop.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment20_03: file(relativePath: { eq: "20flatrack_31mt.png" }) {
+        equipment20_03: file(relativePath: { eq: "equipment/20flatrack_31mt.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
         }
-        equipment20_04: file(relativePath: { eq: "20highcube_hardtop.png" }) {
+        equipment20_04: file(relativePath: { eq: "equipment/20highcube_hardtop.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -202,6 +202,13 @@ export const useImage = () => {
           }
         } 
         oog49: file(relativePath: { eq: "oog/sovi49.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sovi_map: file(relativePath: { eq: "map/SOVI_MAP.png" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid

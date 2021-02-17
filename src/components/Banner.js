@@ -13,12 +13,12 @@ export default function Banner(props) {
   let content = {
     EN: {
       heading1: "Welcome",
-      heading2: "Meet Vietnam's Leading Logistics Corporation",
+      heading2: "Meet Song Viet Logistics Corporation",//"Meet Vietnam's Leading Logistics Corporation",
     },
 
     VI: {
       heading1: "Chào mừng",
-      heading2: "Tìm hiểu tập đoàn logistics hàng đầu tại Việt Nam",
+      heading2: "Tìm hiểu tập đoàn logistics Sóng Việt",
     },
   }
 
