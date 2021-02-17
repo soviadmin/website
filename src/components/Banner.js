@@ -1,11 +1,9 @@
 import React from "react"
-import { useImage } from "../hooks/useImage"
 import Carousel from "react-bootstrap/Carousel"
 
 // import Img from "gatsby-image";
 import banner1 from "../assets/images/banner1.jpg"
 import banner2 from "../assets/images/banner2.jpg"
-import banner3 from "../assets/images/banner3.jpg"
 import banner4 from "../assets/images/banner4.jpg"
 import ScrollAnimation from "react-animate-on-scroll"
 
@@ -38,7 +36,7 @@ export default function Banner(props) {
             <h3 className="heading2">{content.heading2}</h3>
           </Carousel.Caption>
         </Carousel.Item>
-        {/* <Carousel.Item interval={1000}>
+        <Carousel.Item interval={1000}>
           <img
             className="d-block w-100 banner-image"
             src={banner1}
@@ -51,7 +49,7 @@ export default function Banner(props) {
             src={banner2}
             alt="Third slide"
           />
-        </Carousel.Item> */}
+        </Carousel.Item>
       </Carousel>
     </ScrollAnimation>
   )

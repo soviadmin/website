@@ -163,7 +163,7 @@ const EmailForm = props => {
         <input
           type="submit"
           value={content.submitBtn}
-          className="btn btn-primary my-btn filled-btn"
+          className="btn btn-primary my-btn contact-btn"
         />
       </form>
     </div>

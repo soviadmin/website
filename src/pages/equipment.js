@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Helmet from "react-helmet"
 import { Tab, Tabs } from "react-bootstrap"
 import ScrollAnimation from "react-animate-on-scroll"
@@ -7,6 +7,14 @@ import Img from "gatsby-image"
 import Layout from "../components/Layout.js"
 
 const Equipment = () => {
+  const [language, setLanguage] = useState("en")
+  const languageStoredInLocalStorage = useRef()
+
+  useEffect(() => {
+    languageStoredInLocalStorage.current = localStorage.getItem("language")
+    setLanguage(languageStoredInLocalStorage.current)
+  }, [])
+
   let content = {
     EN: {
       title: "Equipment",
@@ -17,6 +25,9 @@ const Equipment = () => {
       tab2: "Cold/Tank Containers", //"SOVI's Special",
       tab3: "Flat Rack/Super Rack",
       note: "Scroll down to see more",
+      desc: "Description",
+      descContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
 
     VI: {
@@ -28,13 +39,13 @@ const Equipment = () => {
       tab2: "Container Tank/Lạnh",
       tab3: "Flat Rack/Super Rack",
       note: "Lướt xuống để xem",
+      desc: "Giới thiệu",
+      descContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
   }
 
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-  languageStoredInLocalStorage === "en"
-    ? (content = content.EN)
-    : (content = content.VI)
+  language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
     <Layout>
@@ -56,6 +67,10 @@ const Equipment = () => {
           </ScrollAnimation>
         </header>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <div className="equipment-desc">
+            <h2>{content.desc}</h2>
+            <p>{content.descContent}</p>
+          </div>
           <div className="equipment-tabs">
             <p className="note">
               <em>{content.note}</em>
@@ -90,7 +105,7 @@ export function AllEquipment() {
   const imgContainer = useImage()
 
   function randomKey() {
-    const rand = 1 + Math.random() * 100
+    let rand = 1 + Math.random() * 100
     if (rand === itemKey) {
       rand = rand + 100
       setKey(rand)
@@ -164,7 +179,7 @@ export function Special() {
   const imgContainer = useImage()
 
   function randomKey() {
-    const rand = 1 + Math.random() * 100
+    let rand = 1 + Math.random() * 100
     if (rand === itemKey) {
       rand = rand + 100
       setKey(rand)
@@ -213,7 +228,7 @@ export function FlatRack() {
   const imgContainer = useImage()
 
   function randomKey() {
-    const rand = 1 + Math.random() * 100
+    let rand = 1 + Math.random() * 100
     if (rand === itemKey) {
       rand = rand + 100
       setKey(rand)

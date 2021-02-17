@@ -1,0 +1,31 @@
+#notfound {
+  .page {
+    background: _palette(p-med);
+    padding: 3rem 5rem;
+    text-align: center;
+  }
+
+  .alert {
+    color: _palette(fg);
+  }
+
+  .status {
+    font-size: 10rem;
+    color: _palette(fg);
+  }
+
+  .message {
+    font-weight: _font(w-thin);
+    color: _palette(fg);
+  }
+
+  .link {
+    text-decoration: none;
+    color: _palette(p-blue);
+    font-weight: _font(w-bold);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

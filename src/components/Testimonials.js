@@ -39,8 +39,7 @@ export default function Testimonials(props) {
       },
       why3: {
         label: "Quality assurance",
-        text:
-          "Prioritize customers' benefits and good experiences over costs",
+        text: "Prioritize customers' benefits and good experiences over costs",
       },
       title2: "Our partners",
     },
@@ -105,57 +104,77 @@ export default function Testimonials(props) {
             {/* Brand Row 1 */}
             <div className="row brands">
               <div className="col-sm-4 col-md">
-                <img src={dhl}></img>
+                <img src={dhl} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={schenker}></img>
+                <img src={schenker} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={sarens}></img>
+                <img src={sarens} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={craneww}></img>
+                <img src={craneww} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={kn}></img>
+                <img src={kn} alt="Partner Logo"></img>
               </div>
             </div>
 
             {/* Brand Row 2 */}
             <div className="row brands">
               <div className="col-sm-4 col-md">
-                <img src={bollore} style={{ width: "100%" }}></img>
+                <img
+                  src={bollore}
+                  style={{ width: "100%" }}
+                  alt="Partner Logo"
+                ></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={geodis}></img>
+                <img src={geodis} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={dsv}></img>
+                <img src={dsv} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={rhenus}></img>
+                <img src={rhenus} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={edico} style={{ width: "100%" }}></img>
+                <img
+                  src={edico}
+                  style={{ width: "100%" }}
+                  alt="Partner Logo"
+                ></img>
               </div>
             </div>
 
             {/* Brand Row 3 */}
             <div className="row brands">
               <div className="col-sm-4 col-md">
-                <img src={vantage}></img>
+                <img src={vantage} alt="Partner Logo"></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={martech} style={{ width: "90%" }}></img>
+                <img
+                  src={martech}
+                  style={{ width: "90%" }}
+                  alt="Partner Logo"
+                ></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={hoanglam} style={{ width: "70%" }}></img>
+                <img
+                  src={hoanglam}
+                  style={{ width: "70%" }}
+                  alt="Partner Logo"
+                ></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={ptsc} style={{ width: "60%" }}></img>
+                <img
+                  src={ptsc}
+                  style={{ width: "60%" }}
+                  alt="Partner Logo"
+                ></img>
               </div>
               <div className="col-sm-4 col-md">
-                <img src={lilama18}></img>
+                <img src={lilama18} alt="Partner Logo"></img>
               </div>
             </div>
           </ScrollAnimation>

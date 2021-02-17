@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Nav, Navbar, Form } from "react-bootstrap"
 import { Link } from "gatsby"
 import logo from "../assets/images/logo/logo2.png"
@@ -10,10 +10,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header(props) {
-  let languageStoredInLocalStorage = localStorage.getItem("language")
-  const [language, setLanguage] = useState(
-    languageStoredInLocalStorage ? languageStoredInLocalStorage : "en"
-  )
+  const [language, setLanguage] = useState("en")
+
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language"))
+  }, [language])
 
   const handleSetLanguage = e => {
     setLanguage(e.target.value)
