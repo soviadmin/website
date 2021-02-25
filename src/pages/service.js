@@ -23,7 +23,8 @@ const Service = () => {
       heading: "Our Services",
       ser1: {
         name: "Ocean & Air Freight",
-        subheading: "Over the past few years, we have partnered with reputable airlines and transport companies to support the following routes:",//"SOVI specializes in two major freight types",
+        subheading:
+          "Over the past few years, we have partnered with reputable airlines and transport companies to support the following routes:", //"SOVI specializes in two major freight types",
         item1: "Air Freight",
         item2: "Ocean Freight",
       },
@@ -55,7 +56,8 @@ const Service = () => {
       heading: "Dịch vụ của chúng tôi",
       ser1: {
         name: "Cước vận chuyển đường biển/hàng không",
-        subheading: "Trong những năm qua, chúng tôi đã thiết lập mối quan hệ với các đơn vị hàng không, vận tải uy tín để hỗ trợ các tuyến đường sau:",
+        subheading:
+          "Trong những năm qua, chúng tôi đã thiết lập mối quan hệ với các đơn vị hàng không, vận tải uy tín để hỗ trợ các tuyến đường sau:",
         item1: "Đường hàng không: (lập bảng các tuyến)",
         item2: "Đường biển: (lập bảng các tuyến)",
       },
@@ -66,17 +68,20 @@ const Service = () => {
       },
       ser3: {
         name: "Khai báo hải quan",
-        subheading: "Chúng tôi cung cấp dịch vụ khai báo hải quan theo 2 loại hình chính:",
+        subheading:
+          "Chúng tôi cung cấp dịch vụ khai báo hải quan theo 2 loại hình chính:",
         item1: "Thủ tục quá cảnh",
         item2: "Thủ tục khai báo hàng hoá xuất nhập khẩu",
       },
       ser4: {
         name: "Vận chuyển đường bộ",
-        subheading: "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
+        subheading:
+          "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
       },
       ser5: {
         name: "Phát chuyển nhanh",
-        subheading: "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
+        subheading:
+          "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
       },
     },
   }
@@ -105,7 +110,7 @@ const Service = () => {
         <div>
           <div className="intro">
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+              <Tab.Container id="left-tabs-example" defaultActiveKey="freight">
                 <Row>
                   <Col sm={4}>
                     <Nav variant="pills" className="flex-column">
@@ -176,11 +181,15 @@ const Service = () => {
                       </Tab.Pane>
                       <Tab.Pane id="tab4" eventKey="trucking">
                         <h1>{content.ser4.name}</h1>
-                        <p><em>{content.ser4.subheading}</em></p>
+                        <p>
+                          <em>{content.ser4.subheading}</em>
+                        </p>
                       </Tab.Pane>
                       <Tab.Pane path="/tab5" eventKey="express">
                         <h1>{content.ser5.name}</h1>
-                        <p><em>{content.ser5.subheading}</em></p>
+                        <p>
+                          <em>{content.ser5.subheading}</em>
+                        </p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Col>
