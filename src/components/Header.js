@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Nav, Navbar, Form } from "react-bootstrap"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import logo from "../assets/images/logo/logo2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -11,6 +11,17 @@ import {
 
 export default function Header(props) {
   const [language, setLanguage] = useState("en")
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
 
   useEffect(() => {
     setLanguage(localStorage.getItem("language"))
@@ -58,7 +69,7 @@ export default function Header(props) {
         <div className="row contact-header">
           <div className="col-3">
             <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" />
-            (+84) 310 931 337
+            (+84) 310 931 337 {data.site.siteMetadata.title}
           </div>
           <div className="col-3">
             <FontAwesomeIcon icon={faFax} className="contact-icon" />

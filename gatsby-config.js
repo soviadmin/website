@@ -10,7 +10,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: " | SOVI",
+    title: "SOVI",
     author: "Katie & Khe",
     description: "SOVI's Website",
   },
@@ -18,7 +18,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,28 +37,28 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `equipment`,
-        path: `${__dirname}/src/assets/images/equipment`
+        path: `${__dirname}/src/assets/images/equipment`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `icon`,
-        path: `${__dirname}/src/assets/images/icon`
+        path: `${__dirname}/src/assets/images/icon`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `logo`,
-        path: `${__dirname}/src/assets/images/logo`
+        path: `${__dirname}/src/assets/images/logo`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `map`,
-        path: `${__dirname}/src/assets/images/map`
+        path: `${__dirname}/src/assets/images/map`,
       },
     },
     {
@@ -69,15 +69,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-bb',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'minimal-ui',
-        icon: 'src/assets/images/logo/favicon.ico', // This path is relative to the root of the site. #663399
+        name: "gatsby-starter-bb",
+        short_name: "starter",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "minimal-ui",
+        icon: "src/assets/images/logo/icon.png", // This path is relative to the root of the site. #663399
       },
     },
     {
@@ -89,5 +96,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-transformer-remark`,
   ],
 }

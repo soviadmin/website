@@ -1,0 +1,4 @@
+backend:
+  name: github
+  repo: soviadmin/website
+  branch: main
