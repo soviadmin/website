@@ -3,7 +3,6 @@
 #   repo: soviadmin/website
 #   branch: main
 
-
 backend:
   name: git-gateway
   branch: main
