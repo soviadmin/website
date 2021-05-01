@@ -21,9 +21,9 @@ const Equipment = () => {
       breadcrumb1: "Home",
       breadcrumb2: "Equipment",
       heading: "Equipment Gallery",
-      tab1: "All-purpose Containers",
-      tab2: "Cold/Tank Containers", //"SOVI's Special",
-      tab3: "Flat Rack/Super Rack",
+      tab1: "General Purpose",
+      tab2: "Reefer", 
+      tab3: "Special",
       note: "Scroll down to see more",
       desc: "Description",
       descContent:
@@ -35,9 +35,9 @@ const Equipment = () => {
       breadcrumb1: "Trang chủ",
       breadcrumb2: "Thiết bị",
       heading: "Kho thiết bị",
-      tab1: "Container Đa dụng",
-      tab2: "Container Tank/Lạnh",
-      tab3: "Flat Rack/Super Rack",
+      tab1: "Container bách hoá",
+      tab2: "Container lạnh",
+      tab3: "Container đặc biệt",
       note: "Lướt xuống để xem",
       desc: "Giới thiệu",
       descContent:
@@ -82,13 +82,13 @@ const Equipment = () => {
               id="uncontrolled-tab-example"
             >
               <Tab eventKey="all" title={content.tab1}>
-                <AllEquipment />
+                <GeneralPurpose />
               </Tab>
               <Tab eventKey="open-top" title={content.tab2}>
-                <Special />
+                <Reefer />
               </Tab>
               <Tab eventKey="hard-top" title={content.tab3}>
-                <FlatRack />
+                <Special />
               </Tab>
             </Tabs>
           </div>
@@ -100,7 +100,7 @@ const Equipment = () => {
 
 export default Equipment
 
-export function AllEquipment() {
+export function GeneralPurpose() {
   const [itemKey, setKey] = useState(0)
   const imgContainer = useImage()
 
@@ -112,68 +112,88 @@ export function AllEquipment() {
     }
     return rand
   }
-  const allItems = [
-    [
-      imgContainer.equipment40_01.childImageSharp.fluid,
-      "40' Open Top Container",
-    ],
-    // [
-    //   imgContainer.equipment40_02.childImageSharp.fluid,
-    //   "40' High Cube Flat Rack",
-    // ],
-    // [
-    //   imgContainer.equipment40_03.childImageSharp.fluid,
-    //   "40' High Cube Super Rack",
-    // ],
-    // [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
-    // [
-    //   imgContainer.equipment40_05.childImageSharp.fluid,
-    //   "40' Flat Rack with 47 MT Pay Load",
-    // ],
-    // [
-    //   imgContainer.equipment40_06.childImageSharp.fluid,
-    //   "40' Flat Rack with Collapsible Ends",
-    // ],
-    [
-      imgContainer.equipment40_07.childImageSharp.fluid,
-      "40' High Cube Hard Top Open Top",
-    ],
-    [
-      imgContainer.equipment20_01.childImageSharp.fluid,
-      "20' Open Top Container",
-    ],
+  const genPurposeItems = [
     [
       imgContainer.equipment20_02.childImageSharp.fluid,
-      "20' High Cube Open Top",
+      "20' Container", "eq-20"
     ],
-    // [
-    //   imgContainer.equipment20_03.childImageSharp.fluid,
-    //   "20' Flat Rack with 31 MT Pay Load",
-    // ],
     [
-      imgContainer.equipment20_04.childImageSharp.fluid,
-      "20' High Cube Hard Top",
+      imgContainer.equipment40_01.childImageSharp.fluid,
+      "40' Container", "eq-40"
+    ],
+    [
+      imgContainer.equipment40_01.childImageSharp.fluid,
+      "40' High Cube Container", "eq-40-hq"
+    ],
+    [
+      imgContainer.equipment40_01.childImageSharp.fluid,
+      "45' Container", "eq-45"
     ],
   ]
   return (
     <div className="row">
-      {allItems.map(groupItem => {
+      {genPurposeItems.map(groupItem => {
+        return (
+            <div
+              className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item"
+              key={randomKey()}
+            >
+              <a href={`/equipment/general-purpose/${groupItem[2]}`}>
+                <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                  <Img key={randomKey()} fluid={groupItem[0]} />
+                  <p className="eq-name mb-5">{groupItem[1]}</p>
+                </ScrollAnimation>
+              </a>
+            </div>
+        )
+      })}
+    </div>
+  )
+}
+//Loại container lạnh (Reefer)
+export function Reefer() {
+  const [itemKey, setKey] = useState(0)
+  const imgContainer = useImage()
+
+  function randomKey() {
+    let rand = 1 + Math.random() * 100
+    if (rand === itemKey) {
+      rand = rand + 100
+      setKey(rand)
+    }
+    return rand
+  }
+  const reeferItems = [
+    [
+      imgContainer.equipment20_reefer.childImageSharp.fluid,
+      "20' Reefer", "eq-20-rf"
+    ],
+    [
+      imgContainer.equipment40_reefer.childImageSharp.fluid,
+      "40' Reefer High Cube", "eq-40-rf"
+    ],
+  ]
+  return (
+    <div className="row">
+      {reeferItems.map(groupItem => {
         return (
           <div
             className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item"
             key={randomKey()}
           >
-            <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-              <Img key={randomKey()} fluid={groupItem[0]} />
-              <p className="eq-name mb-5">{groupItem[1]}</p>
-            </ScrollAnimation>
+            <a href={`/equipment/reefer/${groupItem[2]}`}>
+              <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                <Img key={randomKey()} fluid={groupItem[0]} />
+                <p className="eq-name mb-5">{groupItem[1]}</p>
+              </ScrollAnimation>
+            </a>
           </div>
         )
       })}
     </div>
   )
 }
-//Loại chuyên dụng
+//Loại đặc biệt - SOVI'S Special
 export function Special() {
   const [itemKey, setKey] = useState(0)
   const imgContainer = useImage()
@@ -188,21 +208,25 @@ export function Special() {
   }
   const specialItems = [
     [
-      imgContainer.equipment40_01.childImageSharp.fluid,
-      "40' Open Top Container",
+      imgContainer.equipment20_04.childImageSharp.fluid,
+      "20' Open Top Container", "eq-20-ot"
     ],
     [
-      imgContainer.equipment20_01.childImageSharp.fluid,
-      "20' Open Top Container",
+      imgContainer.equipment40_07.childImageSharp.fluid,
+      "40' Open Top Container", "eq-40-ot"
     ],
-    // [
-    //   imgContainer.equipment40_06.childImageSharp.fluid,
-    //   "40' Flat Rack with Collapsible Ends",
-    // ],
     [
-      imgContainer.equipment20_02.childImageSharp.fluid,
-      "20' High Cube Open Top",
+      imgContainer.equipment20_03.childImageSharp.fluid,
+      "20' Flat Rack", "eq-20-fr"
     ],
+    [
+      imgContainer.equipment40_06.childImageSharp.fluid,
+      "40' Flat Rack", "eq-40-fr"
+    ],
+    [
+      imgContainer.equipment40_04.childImageSharp.fluid,
+      "40' Super Rack", "eq-40-sr"
+    ]
   ]
   return (
     <div className="row">
@@ -212,92 +236,12 @@ export function Special() {
             className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item"
             key={randomKey()}
           >
-            <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-              <Img key={randomKey()} fluid={groupItem[0]} />
-              <p className="eq-name mb-5">{groupItem[1]}</p>
-            </ScrollAnimation>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-//Loại đặc biệt - SOVI'S Super Special
-export function FlatRack() {
-  const [itemKey, setKey] = useState(0)
-  const imgContainer = useImage()
-
-  function randomKey() {
-    let rand = 1 + Math.random() * 100
-    if (rand === itemKey) {
-      rand = rand + 100
-      setKey(rand)
-    }
-    return rand
-  }
-  const superSpecialItems = [
-    [
-      imgContainer.equipment20_03.childImageSharp.fluid,
-      "20' Flat Rack with 31 MT Pay Load",
-    ],
-    [
-      imgContainer.equipment40_02.childImageSharp.fluid,
-      "40' High Cube Flat Rack",
-    ],
-    // [
-    //   imgContainer.equipment40_07.childImageSharp.fluid,
-    //   "40' High Cube Hard Top Open Top",
-    // ],
-    [
-      imgContainer.equipment40_03.childImageSharp.fluid,
-      "40' High Cube Super Rack",
-    ],
-    [
-      imgContainer.equipment40_04.childImageSharp.fluid,
-      "40' Super Rack"
-    ],
-    [
-      imgContainer.equipment40_05.childImageSharp.fluid,
-      "40' Flat Rack with 47 MT Pay Load",
-    ],
-    [
-      imgContainer.equipment40_06.childImageSharp.fluid,
-      "40' Flat Rack with Collapsible Ends",
-    ],
-    
-
- // [
-    //   imgContainer.equipment40_02.childImageSharp.fluid,
-    //   "40' High Cube Flat Rack",
-    // ],
-    // [
-    //   imgContainer.equipment40_03.childImageSharp.fluid,
-    //   "40' High Cube Super Rack",
-    // ],
-    // [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
-    // [
-    //   imgContainer.equipment40_05.childImageSharp.fluid,
-    //   "40' Flat Rack with 47 MT Pay Load",
-    // ],
-   
-
-    // [
-    //   imgContainer.equipment20_04.childImageSharp.fluid,
-    //   "20' High Cube Hard Top",
-    // ],
-  ]
-  return (
-    <div className="row">
-      {superSpecialItems.map(groupItem => {
-        return (
-          <div
-            className="col-xl-4 col-lg-6 col-sm-12 eq-image eq-gallery-item"
-            key={randomKey()}
-          >
-            <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
-              <Img key={randomKey()} fluid={groupItem[0]} />
-              <p className="eq-name mb-5">{groupItem[1]}</p>
-            </ScrollAnimation>
+            <a href={`/equipment/special/${groupItem[2]}`}>
+              <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+                <Img key={randomKey()} fluid={groupItem[0]} />
+                <p className="eq-name mb-5">{groupItem[1]}</p>
+              </ScrollAnimation>
+            </a>
           </div>
         )
       })}
