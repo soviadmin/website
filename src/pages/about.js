@@ -6,6 +6,7 @@ import useOnScreen from "../hooks/useOnScreen"
 import ScrollAnimation from "react-animate-on-scroll"
 import Layout from "../components/Layout.js"
 import groupImg from "../assets/images/group.jpg"
+import PageHeader from "../components/PageHeader"
 
 const About = () => {
   const [state, setState] = useState({
@@ -37,8 +38,7 @@ const About = () => {
   let content = {
     EN: {
       title: "About",
-      breadcrumb1: "Home",
-      breadcrumb2: "About",
+      breadcrumb: [{name: "About"}],
       heading: "About us",
       sec1: {
         heading: "We are dedicated providers",
@@ -60,8 +60,7 @@ const About = () => {
 
     VI: {
       title: "Giới thiệu",
-      breadcrumb1: "Trang chủ",
-      breadcrumb2: "Giới thiệu",
+      breadcrumb: [{name: "Giới thiệu"}],
       heading: "Về chúng tôi",
       sec1: {
         heading: "Chúng tôi là nhà cung cấp dịch vụ chu đáo và tận tâm",
@@ -88,22 +87,10 @@ const About = () => {
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="about-page">
-        <header className="header">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">{content.breadcrumb1}</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  {content.breadcrumb2}
-                </li>
-              </ol>
-            </nav>
-            <h1 className="title">{content.heading}</h1>
-          </ScrollAnimation>
-        </header>
-
+        <PageHeader language={language} 
+                    breadcrumbList={content.breadcrumb} 
+                    title={content.title} 
+                    heading={content.heading}/>
         <div>
           <div className="intro row">
             <div className="col-md-6">

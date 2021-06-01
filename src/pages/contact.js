@@ -8,12 +8,11 @@ import {
   faPhoneAlt,
   faClock,
 } from "@fortawesome/free-solid-svg-icons"
-import MyMap from "../map/MyMap"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "../components/EmailForm.js"
-import { propTypes } from "react-bootstrap/esm/Image"
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
+import PageHeader from "../components/PageHeader"
 
 const Contact = () => {
   const [language, setLanguage] = useState("en")
@@ -28,14 +27,13 @@ const Contact = () => {
   let content = {
     EN: {
       title: "Contact",
-      breadcrumb1: "Home",
-      breadcrumb2: "Contact",
+      breadcrumb: [{name: "Contact"}],
       heading: "Contact Us",
       cta: "Get In Touch",
       info: {
         title: "Head Office",
-        company: "Song Viet Transport Service Corp",
-        address: "279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        company: "Song Viet Transport Service & Trading Corp",
+        address: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         hours: "Mon-Fri: 09:00AM - 06:00PM",
         email: "info@example.com",
         phone: "(+84) 310 931 337",
@@ -49,8 +47,7 @@ const Contact = () => {
 
     VI: {
       title: "Liên hệ",
-      breadcrumb1: "Trang chủ",
-      breadcrumb2: "Liên hệ",
+      breadcrumb: [{name: "Liên hệ"}],
       heading: "Thông tin liên hệ",
       cta: "Hãy liên hệ với chúng tôi",
       info: {
@@ -75,25 +72,12 @@ const Contact = () => {
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="contact-page">
-        <header className="header">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <nav aria-label="breadcrumb">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <a href="/">{content.breadcrumb1}</a>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  {content.breadcrumb2}
-                </li>
-              </ol>
-            </nav>
-            <h1 className="title">{content.heading}</h1>
-          </ScrollAnimation>
-        </header>
-        
+        <PageHeader language={language} 
+                    breadcrumbList={content.breadcrumb} 
+                    title={content.title} 
+                    heading={content.heading}/>
         {/* Edit this map's CSS using margin-top of _contact.scss/contact-inner-section class */}
         {/* <MyMap className="map" /> */}
-
         <div className="contact-inner-section">
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
             <h1 className="heading">{content.cta}</h1>
