@@ -252,10 +252,7 @@ export function FlatRack() {
       imgContainer.equipment40_03.childImageSharp.fluid,
       "40' High Cube Super Rack",
     ],
-    [
-      imgContainer.equipment40_04.childImageSharp.fluid,
-      "40' Super Rack"
-    ],
+    [imgContainer.equipment40_04.childImageSharp.fluid, "40' Super Rack"],
     [
       imgContainer.equipment40_05.childImageSharp.fluid,
       "40' Flat Rack with 47 MT Pay Load",
@@ -264,9 +261,8 @@ export function FlatRack() {
       imgContainer.equipment40_06.childImageSharp.fluid,
       "40' Flat Rack with Collapsible Ends",
     ],
-    
 
- // [
+    // [
     //   imgContainer.equipment40_02.childImageSharp.fluid,
     //   "40' High Cube Flat Rack",
     // ],
@@ -279,7 +275,6 @@ export function FlatRack() {
     //   imgContainer.equipment40_05.childImageSharp.fluid,
     //   "40' Flat Rack with 47 MT Pay Load",
     // ],
-   
 
     // [
     //   imgContainer.equipment20_04.childImageSharp.fluid,

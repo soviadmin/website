@@ -5,23 +5,26 @@
 
 backend:
   name: git-gateway
+  repo: soviadmin/website
   branch: main
 
-media_folder: static/img
-public_folder: /img
+publish_mode: editorial_workflow
+media_folder: static/images
+public_folder: /images
 
 collections:
-  - name: 'website content'
-    label: 'Website Content'
-    folder: 'content'
-    create: true
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
+  - name: "mardown-content"
+    label: "Content"
+    folder: "mardown-content"
+    create: false
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
