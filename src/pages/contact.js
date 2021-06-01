@@ -32,16 +32,16 @@ const Contact = () => {
       cta: "Get In Touch",
       info: {
         title: "Head Office",
-        company: "Song Viet Transport Service & Trading Corp",
+        company: "Song Viet Transport Service & Trading Corporation",
         address: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         hours: "Mon-Fri: 09:00AM - 06:00PM",
-        email: "info@example.com",
+        email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
       },
       form: {
         heading: "Send us an email",
         subheading:
-          "Have a question or request? Let us know by filling this form",
+          "Have a question or request? Let us know by filling out this form",
       },
     },
 
@@ -53,15 +53,15 @@ const Contact = () => {
       info: {
         title: "Trụ sở chính",
         company: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
-        address: "279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        address: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
         hours: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
-        email: "info@example.com",
+        email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
       },
       form: {
         heading: "Liên hệ qua email",
         subheading:
-          "Bạn có bất cứ thắc mắc hay yêu cầu nào? Hãy cho chúng tôi biết bằng cách điền vào mẫu đơn dưới đây",
+          "Bạn có thắc mắc hay yêu cầu nào? Hãy cho chúng tôi biết bằng cách điền vào mẫu đơn dưới đây",
       },
     },
   }

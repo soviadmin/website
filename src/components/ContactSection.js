@@ -7,7 +7,7 @@ export default function ContactSection(props) {
     EN: {
       title: "Contact us",
       text:
-        "Send us your message by filling out the email form. Our staff will be happy to get in touch with you",
+        "Send us your message by filling out this form. Our staff will be happy to get in touch with you",
       button: "Request for Quote",
     },
 

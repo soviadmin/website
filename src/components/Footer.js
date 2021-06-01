@@ -12,10 +12,10 @@ export default function Footer(props) {
   let content = {
     EN: {
       menu1: {
-        title: "Song Viet Transport Service Corp",
-        item1: "279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        title: "Song Viet Transport Service & Trading Corporation",
+        item1: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         item2: "Mon-Fri: 09:00AM - 06:00PM",
-        item3: "info@example.com",
+        item3: "sovi@sovi.vn",
         item4: "(+84) 310 931 337",
       },
       menu2: {
@@ -38,15 +38,15 @@ export default function Footer(props) {
         title: "Follow us on",
       },
       copyright:
-        "2020 © Song Viet Transport Service Corp. All rights reserved.",
+        "2020 © Song Viet Transport Service & Trading Corp. All rights reserved.",
     },
 
     VI: {
       menu1: {
         title: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
-        item1: "279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        item1: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
         item2: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
-        item3: "info@example.com",
+        item3: "sovi@sovi.vn",
         item4: "(+84) 310 931 337",
       },
       menu2: {
