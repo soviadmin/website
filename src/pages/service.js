@@ -5,6 +5,7 @@ import Layout from "../components/Layout.js"
 import ScrollAnimation from "react-animate-on-scroll"
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
+import PageHeader from "../components/PageHeader.js"
 
 const Service = () => {
   const [language, setLanguage] = useState("en")
@@ -18,8 +19,7 @@ const Service = () => {
   let content = {
     EN: {
       title: "Service",
-      breadcrumb1: "Home",
-      breadcrumb2: "Service",
+      breadcrumb: [{name: "Service"}],
       heading: "Our Services",
       ser1: {
         name: "Ocean & Air Freight",
@@ -51,8 +51,7 @@ const Service = () => {
 
     VI: {
       title: "Dịch vụ",
-      breadcrumb1: "Trang chủ",
-      breadcrumb2: "Dịch vụ",
+      breadcrumb: [{name: "Dịch vụ"}],
       heading: "Dịch vụ của chúng tôi",
       ser1: {
         name: "Cước vận chuyển đường biển/hàng không",
@@ -92,22 +91,10 @@ const Service = () => {
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="service-page">
-        <header className="header">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/">{content.breadcrumb1}</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  {content.breadcrumb2}
-                </li>
-              </ol>
-            </nav>
-            <h1 className="title">{content.heading}</h1>
-          </ScrollAnimation>
-        </header>
-        <div>
+        <PageHeader language={language} 
+                    breadcrumbList={content.breadcrumb} 
+                    title={content.title} 
+                    heading={content.heading}/>
           <div className="intro">
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <Tab.Container id="left-tabs-example" defaultActiveKey="freight">
@@ -197,7 +184,6 @@ const Service = () => {
               </Tab.Container>
             </ScrollAnimation>
           </div>
-        </div>
       </div>
     </Layout>
   )

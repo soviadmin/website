@@ -11,7 +11,7 @@
     font-weight: _font(w-bold);
   }
   .row {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   .eq-image {
     padding: 0rem 3rem;
@@ -19,6 +19,9 @@
   }
   .eq-name {
     font-weight: 600;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
   }
   //Overriding Bootstrap carousel indicator
   .carousel-indicators {

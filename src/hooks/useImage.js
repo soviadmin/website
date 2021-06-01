@@ -82,6 +82,20 @@ export const useImage = () => {
               }
             }
         }
+        equipment20_reefer: file(relativePath: { eq: "equipment/20rf.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        equipment40_reefer: file(relativePath: { eq: "equipment/40rf_hq.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         oog04: file(relativePath: { eq: "oog/sovi4.JPG" }) {
           childImageSharp {
             fluid(quality: 100) {

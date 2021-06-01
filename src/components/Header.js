@@ -69,15 +69,16 @@ export default function Header(props) {
         <div className="row contact-header">
           <div className="col-3">
             <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" />
-            (+84) 310 931 337 {data.site.siteMetadata.title}
+            (+84) 310 931 337 
+            {/* {data.site.siteMetadata.title} */}
           </div>
-          <div className="col-3">
+          {/* <div className="col-3">
             <FontAwesomeIcon icon={faFax} className="contact-icon" />
             1234567890
-          </div>
+          </div> */}
           <div className="col-3">
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-            info@example.com
+            sovi@sovi.vn
           </div>
           <div className="col-lg-3 col-sm-12 language-header">
             <Form.Label className="select-label">{content.language}</Form.Label>

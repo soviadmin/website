@@ -8,12 +8,11 @@ import {
   faPhoneAlt,
   faClock,
 } from "@fortawesome/free-solid-svg-icons"
-import MyMap from "../map/MyMap"
 import ScrollAnimation from "react-animate-on-scroll"
 import EmailForm from "../components/EmailForm.js"
-import { propTypes } from "react-bootstrap/esm/Image"
 import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
+import PageHeader from "../components/PageHeader"
 
 const Contact = () => {
   const [language, setLanguage] = useState("en")
@@ -28,43 +27,41 @@ const Contact = () => {
   let content = {
     EN: {
       title: "Contact",
-      breadcrumb1: "Home",
-      breadcrumb2: "Contact",
+      breadcrumb: [{name: "Contact"}],
       heading: "Contact Us",
       cta: "Get In Touch",
       info: {
         title: "Head Office",
-        company: "Song Viet Transport Service Corp",
-        address: "279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        company: "Song Viet Transport Service & Trading Corporation",
+        address: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         hours: "Mon-Fri: 09:00AM - 06:00PM",
-        email: "info@example.com",
+        email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
       },
       form: {
         heading: "Send us an email",
         subheading:
-          "Have a question or request? Let us know by filling this form",
+          "Have a question or request? Let us know by filling out this form",
       },
     },
 
     VI: {
       title: "Liên hệ",
-      breadcrumb1: "Trang chủ",
-      breadcrumb2: "Liên hệ",
+      breadcrumb: [{name: "Liên hệ"}],
       heading: "Thông tin liên hệ",
       cta: "Hãy liên hệ với chúng tôi",
       info: {
         title: "Trụ sở chính",
         company: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
-        address: "279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        address: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
         hours: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
-        email: "info@example.com",
+        email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
       },
       form: {
         heading: "Liên hệ qua email",
         subheading:
-          "Bạn có bất cứ thắc mắc hay yêu cầu nào? Hãy cho chúng tôi biết bằng cách điền vào mẫu đơn dưới đây",
+          "Bạn có thắc mắc hay yêu cầu nào? Hãy cho chúng tôi biết bằng cách điền vào mẫu đơn dưới đây",
       },
     },
   }
@@ -75,25 +72,12 @@ const Contact = () => {
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="contact-page">
-        <header className="header">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-            <nav aria-label="breadcrumb">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <a href="/">{content.breadcrumb1}</a>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  {content.breadcrumb2}
-                </li>
-              </ol>
-            </nav>
-            <h1 className="title">{content.heading}</h1>
-          </ScrollAnimation>
-        </header>
-        
+        <PageHeader language={language} 
+                    breadcrumbList={content.breadcrumb} 
+                    title={content.title} 
+                    heading={content.heading}/>
         {/* Edit this map's CSS using margin-top of _contact.scss/contact-inner-section class */}
         {/* <MyMap className="map" /> */}
-
         <div className="contact-inner-section">
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
             <h1 className="heading">{content.cta}</h1>

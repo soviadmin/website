@@ -5,6 +5,7 @@ import { useImage } from "../hooks/useImage"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 
 export default function EquipmentSection(props) {
   const imgContainer = useImage()
@@ -12,30 +13,36 @@ export default function EquipmentSection(props) {
 
   let content = {
     EN: {
+      //Slide 1
       title: "Featured Equipment",
-      eq1: "40' High Cube Flat Rack",
-      eq2: "40' High Cube Hard Top Open Top",
-      eq3: "20' Flat Rack with 31 MT Pay Load",
-      eq4: "40' Flat Rack with 47 MT Pay Load",
-      eq5: "40' High Cube Super Rack",
-      eq6: "40' Super Rack",
-      eq7: "20' High Cube Hard Top",
-      eq8: "40' Open Top Container",
-      eq9: "40' Flat Rack with Collapsible Ends",
+      eq1: "20' General Purpose Container",
+      eq2: "40' High Cube Container",
+      eq3: "45' General Purpose Container",
+      //Slide 2
+      eq4: "20' Reefer Container",
+      eq5: "20' Open Top Container",
+      eq6: "40' Open Top Container",
+      //Slide 3
+      eq7: "20' Flat Rack Container",
+      eq8: "40' Flat Rack Container",
+      eq9: "40' Super Rack Container",
       button: "See all equipment",
     },
 
     VI: {
+      //Slide 1
       title: "Các thiết bị nổi bật",
-      eq1: "40' High Cube Flat Rack",
-      eq2: "40' High Cube Hard Top Open Top",
-      eq3: "20' Flat Rack with 31 MT Pay Load",
-      eq4: "40' Flat Rack with 47 MT Pay Load",
-      eq5: "40' High Cube Super Rack",
-      eq6: "40' Super Rack",
-      eq7: "20' High Cube Hard Top",
-      eq8: "40' Open Top Container",
-      eq9: "40' Flat Rack with Collapsible Ends",
+      eq1: "Container thường 20'",
+      eq2: "Container cao 40'",
+      eq3: "Container thường 45'",
+      //Slide 2
+      eq4: "Container lạnh 20'",
+      eq5: "Container Open Top 20'",
+      eq6: "Container Open Top 40'",
+      //Slide 3
+      eq7: "Container Flat Rack 20'",
+      eq8: "Container Flat Rack 40'",
+      eq9: "Container Super Rack 40'",
       button: "Xem tất cả thiết bị",
     },
   }
@@ -48,24 +55,32 @@ export default function EquipmentSection(props) {
       rand = rand + 100
       setKey(rand)
     }
-    console.log(rand)
     return rand
   }
   const eqImages = [
     [
-      [imgContainer.equipment40_02.childImageSharp.fluid, content.eq1],
-      [imgContainer.equipment40_07.childImageSharp.fluid, content.eq2],
-      [imgContainer.equipment20_03.childImageSharp.fluid, content.eq3],
+      [imgContainer.equipment20_02.childImageSharp.fluid, content.eq1,
+      "general-purpose/eq-20"],
+      [imgContainer.equipment40_01.childImageSharp.fluid, content.eq2,
+      "general-purpose/eq-40-hq"],
+      [imgContainer.equipment40_01.childImageSharp.fluid, content.eq3,
+      "general-purpose/eq-45"],
     ],
     [
-      [imgContainer.equipment40_05.childImageSharp.fluid, content.eq4],
-      [imgContainer.equipment40_03.childImageSharp.fluid, content.eq5],
-      [imgContainer.equipment40_04.childImageSharp.fluid, content.eq6],
+      [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
+      "reefer/eq-20-rf"],
+      [imgContainer.equipment20_04.childImageSharp.fluid, content.eq5,
+      "special/eq-20-ot"],
+      [imgContainer.equipment40_07.childImageSharp.fluid, content.eq6,
+      "special/eq-40-ot"],
     ],
     [
-      [imgContainer.equipment20_04.childImageSharp.fluid, content.eq7],
-      [imgContainer.equipment40_01.childImageSharp.fluid, content.eq8],
-      [imgContainer.equipment40_06.childImageSharp.fluid, content.eq9],
+      [imgContainer.equipment20_03.childImageSharp.fluid, content.eq7,
+      "special/eq-20-fr"],
+      [imgContainer.equipment40_06.childImageSharp.fluid, content.eq8,
+      "special/eq-40-fr"],
+      [imgContainer.equipment40_04.childImageSharp.fluid, content.eq9,
+      "special/eq-40-sr"],
     ],
   ]
 
@@ -86,9 +101,11 @@ export default function EquipmentSection(props) {
                         <div
                           className="col-lg-4 col-xs-12 eq-image"
                           key={randomKey()}
-                        >
-                          <Img key={randomKey()} fluid={groupItem[0]} />
-                          <p className="eq-name">{groupItem[1]}</p>
+                        > 
+                          <Link to={`/equipment/${groupItem[2]}`}>
+                            <Img key={randomKey()} fluid={groupItem[0]} />
+                            <p className="eq-name">{groupItem[1]}</p>
+                          </Link>
                         </div>
                       )
                     })}
