@@ -58,6 +58,11 @@
       padding: 3rem 1rem;
     }
   }
+  @include breakpoint(small1) {
+    .equipment-desc {
+      text-align: center;
+    }
+  }
   @include breakpoint(small2) {
     .nav-link {
       font-size: 1rem;
