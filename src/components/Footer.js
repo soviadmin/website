@@ -153,7 +153,7 @@ export default function Footer(props) {
                 className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: "60px" }}
               />
-              <ul>
+              <ul style={{listStyle: "none"}}>
                 <li className="social-icon">
                   <a href="https://www.facebook.com/sovi.tran.31">
                     <FontAwesomeIcon icon={faFacebookF} />

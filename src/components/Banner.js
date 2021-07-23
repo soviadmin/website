@@ -16,7 +16,7 @@ export default function Banner(props) {
 
     VI: {
       heading1: "Chào mừng",
-      heading2: "Tìm hiểu tập đoàn logistics Sóng Việt",
+      heading2: "Tìm hiểu công ty logistics Sóng Việt",
     },
   }
 

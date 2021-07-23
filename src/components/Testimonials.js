@@ -49,7 +49,7 @@ export default function Testimonials(props) {
       why1: {
         label: "Hiệu quả nhanh chóng",
         text:
-          "Tiết kiệm thời gian cho khách hàng bởi tốc độ phản hồi và xử lý kiện hàng nhanh chóng",
+          "Tiết kiệm thời gian cho khách hàng với tốc độ phản hồi và xử lý kiện hàng nhanh chóng",
       },
       why2: {
         label: "Đáng tin cậy",

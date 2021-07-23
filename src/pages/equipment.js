@@ -23,14 +23,13 @@ const Equipment = () => {
       breadcrumb: [
         {name: "Equipment"}
       ],
-      heading: "Equipment Gallery",
+      heading: "Container Types",
       tab1: "General Purpose",
       tab2: "Reefer", 
       tab3: "Special",
       note: "Scroll down to see more",
       desc: "Description",
-      descContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      descContent: "Common container types and necessary specification related to stuffing into container."
     },
 
     VI: {
@@ -38,14 +37,14 @@ const Equipment = () => {
       breadcrumb: [
         {name: "Thiết bị"}
       ],
-      heading: "Kho thiết bị",
+      heading: "Các loại container thông dụng",
       tab1: "Container thường",
       tab2: "Container lạnh",
       tab3: "Container đặc biệt",
       note: "Lướt xuống để xem",
       desc: "Giới thiệu",
-      descContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      descContent: "Một số container thông dụng và các thông số cần " + 
+                  "thiết liên quan đến việc đóng hàng vào container."
     },
   }
 

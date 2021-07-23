@@ -42,8 +42,14 @@ const About = () => {
       heading: "About us",
       sec1: {
         heading: "We are dedicated providers",
-        text:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+        text1: "Established since 2011, SOVI company focuses on two key " + 
+                "services: providing specialized containers (Flat-rack and " + 
+                "Open-top) and providing solutions in oversized cargoes transportation.",
+        text2: "With the team of experts applying deep expertise and experience " + 
+                "in the maritime and logistics industry, we aim to deliver high-quality " + 
+                "and cost-effective services to our clients.",
+        text3: "Our motto is:",
+        text4: "SAFE – COST-EFFECTIVE - EFFICIENT"
       },
       sec2: {
         heading: "Over 1,500 customers have used SOVI services",
@@ -64,8 +70,15 @@ const About = () => {
       heading: "Về chúng tôi",
       sec1: {
         heading: "Chúng tôi là nhà cung cấp dịch vụ chu đáo và tận tâm",
-        text:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+        text1: "Được thành lập năm 2011, công ty SOVI đã định hướng tập " + 
+              "trung kinh doanh vào việc cung cấp các container đặc biệt " + 
+              "(OT/FR) và các giải pháp vận chuyển các lô hàng quá khổ, quá tải.",
+        text2: "Bằng đội ngũ nhân viên có kinh nghiệm lâu năm trong lĩnh " + 
+                "vực hàng hải, logistics và khai thác hàng quá khổ, quá tải, chúng " + 
+                "tôi đã, đang và tiếp tục cam đoan làm hài lòng khách hàng bởi chất " + 
+                "lượng dịch vụ cũng như giá cả hợp lý.",
+        text3: "Phương châm hoạt động của chúng tôi là",
+        text4: "AN TOÀN – TIẾT KIỆM – HIỆU QUẢ"
       },
       sec2: {
         heading: "SOVI đã cung ứng dịch vụ cho các công ty logistics hàng đầu thế giới", //"Hơn 1500 khách hàng đã dùng dịch vụ tại SOVI",
@@ -95,8 +108,14 @@ const About = () => {
           <div className="intro row">
             <div className="col-md-6">
               <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-                <h2>{content.sec1.heading}</h2>
-                <p>{content.sec1.text}</p>
+                <h2 className="mb-4">{content.sec1.heading}</h2>
+                <p>{content.sec1.text1}</p>
+                <br></br>
+                <p>{content.sec1.text2}</p>
+                <br></br>
+                <p>{content.sec1.text3}</p>
+                <br></br>
+                <p>{content.sec1.text4}</p>
               </ScrollAnimation>
             </div>
             <div className="col-md-6">

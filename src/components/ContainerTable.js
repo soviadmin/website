@@ -20,8 +20,8 @@ export default function ContainerTable(props) {
 
         VI: {
             heading: "Thông số kĩ thuật",
-            tbTitleDG: "Cửa mở (m)",
-            tbTitleIR: "Phần trong (m)",
+            tbTitleDG: "Kích thước cửa (m)",
+            tbTitleIR: "Bên trong (m)",
             tbTitleWM: "Khối lượng (kg)/ Thể tích",
             length: "Dài",
             width: "Rộng",

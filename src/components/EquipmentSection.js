@@ -57,18 +57,19 @@ export default function EquipmentSection(props) {
     }
     return rand
   }
+  //Featuring Special Containers only
   const eqImages = [
+    // [
+    //   [imgContainer.equipment20_02.childImageSharp.fluid, content.eq1,
+    //   "general-purpose/eq-20"],
+    //   [imgContainer.equipment40_01.childImageSharp.fluid, content.eq2,
+    //   "general-purpose/eq-40-hq"],
+    //   [imgContainer.equipment40_01.childImageSharp.fluid, content.eq3,
+    //   "general-purpose/eq-45"],
+    // ],
     [
-      [imgContainer.equipment20_02.childImageSharp.fluid, content.eq1,
-      "general-purpose/eq-20"],
-      [imgContainer.equipment40_01.childImageSharp.fluid, content.eq2,
-      "general-purpose/eq-40-hq"],
-      [imgContainer.equipment40_01.childImageSharp.fluid, content.eq3,
-      "general-purpose/eq-45"],
-    ],
-    [
-      [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
-      "reefer/eq-20-rf"],
+      // [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
+      // "reefer/eq-20-rf"],
       [imgContainer.equipment20_04.childImageSharp.fluid, content.eq5,
       "special/eq-20-ot"],
       [imgContainer.equipment40_07.childImageSharp.fluid, content.eq6,
@@ -83,7 +84,6 @@ export default function EquipmentSection(props) {
       "special/eq-40-sr"],
     ],
   ]
-
   return (
     <div className="feature-eq">
       <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
@@ -95,7 +95,7 @@ export default function EquipmentSection(props) {
             return (
               <Carousel.Item interval={1000} key={randomKey()}>
                 <div className="container">
-                  <div className="row">
+                  <div className="row justify-content-center">
                     {group.map(groupItem => {
                       return (
                         <div
