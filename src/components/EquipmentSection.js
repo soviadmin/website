@@ -68,20 +68,35 @@ export default function EquipmentSection(props) {
     //   "general-purpose/eq-45"],
     // ],
     [
-      [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
-      "reefer/eq-20-rf"],
-      [imgContainer.equipment20_04.childImageSharp.fluid, content.eq5,
-      "special/eq-20-ot"],
-      [imgContainer.equipment40_07.childImageSharp.fluid, content.eq6,
-      "special/eq-40-ot"],
+      // [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
+      // "reefer/eq-20-rf"],
+      [
+        imgContainer.equipment20_04.childImageSharp.fluid,
+        content.eq5,
+        "special/eq-20-ot",
+      ],
+      [
+        imgContainer.equipment40_07.childImageSharp.fluid,
+        content.eq6,
+        "special/eq-40-ot",
+      ],
     ],
     [
-      [imgContainer.equipment20_03.childImageSharp.fluid, content.eq7,
-      "special/eq-20-fr"],
-      [imgContainer.equipment40_06.childImageSharp.fluid, content.eq8,
-      "special/eq-40-fr"],
-      [imgContainer.equipment40_04.childImageSharp.fluid, content.eq9,
-      "special/eq-40-sr"],
+      [
+        imgContainer.equipment20_03.childImageSharp.fluid,
+        content.eq7,
+        "special/eq-20-fr",
+      ],
+      [
+        imgContainer.equipment40_06.childImageSharp.fluid,
+        content.eq8,
+        "special/eq-40-fr",
+      ],
+      [
+        imgContainer.equipment40_04.childImageSharp.fluid,
+        content.eq9,
+        "special/eq-40-sr",
+      ],
     ],
   ]
   return (
@@ -101,7 +116,7 @@ export default function EquipmentSection(props) {
                         <div
                           className="col-lg-4 col-xs-12 eq-image"
                           key={randomKey()}
-                        > 
+                        >
                           <Link to={`/equipment/${groupItem[2]}`}>
                             <Img key={randomKey()} fluid={groupItem[0]} />
                             <p className="eq-name">{groupItem[1]}</p>

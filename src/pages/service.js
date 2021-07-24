@@ -13,16 +13,17 @@ const Service = () => {
   let content = {
     EN: {
       title: "Service",
-      breadcrumb: [{name: "Service"}],
+      breadcrumb: [{ name: "Service" }],
       heading: "Our Services",
       ser1: {
         name: "Ocean & Air Freight",
-        subheading: "With years of operations in forwarding/logistics " + 
-                    "industry, we have established long-term relationship " + 
-                    "and cooperation with major airlines and shipping lines. " + 
-                    "Therefore, we are able to provide competitive RATE, priority " + 
-                    "in EQUIPMENT supply and SPACE reservation to our clients.",
-          //"Over the past few years, we have partnered with reputable airlines and transport companies to support the following routes:", //"SOVI specializes in two major freight types",
+        subheading:
+          "With years of operations in forwarding/logistics " +
+          "industry, we have established long-term relationship " +
+          "and cooperation with major airlines and shipping lines. " +
+          "Therefore, we are able to provide competitive RATE, priority " +
+          "in EQUIPMENT supply and SPACE reservation to our clients.",
+        //"Over the past few years, we have partnered with reputable airlines and transport companies to support the following routes:", //"SOVI specializes in two major freight types",
         // item1: "Air Freight",
         // item2: "Ocean Freight",
       },
@@ -33,11 +34,13 @@ const Service = () => {
       },
       ser3: {
         name: "Custom Clearance",
-        subheading1: "To insure consistent fluidity of the logistics chain, " + 
-                    "SOVI provides customs clearance services to our clients " + 
-                    "from documentation preparation and submission, customs " + 
-                    "examination and duty payment.",
-        subheading2: "With years of experience, SOVI also advises on reducing the risk and how to optimize duty payables.",
+        subheading1:
+          "To insure consistent fluidity of the logistics chain, " +
+          "SOVI provides customs clearance services to our clients " +
+          "from documentation preparation and submission, customs " +
+          "examination and duty payment.",
+        subheading2:
+          "With years of experience, SOVI also advises on reducing the risk and how to optimize duty payables.",
         subheading3: "We hold certification on Customs, Safety and Security.",
         //"Our custom clearance services center in 2 major types",
         // item1: "Customs transit formalities",
@@ -52,22 +55,23 @@ const Service = () => {
         // subheading: "Please contact us for more details.",
         item1: "Stuffing & Unstuffing",
         item2: "Lashing/Unlashing",
-        item3: "Inspection & Certificate"  
+        item3: "Inspection & Certificate",
       },
     },
 
     VI: {
       title: "Dịch vụ",
-      breadcrumb: [{name: "Dịch vụ"}],
+      breadcrumb: [{ name: "Dịch vụ" }],
       heading: "Dịch vụ của chúng tôi",
       ser1: {
         name: "Cước vận chuyển đường biển/hàng không",
-        subheading: "Nhiều năm tham gia vào thị trường vận tải hàng hóa " + 
-                    "xuất nhập khẩu, chúng tôi đã liên kết chặt chẽ và hợp " + 
-                    "tác với các hãng hàng không, tàu biển lớn. Nhờ đó, chúng " + 
-                    "tôi có thể cung cấp cho khách hàng của mình các lợi thế về: " + 
-                    "GIÁ, THIẾT BỊ, GIỮ CHỖ…",
-         // "Trong những năm qua, chúng tôi đã thiết lập mối quan hệ với các đơn vị hàng không, vận tải uy tín để hỗ trợ các tuyến đường sau:",
+        subheading:
+          "Nhiều năm tham gia vào thị trường vận tải hàng hóa " +
+          "xuất nhập khẩu, chúng tôi đã liên kết chặt chẽ và hợp " +
+          "tác với các hãng hàng không, tàu biển lớn. Nhờ đó, chúng " +
+          "tôi có thể cung cấp cho khách hàng của mình các lợi thế về: " +
+          "GIÁ, THIẾT BỊ, GIỮ CHỖ…",
+        // "Trong những năm qua, chúng tôi đã thiết lập mối quan hệ với các đơn vị hàng không, vận tải uy tín để hỗ trợ các tuyến đường sau:",
         // item1: "Đường hàng không: (lập bảng các tuyến)",
         // item2: "Đường biển: (lập bảng các tuyến)",
       },
@@ -78,16 +82,18 @@ const Service = () => {
       },
       ser3: {
         name: "Khai báo hải quan",
-        subheading1: "Để đảm bảo tính lưu động nhất quán của chuỗi " + 
-                    "logistics, SOVI cung cấp dịch vụ hoàn tất thủ " + 
-                    "tục hải quan cho các khách hàng từ việc cung cấp " + 
-                    "chứng từ, kiểm tra và nộp thuế.",
-        subheading2: "Với nhiều năm kinh nghiệm và am hiểu toàn diện " + 
-                    "trong lĩnh vực logistics, chúng tôi cũng tư vấn " + 
-                    "cho các khách hàng việc giảm thiểu rủi ro và tối " + 
-                    "ưu hóa các khoản phải nộp thuế.", 
+        subheading1:
+          "Để đảm bảo tính lưu động nhất quán của chuỗi " +
+          "logistics, SOVI cung cấp dịch vụ hoàn tất thủ " +
+          "tục hải quan cho các khách hàng từ việc cung cấp " +
+          "chứng từ, kiểm tra và nộp thuế.",
+        subheading2:
+          "Với nhiều năm kinh nghiệm và am hiểu toàn diện " +
+          "trong lĩnh vực logistics, chúng tôi cũng tư vấn " +
+          "cho các khách hàng việc giảm thiểu rủi ro và tối " +
+          "ưu hóa các khoản phải nộp thuế.",
         subheading3: "SOVI được chứng nhận về Hải quan, An toàn và Bảo mật.",
-          //"Chúng tôi cung cấp dịch vụ khai báo hải quan theo 2 loại hình chính:",
+        //"Chúng tôi cung cấp dịch vụ khai báo hải quan theo 2 loại hình chính:",
         // item1: "Thủ tục quá cảnh",
         // item2: "Thủ tục khai báo hàng hoá xuất nhập khẩu",
       },
@@ -100,7 +106,7 @@ const Service = () => {
         name: "Các dịch vụ hỗ trợ", //"Phát chuyển nhanh",
         item1: "Đóng và Dỡ hàng",
         item2: "Chằng buộc và Tháo gỡ hàng",
-        item3: "Kiểm định và Chứng nhận"
+        item3: "Kiểm định và Chứng nhận",
         // subheading:
         //   "Thông tin đang được bổ sung, vui lòng liên hệ để biết thêm chi tiết.",
       },
@@ -113,41 +119,30 @@ const Service = () => {
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="service-page">
-        <PageHeader language={language} 
-                    breadcrumbList={content.breadcrumb} 
-                    title={content.title} 
-                    heading={content.heading}/>
-          <div className="intro">
-            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-              <Tab.Container id="left-tabs-example" defaultActiveKey="freight">
-                <Row>
-                  <Col sm={4}>
-                    <Nav variant="pills" className="flex-column">
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="freight"
-                          href="/service#target=freight"
-                        >
-                          {content.ser1.name}
-                        </Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="oog"
-                          href="/service#target=oog-solution"
-                        >
-                          {content.ser2.name}
-                        </Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="cc"
-                          href="/service#target=custom-clearance"
-                        >
-                          {content.ser3.name}
-                        </Nav.Link>
-                      </Nav.Item>
-                      {/* <Nav.Item>
+        <PageHeader
+          language={language}
+          breadcrumbList={content.breadcrumb}
+          title={content.title}
+          heading={content.heading}
+        />
+        <div className="intro">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <Tab.Container id="left-tabs-example" defaultActiveKey="freight">
+              <Row>
+                <Col sm={4}>
+                  <Nav variant="pills" className="flex-column">
+                    <Nav.Item>
+                      <Nav.Link eventKey="freight">
+                        {content.ser1.name}
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="oog">{content.ser2.name}</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="cc">{content.ser3.name}</Nav.Link>
+                    </Nav.Item>
+                    {/* <Nav.Item>
                         <Nav.Link
                           eventKey="trucking"
                           href="/service#target=trucking"
@@ -155,59 +150,56 @@ const Service = () => {
                           {content.ser4.name}
                         </Nav.Link>
                       </Nav.Item> */}
-                      <Nav.Item>
-                        <Nav.Link
-                          eventKey="ss"
-                          href="/service#target=supporting-service"
-                        >
-                          {content.ser5.name}
-                        </Nav.Link>
-                      </Nav.Item>
-                    </Nav>
-                  </Col>
-                  <Col sm={8}>
-                    <Tab.Content>
-                      <Tab.Pane id="tab1" eventKey="freight">
-                        <h1>{content.ser1.name}</h1>
-                        <p>{content.ser1.subheading}</p>
-                      </Tab.Pane>
-                      <Tab.Pane id="tab2" eventKey="oog">
-                        <h1>{content.ser2.name}</h1>
-                        <p>{content.ser2.subheading}</p>
-                        <OOGSolution />
-                      </Tab.Pane>
-                      <Tab.Pane id="tab3" eventKey="cc">
-                        <h1>{content.ser3.name}</h1>
-                        <p>{content.ser3.subheading1}</p>
-                        <p>{content.ser3.subheading2}</p>
-                        <p>{content.ser3.subheading3}</p>
-                      </Tab.Pane>
-                      {/* <Tab.Pane id="tab4" eventKey="trucking">
+                    <Nav.Item>
+                      <Nav.Link eventKey="ss">{content.ser5.name}</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                </Col>
+                <Col sm={8}>
+                  <Tab.Content>
+                    <Tab.Pane id="tab1" eventKey="freight">
+                      <h1>{content.ser1.name}</h1>
+                      <p>{content.ser1.subheading}</p>
+                    </Tab.Pane>
+                    <Tab.Pane id="tab2" eventKey="oog">
+                      <h1>{content.ser2.name}</h1>
+                      <p>{content.ser2.subheading}</p>
+                      <OOGSolution />
+                    </Tab.Pane>
+                    <Tab.Pane id="tab3" eventKey="cc">
+                      <h1>{content.ser3.name}</h1>
+                      <p>{content.ser3.subheading1}</p>
+                      <p>{content.ser3.subheading2}</p>
+                      <p>{content.ser3.subheading3}</p>
+                    </Tab.Pane>
+                    {/* <Tab.Pane id="tab4" eventKey="trucking">
                         <h1>{content.ser4.name}</h1>
                         <p>
                           <em>{content.ser4.subheading}</em>
                         </p>
                       </Tab.Pane> */}
-                      <Tab.Pane path="/tab5" eventKey="ss">
-                        <h1>{content.ser5.name}</h1>
-                        <p className="ml-5">
-                          <ul style={{listStyle: "inherit", display: "inherit"}}>
-                            <li>{content.ser5.item1}</li>
-                            <li>{content.ser5.item2}</li>
-                            <li>{content.ser5.item3}</li>
-                          </ul>
-                        </p>
-                        
-                        {/* <p>
+                    <Tab.Pane path="/tab5" eventKey="ss">
+                      <h1>{content.ser5.name}</h1>
+                      <p className="ml-5">
+                        <ul
+                          style={{ listStyle: "inherit", display: "inherit" }}
+                        >
+                          <li>{content.ser5.item1}</li>
+                          <li>{content.ser5.item2}</li>
+                          <li>{content.ser5.item3}</li>
+                        </ul>
+                      </p>
+
+                      {/* <p>
                           <em>{content.ser5.subheading}</em>
                         </p> */}
-                      </Tab.Pane>
-                    </Tab.Content>
-                  </Col>
-                </Row>
-              </Tab.Container>
-            </ScrollAnimation>
-          </div>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Col>
+              </Row>
+            </Tab.Container>
+          </ScrollAnimation>
+        </div>
       </div>
     </Layout>
   )

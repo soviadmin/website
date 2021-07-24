@@ -34,6 +34,10 @@ export default function ServiceSection(props) {
         name: "Express",
         desc: "Nationwide Services Available",
       },
+      ser6: {
+        name: "Supporting Services",
+        desc: "Stuffing/Unstuffing, Lashing, Certification,...",
+      },
       button: "See all services",
     },
 
@@ -49,7 +53,7 @@ export default function ServiceSection(props) {
       },
       ser3: {
         name: "Khai báo hải quan",
-        desc: "Quá cảnh & Xuất nhập khẩu",//"Thủ tục & Hàng hoá",
+        desc: "Quá cảnh & Xuất nhập khẩu", //"Thủ tục & Hàng hoá",
       },
       ser4: {
         name: "Vận chuyển đường bộ",
@@ -58,6 +62,10 @@ export default function ServiceSection(props) {
       ser5: {
         name: "Phát chuyển nhanh",
         desc: "Chuyển phát toàn quốc",
+      },
+      ser6: {
+        name: "Các dịch vụ hỗ trợ",
+        desc: "Đóng/dỡ hàng, Chằng buộc, Chứng nhận,...",
       },
       button: "Xem tất cả dịch vụ",
     },
@@ -77,8 +85,8 @@ export default function ServiceSection(props) {
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-xs-12">
-              <a href="/service#target=freight">
+            <div className="col-lg-6 col-xs-12">
+              <a href="/service">
                 <div className="card mb-5">
                   <div className="card-body">
                     <FreightIcon className="service-icon" />
@@ -88,8 +96,8 @@ export default function ServiceSection(props) {
                 </div>
               </a>
             </div>
-            <div className="col-lg-4 col-xs-12">
-              <a href="/service#target=oog-solution">
+            <div className="col-lg-6 col-xs-12">
+              <a href="/service">
                 <div className="card mb-5">
                   <div className="card-body">
                     <OOGIcon className="service-icon" />
@@ -99,8 +107,8 @@ export default function ServiceSection(props) {
                 </div>
               </a>
             </div>
-            <div className="col-lg-4 col-xs-12">
-              <a href="/service#target=custom-clearance">
+            {/* <div className="col-lg-4 col-xs-12">
+              <a href="/service">
                 <div className="card mb-5">
                   <div className="card-body">
                     <CustomClearanceIcon className="service-icon" />
@@ -109,30 +117,30 @@ export default function ServiceSection(props) {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
           </div>
           {/* ROW 2 */}
-          <div className="row service-row2">
+          <div className="row">
             <div className="col-lg-6 col-xs-12">
-              <a href="/service#target=trucking">
+              <a href="/service">
                 <div className="card mb-5">
-                  <TruckingIcon
+                  <CustomClearanceIcon
                     className="service-icon"
                     style={{
-                      width: "10rem",
-                      marginBottom: "-1rem",
+                      width: "9rem",
+                      marginBottom: "-0.5rem",
                       marginTop: "2rem",
                     }}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{content.ser4.name}</h5>
-                    <p className="card-text">{content.ser4.desc}</p>
+                    <h5 className="card-title">{content.ser3.name}</h5>
+                    <p className="card-text">{content.ser3.desc}</p>
                   </div>
                 </div>
               </a>
             </div>
             <div className="col-lg-6 col-xs-12">
-              <a href="/service#target=express">
+              <a href="/service">
                 <div className="card mb-5">
                   <ExpressIcon
                     className="service-icon"
@@ -143,8 +151,8 @@ export default function ServiceSection(props) {
                     }}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{content.ser5.name}</h5>
-                    <p className="card-text">{content.ser5.desc}</p>
+                    <h5 className="card-title">{content.ser6.name}</h5>
+                    <p className="card-text">{content.ser6.desc}</p>
                   </div>
                 </div>
               </a>
