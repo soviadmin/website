@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header(props) {
-  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const data = useStaticQuery(
     graphql`
       query {
@@ -23,14 +22,9 @@ export default function Header(props) {
     `
   )
 
-  useEffect(() => {
-    setLanguage(window.localStorage.getItem("language"))
-  }, [language])
-
   const handleSetLanguage = e => {
-    setLanguage(e.target.value)
     localStorage.setItem("language", e.target.value)
-    props.toggleLanguage(e.target.value)
+    // props.toggleLanguage(e.target.value)
     window.location.reload()
   }
 
@@ -56,8 +50,14 @@ export default function Header(props) {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
-
+  if (typeof window !== "undefined") {
+    content = content.EN
+  } else if (localStorage.getItem("language") == "en") {
+    content = content.EN
+  } else {
+    content = content.VI
+  }
+  
   return (
     <header id="header">
       <Navbar

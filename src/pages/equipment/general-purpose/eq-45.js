@@ -6,7 +6,6 @@ import ContainerTable from "../../../components/ContainerTable"
 import PageHeader from "../../../components/PageHeader"
 
 export default function Eq45() {
-  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const imgContainer = useImage()
 
   // Container's title & image should be entered directly this way instead of
@@ -28,7 +27,13 @@ export default function Eq45() {
       ],
     },
   }
-  language === "en" ? (content = content.EN) : (content = content.VI)
+  if (typeof window !== "undefined") {
+    content = content.EN
+  } else if (localStorage.getItem("language") == "en") {
+    content = content.EN
+  } else {
+    content = content.VI
+  }
   return (
     <Layout>
       <Helmet title={content.title}></Helmet>

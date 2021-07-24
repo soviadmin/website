@@ -15,7 +15,6 @@ const About = () => {
     num_hours: 0,
   })
 
-  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const ref = useRef()
   const isVisible = useOnScreen(ref)
 
@@ -94,8 +93,13 @@ const About = () => {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
-
+  if (typeof window !== "undefined") {
+    content = content.EN
+  } else if (localStorage.getItem("language") == "en") {
+    content = content.EN
+  } else {
+    content = content.VI
+  }
   return (
     <Layout>
       <Helmet title={content.title}></Helmet>

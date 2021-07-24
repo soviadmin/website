@@ -4,11 +4,9 @@ import Header from "./Header"
 import Footer from "./Footer"
 
 export default function Layout(props) {
-  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
-
-  const handleSetLanguage = newlanguage => {
-    setLanguage(newlanguage)
-  }
+  // const handleSetLanguage = newlanguage => {
+  //   setLanguage(newlanguage)
+  // }
 
   let childrenWithProps = React.Children.map(props.children, child =>
     React.cloneElement(child, {
@@ -16,13 +14,13 @@ export default function Layout(props) {
     })
   )
 
-  useEffect(() => {
-    setLanguage(localStorage.getItem("language"))
-  }, [language])
+  // useEffect(() => {
+  //   setLanguage(localStorage.getItem("language"))
+  // }, [language])
 
   return (
     <div>
-      <Header toggleLanguage={handleSetLanguage} />
+      <Header />
       {childrenWithProps.map(childrenElement => childrenElement)}
       <Footer language={language} />
     </div>

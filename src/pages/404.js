@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react"
 import Helmet from "react-helmet"
 
 const Notfound = () => {
-  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
-
   let content = {
     EN: {
       title: "Page Not Found",
@@ -24,8 +22,13 @@ const Notfound = () => {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
-
+  if (typeof window !== "undefined") {
+    content = content.EN
+  } else if (localStorage.getItem("language") == "en") {
+    content = content.EN
+  } else {
+    content = content.VI
+  }
   return (
     <div id="notfound">
       <Helmet title={content.title}></Helmet>
