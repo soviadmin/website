@@ -15,10 +15,9 @@ const About = () => {
     num_hours: 0,
   })
 
-  const [language, setLanguage] = useState("en")
+  const [language, setLanguage] = useState(localStorage.getItem("language"))
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  const languageStoredInLocalStorage = useRef()
 
   useEffect(() => {
     if (isVisible === true) {
@@ -29,8 +28,6 @@ const About = () => {
         num_hours: 210000,
       })
     }
-    languageStoredInLocalStorage.current = localStorage.getItem("language")
-    setLanguage(languageStoredInLocalStorage.current)
   }, 
   [isVisible]
   )

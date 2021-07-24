@@ -9,13 +9,7 @@ import ContactSection from "../components/ContactSection"
 import Layout from "../components/Layout"
 
 const IndexPage = () => {
-  const [language, setLanguage] = useState("en")
-  const languageStoredInLocalStorage = useRef()
-
-  useEffect(() => {
-    languageStoredInLocalStorage.current = localStorage.getItem("language")
-    setLanguage(languageStoredInLocalStorage.current)
-  }, [])
+  const [language, setLanguage] = useState(localStorage.getItem("language"))
 
   let content = {
     EN: {

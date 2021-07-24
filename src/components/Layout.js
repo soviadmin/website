@@ -4,7 +4,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 
 export default function Layout(props) {
-  const [language, setLanguage] = useState("en")
+  const [language, setLanguage] = useState(localStorage.getItem("language"))
 
   const handleSetLanguage = newlanguage => {
     setLanguage(newlanguage)

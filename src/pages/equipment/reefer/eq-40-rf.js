@@ -6,14 +6,8 @@ import ContainerTable from "../../../components/ContainerTable"
 import PageHeader from "../../../components/PageHeader"
 
 export default function Eq40Reefer() {
-  const [language, setLanguage] = useState("en")
-  const languageStoredInLocalStorage = useRef()
+  const [language, setLanguage] = useState(localStorage.getItem("language"))
   const imgContainer = useImage()
-
-  useEffect(() => {
-    languageStoredInLocalStorage.current = localStorage.getItem("language")
-    setLanguage(languageStoredInLocalStorage.current)
-  }, [])
 
   // Container's title & image should be entered directly this way instead of 
   // being passed as states via Link. In case page renders by itself, such
