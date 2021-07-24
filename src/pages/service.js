@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 import PageHeader from "../components/PageHeader.js"
 
 const Service = () => {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
 
   let content = {
     EN: {

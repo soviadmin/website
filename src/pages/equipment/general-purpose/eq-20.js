@@ -6,7 +6,7 @@ import ContainerTable from "../../../components/ContainerTable"
 import PageHeader from "../../../components/PageHeader"
 
 export default function Eq20() {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const imgContainer = useImage()
 
 

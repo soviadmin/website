@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header(props) {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const data = useStaticQuery(
     graphql`
       query {
@@ -24,7 +24,7 @@ export default function Header(props) {
   )
 
   useEffect(() => {
-    setLanguage(localStorage.getItem("language"))
+    setLanguage(window.localStorage.getItem("language"))
   }, [language])
 
   const handleSetLanguage = e => {

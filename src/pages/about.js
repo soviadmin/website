@@ -15,7 +15,7 @@ const About = () => {
     num_hours: 0,
   })
 
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const ref = useRef()
   const isVisible = useOnScreen(ref)
 

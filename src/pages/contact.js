@@ -15,7 +15,7 @@ import Img from "gatsby-image"
 import PageHeader from "../components/PageHeader"
 
 const Contact = () => {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
   const imgContainer = useImage();
 
 

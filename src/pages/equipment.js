@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 import PageHeader from "../components/PageHeader"
 
 const Equipment = () => {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
 
   let content = {
     EN: {

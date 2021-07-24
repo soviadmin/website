@@ -13,7 +13,9 @@ const IndexPage = () => {
     localStorage.setItem("language", "en")
   }
 
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(
+    window.localStorage.getItem("language")
+  )
 
   let content = {
     EN: {

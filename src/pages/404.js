@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import Helmet from "react-helmet"
 
 const Notfound = () => {
-  const [language, setLanguage] = useState(localStorage.getItem("language"))
+  const [language, setLanguage] = useState(window.localStorage.getItem("language"))
 
   let content = {
     EN: {
