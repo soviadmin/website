@@ -103,42 +103,42 @@ export default function Testimonials(props) {
           <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
             {/* Brand Row 1 */}
             <div className="row brands">
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={dhl} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={schenker} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={sarens} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img src={craneww} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img src={kn} alt="Partner Logo"></img>
               </div>
             </div>
 
             {/* Brand Row 2 */}
             <div className="row brands">
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img
                   src={bollore}
                   style={{ width: "100%" }}
                   alt="Partner Logo"
                 ></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={geodis} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={dsv} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img src={rhenus} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img
                   src={edico}
                   style={{ width: "100%" }}
@@ -149,31 +149,31 @@ export default function Testimonials(props) {
 
             {/* Brand Row 3 */}
             <div className="row brands">
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img src={vantage} alt="Partner Logo"></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img
                   src={martech}
                   style={{ width: "90%" }}
                   alt="Partner Logo"
                 ></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-4 col-md">
                 <img
                   src={hoanglam}
                   style={{ width: "70%" }}
                   alt="Partner Logo"
                 ></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img
                   src={ptsc}
                   style={{ width: "60%" }}
                   alt="Partner Logo"
                 ></img>
               </div>
-              <div className="col-sm-4 col-md">
+              <div className="col-6 col-md">
                 <img src={lilama18} alt="Partner Logo"></img>
               </div>
             </div>

@@ -933,8 +933,13 @@ setImmediate(function () {
     return;
   }
 
+<<<<<<< HEAD
   reactHotLoader.register(_netlifyIdentityWidget, "_netlifyIdentityWidget", "/Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
   reactHotLoader.register(addLoginListener, "addLoginListener", "/Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+=======
+  reactHotLoader.register(_netlifyIdentityWidget, "_netlifyIdentityWidget", "/Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+  reactHotLoader.register(addLoginListener, "addLoginListener", "/Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+>>>>>>> eccf0901002ff500395b6c8b1f5637fc120564e1
 })();
 
 ;
@@ -1005,8 +1010,13 @@ _netlifyCmsApp.default.registerPreviewStyle("cms.css");
     return;
   }
 
+<<<<<<< HEAD
   reactHotLoader.register(_netlifyCmsApp, "_netlifyCmsApp", "/Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms.js");
   reactHotLoader.register(_emitter, "_emitter", "/Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms.js");
+=======
+  reactHotLoader.register(_netlifyCmsApp, "_netlifyCmsApp", "/Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms.js");
+  reactHotLoader.register(_emitter, "_emitter", "/Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms.js");
+>>>>>>> eccf0901002ff500395b6c8b1f5637fc120564e1
 })();
 
 ;
@@ -1062,7 +1072,11 @@ module.exports = g;
     return;
   }
 
+<<<<<<< HEAD
   reactHotLoader.register(g, "g", "/Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/node_modules/webpack/buildin/global.js");
+=======
+  reactHotLoader.register(g, "g", "/Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/node_modules/webpack/buildin/global.js");
+>>>>>>> eccf0901002ff500395b6c8b1f5637fc120564e1
 })();
 
 ;
@@ -1683,8 +1697,13 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
 module.exports = __webpack_require__(/*! /Users/BBB/Desktop/website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+=======
+__webpack_require__(/*! /Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
+module.exports = __webpack_require__(/*! /Users/khele/Documents/Projects/sovi-website/node_modules/gatsby-plugin-netlify-cms/cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+>>>>>>> eccf0901002ff500395b6c8b1f5637fc120564e1
 
 
 /***/ }),

@@ -69,7 +69,7 @@ export default function Footer(props) {
         title: "Theo dõi chúng tôi tại",
       },
       copyright:
-        "Mọi bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
+        "Bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
     },
   }
 

@@ -106,7 +106,7 @@ const About = () => {
                     heading={content.heading}/>
         <div>
           <div className="intro row">
-            <div className="col-md-6">
+            <div className="col-md-6 about-content">
               <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
                 <h2 className="mb-4">{content.sec1.heading}</h2>
                 <p>{content.sec1.text1}</p>

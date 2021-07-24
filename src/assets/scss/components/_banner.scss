@@ -3,7 +3,7 @@
 #banner {
   .carousel-caption {
     font-size: 10rem;
-    background: #b1b1b1c4;
+    background: #db9f1db5; 
     padding: 1rem 1rem 1rem 1rem;
     text-transform: uppercase;
     width: 33%;
@@ -11,6 +11,7 @@
     bottom: none;
     top: 15%;
     left: 10%;
+    border-radius: 20px;
   }
 
   .carousel-indicators {
@@ -81,22 +82,16 @@
     .carousel-caption {
       width: 50%;
     }
-    .heading1 {
-      font-size: 0.9rem;
-    }
-    .heading2 {
-      font-size: 2rem;
-    }
   }
   @include breakpoint(xsmall1) {
     .carousel-caption {
       width: 50%;
     }
     .heading1 {
-      font-size: 0.5rem;
+      font-size: 0.8rem;
     }
     .heading2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
   @include breakpoint(xsmall2) {
@@ -104,10 +99,10 @@
       width: 60%;
     }
     .heading1 {
-      font-size: 0.4rem;
+      font-size: 0.5rem;
     }
     .heading2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
   @include breakpoint(xsmall3) {
