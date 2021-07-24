@@ -15,13 +15,12 @@ import Img from "gatsby-image"
 import PageHeader from "../components/PageHeader"
 
 const Contact = () => {
-  const imgContainer = useImage();
-
+  const imgContainer = useImage()
 
   let content = {
     EN: {
       title: "Contact",
-      breadcrumb: [{name: "Contact"}],
+      breadcrumb: [{ name: "Contact" }],
       heading: "Contact Us",
       cta: "Get In Touch",
       info: {
@@ -41,7 +40,7 @@ const Contact = () => {
 
     VI: {
       title: "Liên hệ",
-      breadcrumb: [{name: "Liên hệ"}],
+      breadcrumb: [{ name: "Liên hệ" }],
       heading: "Thông tin liên hệ",
       cta: "Hãy liên hệ với chúng tôi",
       info: {
@@ -60,21 +59,25 @@ const Contact = () => {
     },
   }
 
-  if (typeof window !== "undefined") {
-    content = content.EN
-  } else if (localStorage.getItem("language") == "en") {
-    content = content.EN
+  if (localStorage) {
+    if (localStorage.getItem("language") == "en") {
+      content = content.EN
+    } else {
+      content = content.VI
+    }
   } else {
-    content = content.VI
+    content = content.EN
   }
   return (
     <Layout>
       <Helmet title={content.title}></Helmet>
       <div className="contact-page">
-        <PageHeader language={language} 
-                    breadcrumbList={content.breadcrumb} 
-                    title={content.title} 
-                    heading={content.heading}/>
+        <PageHeader
+          language={language}
+          breadcrumbList={content.breadcrumb}
+          title={content.title}
+          heading={content.heading}
+        />
         {/* Edit this map's CSS using margin-top of _contact.scss/contact-inner-section class */}
         {/* <MyMap className="map" /> */}
         <div className="contact-inner-section">
@@ -142,7 +145,10 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                  <Img className="mb-sm-4 mb-4 mr-lg-3" fluid={imgContainer.sovi_map.childImageSharp.fluid}/>
+                  <Img
+                    className="mb-sm-4 mb-4 mr-lg-3"
+                    fluid={imgContainer.sovi_map.childImageSharp.fluid}
+                  />
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <h3>{content.form.heading}</h3>

@@ -22,12 +22,14 @@ const Notfound = () => {
     },
   }
 
-  if (typeof window !== "undefined") {
-    content = content.EN
-  } else if (localStorage.getItem("language") == "en") {
-    content = content.EN
+  if (localStorage) {
+    if (localStorage.getItem("language") == "en") {
+      content = content.EN
+    } else {
+      content = content.VI
+    }
   } else {
-    content = content.VI
+    content = content.EN
   }
   return (
     <div id="notfound">
