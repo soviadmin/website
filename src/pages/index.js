@@ -9,14 +9,18 @@ import ContactSection from "../components/ContactSection"
 import Layout from "../components/Layout"
 
 const IndexPage = () => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem("language", "en")
+  }
+
   const [language, setLanguage] = useState(localStorage.getItem("language"))
 
   let content = {
     EN: {
-      title: "Home"
+      title: "Home",
     },
     VI: {
-      title: "Trang chủ"
+      title: "Trang chủ",
     },
   }
 
