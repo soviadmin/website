@@ -68,8 +68,8 @@ export default function EquipmentSection(props) {
     //   "general-purpose/eq-45"],
     // ],
     [
-      // [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
-      // "reefer/eq-20-rf"],
+      [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
+      "reefer/eq-20-rf"],
       [imgContainer.equipment20_04.childImageSharp.fluid, content.eq5,
       "special/eq-20-ot"],
       [imgContainer.equipment40_07.childImageSharp.fluid, content.eq6,
