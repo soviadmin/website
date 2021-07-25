@@ -24,7 +24,7 @@ export default function ServiceSection(props) {
       },
       ser3: {
         name: "Custom Clearance",
-        desc: "Transit formalities & Cargo",
+        desc: "Transit Formalities & Cargo",
       },
       ser4: {
         name: "Trucking",

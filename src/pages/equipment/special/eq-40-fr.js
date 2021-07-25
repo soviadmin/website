@@ -7,6 +7,11 @@ import PageHeader from "../../../components/PageHeader"
 
 export default function Eq40FlatRack() {
   const imgContainer = useImage()
+  const [language, setLang] = useState(null)
+
+  useEffect(() => {
+    setLang(localStorage.getItem("language")) // en or vi
+  })
 
   // Container's title & image should be entered directly this way instead of
   // being passed as states via Link. In case page renders by itself, such
@@ -27,15 +32,9 @@ export default function Eq40FlatRack() {
       ],
     },
   }
-  if (localStorage) {
-    if (localStorage.getItem("language") == "en") {
-      content = content.EN
-    } else {
-      content = content.VI
-    }
-  } else {
-    content = content.EN
-  }
+
+  language === "en" ? (content = content.EN) : (content = content.VI)
+
   return (
     <Layout>
       <Helmet title={content.title}></Helmet>

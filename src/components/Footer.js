@@ -25,6 +25,7 @@ export default function Footer(props) {
         item3: "Custom Clearance",
         item4: "Trucking",
         item5: "Express",
+        item6: "Supporting Services",
       },
       menu3: {
         title: "Navigation",
@@ -56,6 +57,7 @@ export default function Footer(props) {
         item3: "Khai báo hải quan",
         item4: "Vận chuyển đường bộ",
         item5: "Phát chuyển nhanh",
+        item6: "Các dịch vụ hỗ trợ",
       },
       menu3: {
         title: "Quay lại",
@@ -117,11 +119,14 @@ export default function Footer(props) {
             <p>
               <a href="/service">{content.menu2.item3}</a>
             </p>
-            <p>
+            {/* <p>
               <a href="/service">{content.menu2.item4}</a>
             </p>
             <p>
               <a href="/service">{content.menu2.item5}</a>
+            </p> */}
+            <p>
+              <a href="/service">{content.menu2.item6}</a>
             </p>
           </div>
           <div className="col-md-3 other">
@@ -153,7 +158,7 @@ export default function Footer(props) {
                 className="accent-2 mb-4 mt-0 d-inline-block mx-auto"
                 style={{ width: "60px" }}
               />
-              <ul style={{listStyle: "none"}}>
+              <ul style={{ listStyle: "none" }}>
                 <li className="social-icon">
                   <a href="https://www.facebook.com/sovi.tran.31">
                     <FontAwesomeIcon icon={faFacebookF} />

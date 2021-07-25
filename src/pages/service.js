@@ -8,6 +8,12 @@ import Img from "gatsby-image"
 import PageHeader from "../components/PageHeader.js"
 
 const Service = () => {
+  const [language, setLang] = useState(null)
+
+  useEffect(() => {
+    setLang(localStorage.getItem("language")) // en or vi
+  })
+
   let content = {
     EN: {
       title: "Service",
@@ -111,16 +117,7 @@ const Service = () => {
     },
   }
 
-  // language === "en" ? (content = content.EN) : (content = content.VI)
-  if (localStorage) {
-    if (localStorage.getItem("language") == "en") {
-      content = content.EN
-    } else {
-      content = content.VI
-    }
-  } else {
-    content = content.EN
-  }
+  language === "en" ? (content = content.EN) : (content = content.VI)
 
   return (
     <Layout>

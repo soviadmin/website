@@ -9,6 +9,7 @@ import groupImg from "../assets/images/team.jpg"
 import PageHeader from "../components/PageHeader"
 
 const About = () => {
+  const [language, setLang] = useState(null)
   const [state, setState] = useState({
     perc_customer: 0,
     num_tasks: 0,
@@ -27,6 +28,7 @@ const About = () => {
         num_hours: 210000,
       })
     }
+    setLang(localStorage.getItem('language'))
   }, [isVisible])
 
   let content = {
@@ -93,15 +95,8 @@ const About = () => {
     },
   }
 
-  if (localStorage) {
-    if (localStorage.getItem("language") == "en") {
-      content = content.EN
-    } else {
-      content = content.VI
-    }
-  } else {
-    content = content.EN
-  }
+  language === "en" ? (content = content.EN) : (content = content.VI)
+
   return (
     <Layout>
       <Helmet title={content.title}></Helmet>
