@@ -33,7 +33,7 @@ export default function Eq20FlatRack() {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
+  language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <Layout>

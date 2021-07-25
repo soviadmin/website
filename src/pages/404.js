@@ -28,7 +28,7 @@ const Notfound = () => {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
+  language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <div id="notfound">

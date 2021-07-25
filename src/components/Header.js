@@ -45,7 +45,7 @@ export default function Header(props) {
     },
   }
 
-  language === "en" ? (content = content.EN) : (content = content.VI)
+  language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <header id="header">

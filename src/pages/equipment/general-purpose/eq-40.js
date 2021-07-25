@@ -32,8 +32,8 @@ export default function Eq40() {
       ],
     },
   }
-  
-  language === "en" ? (content = content.EN) : (content = content.VI)
+
+  language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <Layout>
