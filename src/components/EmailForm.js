@@ -8,10 +8,10 @@ const EmailForm = props => {
     clientName: "",
     clientEmail: "",
     clientMobile: "",
-    clientMessage: "",
+    clientBody: "",
   })
-  const [showSuccess, setShowSuccess] = useState(false)
-  const [showError, setShowError] = useState(false)
+  // const [showSuccess, setShowSuccess] = useState(false)
+  // const [showError, setShowError] = useState(false)
 
   function handleChange(event) {
     event.preventDefault()
@@ -23,10 +23,10 @@ const EmailForm = props => {
     event.preventDefault()
     const data = {
       subject: state.clientSubject,
-      from_name: state.clientName,
+      // from_name: state.clientName,
       sender_email: state.clientEmail,
-      phone: state.clientMobile,
-      message: state.clientMessage,
+      // phone: state.clientMobile,
+      message: state.clientBody,
     }
     try {
       emailjs
@@ -38,19 +38,19 @@ const EmailForm = props => {
         )
         .then(res => {
           console.log("Email successfully sent!")
-          setShowSuccess(true)
+          // setShowSuccess(true)
           setState(state => ({
             ...state,
             clientSubject: "",
-            clientName: "",
+            // clientName: "",
             clientEmail: "",
-            clientMobile: "",
-            clientMessage: "",
+            // clientMobile: "",
+            clientBody: "",
           }))
         }) // Handle errors
         .catch(err => {
           console.error("Unable to send email due to error:", err)
-          setShowError(true)
+          // setShowError(true)
         })
     } catch (error) {
       console.log(error)
@@ -62,23 +62,23 @@ const EmailForm = props => {
   let content = {
     EN: {
       subject: "Subject*",
-      name: "Full Name*",
+      // name: "Full Name*",
       email: "Email*",
-      phone: "Mobile Phone",
+      // phone: "Mobile Phone",
       message: "Message*",
-      successAlert: "Your email has been sent!",
-      failAlert: "Failed to send email. Please try again.",
-      submitBtn: "Submit",
+      // successAlert: "Your email has been sent!",
+      // failAlert: "Failed to send email. Please try again.",
+      submitBtn: "Send",
     },
 
     VI: {
       subject: "Chủ đề*",
-      name: "Họ và Tên*",
+      // name: "Họ và Tên*",
       email: "Email*",
-      phone: "Số điện thoại",
+      // phone: "Số điện thoại",
       message: "Nội dung*",
-      successAlert: "Email của bạn đã gửi đi thành công!",
-      failAlert: "Lỗi xảy ra. Hãy vui lòng thử lại",
+      // successAlert: "Email của bạn đã gửi đi thành công!",
+      // failAlert: "Lỗi xảy ra. Hãy vui lòng thử lại",
       submitBtn: "Xác nhận và gửi",
     },
   }
@@ -87,7 +87,7 @@ const EmailForm = props => {
 
   return (
     <div className="email-form">
-      <form className="test-mailing" onSubmit={handleSubmit}>
+      <form className="test-mailing">
         <div>
           <input
             className={props.type}
@@ -100,7 +100,7 @@ const EmailForm = props => {
             required
             autoComplete="off"
           />
-          <input
+          {/* <input
             className={props.type}
             onChange={handleChange}
             value={state.clientName}
@@ -110,7 +110,7 @@ const EmailForm = props => {
             maxLength={50}
             required
             autoComplete="off"
-          />
+          /> */}
           <input
             className={props.type}
             onChange={handleChange}
@@ -122,7 +122,7 @@ const EmailForm = props => {
             required
             autoComplete="off"
           />
-          <input
+          {/* <input
             className={props.type}
             onChange={handleChange}
             value={state.clientMobile}
@@ -131,20 +131,20 @@ const EmailForm = props => {
             placeholder={content.phone}
             maxLength={50}
             autoComplete="off"
-          />
+          /> */}
           <textarea
             className={props.type}
-            name="clientMessage"
+            name="clientBody"
             onChange={handleChange}
             placeholder={content.message}
             required
             rows="10"
             maxLength="4000"
-            value={state.clientMessage}
+            value={state.clientBody}
             style={{ width: "100%", height: "150px" }}
           />
         </div>
-        <Alert
+        {/* <Alert
           show={showSuccess}
           variant="success"
           onClose={() => setShowSuccess(false)}
@@ -159,12 +159,11 @@ const EmailForm = props => {
           dismissible
         >
           <p className="mb-0">{content.failAlert}</p>
-        </Alert>
-        <input
-          type="submit"
-          value={content.submitBtn}
-          className="btn btn-primary my-btn contact-btn"
-        />
+        </Alert> */}
+        <a className="btn btn-primary my-btn contact-btn" 
+            href={`mailto:sovi@sovi.vn?subject=${state.clientSubject}&body=${state.clientBody}`}>
+          {content.submitBtn}
+        </a>
       </form>
     </div>
   )
