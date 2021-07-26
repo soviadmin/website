@@ -64,12 +64,10 @@ export default function EquipmentSection(props) {
     //   "general-purpose/eq-20"],
     //   [imgContainer.equipment40_01.childImageSharp.fluid, content.eq2,
     //   "general-purpose/eq-40-hq"],
-    //   [imgContainer.equipment40_01.childImageSharp.fluid, content.eq3,
-    //   "general-purpose/eq-45"],
+    //   [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
+    //    "reefer/eq-20-rf"],
     // ],
     [
-      // [imgContainer.equipment20_reefer.childImageSharp.fluid, content.eq4,
-      // "reefer/eq-20-rf"],
       [
         imgContainer.equipment20_04.childImageSharp.fluid,
         content.eq5,
@@ -79,6 +77,11 @@ export default function EquipmentSection(props) {
         imgContainer.equipment40_07.childImageSharp.fluid,
         content.eq6,
         "special/eq-40-ot",
+      ],
+      [  
+        imgContainer.equipment40_01.childImageSharp.fluid, 
+        content.eq3,
+        "general-purpose/eq-45"
       ],
     ],
     [
@@ -108,7 +111,7 @@ export default function EquipmentSection(props) {
         <Carousel id="banner">
           {eqImages.map(group => {
             return (
-              <Carousel.Item interval={1000} key={randomKey()}>
+              <Carousel.Item interval={2000} key={randomKey()}>
                 <div className="container">
                   <div className="row justify-content-center">
                     {group.map(groupItem => {

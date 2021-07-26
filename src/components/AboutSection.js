@@ -54,7 +54,7 @@ export default function AboutSection(props) {
             <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
               <h2 className="heading-one">{content.title1}</h2>
               <h2 className="heading-two">{content.title2}</h2>
-              <p className="mr-5 mt-4">
+              <p className="mr-2 ml-2 mt-4">
                 {content.content1}
                 <br></br>
                 <br></br>
