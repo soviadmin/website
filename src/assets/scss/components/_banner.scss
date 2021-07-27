@@ -3,7 +3,7 @@
 #banner {
   .carousel-caption {
     font-size: 10rem;
-    background: #db9f1db5; 
+    background: #db9f1db5;
     padding: 1rem 1rem 1rem 1rem;
     text-transform: uppercase;
     width: 33%;
@@ -108,6 +108,7 @@
   @include breakpoint(xsmall3) {
     .carousel-caption {
       width: 60%;
+      height: 70%;
     }
     .heading1 {
       font-size: 0.3rem;
