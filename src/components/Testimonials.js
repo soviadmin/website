@@ -65,7 +65,7 @@ export default function Testimonials(props) {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <div>

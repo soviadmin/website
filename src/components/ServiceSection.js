@@ -71,7 +71,7 @@ export default function ServiceSection(props) {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
   // function handleClick(e) {
   //   navigate("/service/location=02")

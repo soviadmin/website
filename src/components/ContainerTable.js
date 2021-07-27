@@ -33,7 +33,7 @@ export default function ContainerTable(props) {
         },
     }
 
-    props.language === "en" ? (content = content.EN) : (content = content.VI)
+    props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
     return (
         <div className="container-table mt-5 pb-5">

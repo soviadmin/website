@@ -12,8 +12,8 @@ export default function PageHeader(props) {
             homeLink: "/"
         },
       }
-    props.language === "en" ? (content = content.EN) : (content = content.VI)
-    return (
+      props.language === "vi" ? (content = content.VI) : (content = content.EN)
+      return (
         <header className="header">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <nav aria-label="breadcrumb">

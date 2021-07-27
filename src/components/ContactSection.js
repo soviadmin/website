@@ -19,7 +19,7 @@ export default function ContactSection(props) {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <div className="get-quote">

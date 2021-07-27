@@ -20,7 +20,7 @@ export default function Banner(props) {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
   return (
     <ScrollAnimation animateIn="fadeIn" animateOnce={true}>

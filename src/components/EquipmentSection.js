@@ -47,7 +47,7 @@ export default function EquipmentSection(props) {
     },
   }
 
-  props.language === "en" ? (content = content.EN) : (content = content.VI)
+  props.language === "vi" ? (content = content.VI) : (content = content.EN)
 
   function randomKey() {
     let rand = 1 + Math.random() * 100
