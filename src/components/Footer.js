@@ -16,7 +16,7 @@ export default function Footer(props) {
         item1: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
         item2: "Mon-Fri: 09:00AM - 06:00PM",
         item3: "sovi@sovi.vn",
-        item4: "(+84) 310 931 337",
+        item4: "(+84) 28 3910 6966",
       },
       menu2: {
         title: "Services",
@@ -48,7 +48,7 @@ export default function Footer(props) {
         item1: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
         item2: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
         item3: "sovi@sovi.vn",
-        item4: "(+84) 310 931 337",
+        item4: "(+84) 28 3910 6966",
       },
       menu2: {
         title: "Dịch vụ",
@@ -71,7 +71,7 @@ export default function Footer(props) {
         title: "Theo dõi chúng tôi tại",
       },
       copyright:
-        "Bản quyền thuộc về Công Ty Thương Mại và Dịch Vụ Vận Chuyển Sóng Việt © 2020.",
+        "Bản quyền thuộc về Công Ty Cổ Phần Thương Mại và Dịch Vụ Vận Tải Sóng Việt © 2020.",
     },
   }
 
