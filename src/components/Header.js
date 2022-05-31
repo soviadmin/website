@@ -69,7 +69,7 @@ export default function Header(props) {
         <div className="row contact-header">
           <div className="col-3">
             <FontAwesomeIcon icon={faPhoneAlt} className="contact-icon" />
-            (+84) 310 931 337 {data.site.siteMetadata.title}
+            (+84) 28 3910 6966 {data.site.siteMetadata.title}
           </div>
           <div className="col-3">
             <FontAwesomeIcon icon={faFax} className="contact-icon" />
