@@ -31,7 +31,7 @@ const Contact = () => {
       info: {
         title: "Head Office",
         company: "Song Viet Transport Service & Trading Corporation",
-        address: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        address: "277-279 Ly Tu Trong St, 3rd Floor, Ward Ben Thanh, HCMC, Vietnam",
         hours: "Mon-Fri: 09:00AM - 06:00PM",
         email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
@@ -51,7 +51,7 @@ const Contact = () => {
       info: {
         title: "Trụ sở chính",
         company: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
-        address: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        address: "277-279 Lý Tự Trọng, Lầu 3, P.Bến Thành, TP. Hồ Chính Minh, Việt Nam",
         hours: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
         email: "sovi@sovi.vn",
         phone: "(+84) 310 931 337",
