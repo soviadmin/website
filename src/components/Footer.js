@@ -13,7 +13,7 @@ export default function Footer(props) {
     EN: {
       menu1: {
         title: "Song Viet Transport Service & Trading Corporation",
-        item1: "277-279 Ly Tu Trong St, 3rd Floor, Dist. 1, HCMC, Vietnam",
+        item1: "277-279 Ly Tu Trong St, 3rd Floor, Ward Ben Thanh, HCMC, Vietnam",
         item2: "Mon-Fri: 09:00AM - 06:00PM",
         item3: "sovi@sovi.vn",
         item4: "(+84) 28 3910 6966",
@@ -45,7 +45,7 @@ export default function Footer(props) {
     VI: {
       menu1: {
         title: "Công ty cổ phần thương mại và dịch vụ vận tải Sóng Việt",
-        item1: "277-279 Lý Tự Trọng, Lầu 3, Q1, TP. Hồ Chính Minh, Việt Nam",
+        item1: "277-279 Lý Tự Trọng, Lầu 3, P. Bến Thành, TP. Hồ Chính Minh, Việt Nam",
         item2: "Thứ Hai - Thứ Sáu: 09:00 - 18:00",
         item3: "sovi@sovi.vn",
         item4: "(+84) 28 3910 6966",
