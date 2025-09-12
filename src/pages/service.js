@@ -50,10 +50,10 @@ const Service = () => {
         // item1: "Customs transit formalities",
         // item2: "Customs clearance for import-export cargo",
       },
-      // ser4: {
-      //   name: "Trucking",
-      //   subheading: "Please contact us for more details.",
-      // },
+      ser4: {
+        name: "Trucking",
+        subheading: "Please contact us for more details.",
+      },
       ser5: {
         name: "Supporting Services",
         // subheading: "Please contact us for more details.",
